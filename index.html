@@ -7,80 +7,78 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Delfos: To Build</title>
 </head>
-<body>
-    <header id="header">
+<body class="body__theme--light">
+    <header id="header" class="header__theme--light">
         <nav class="header__nav">
-            <figure class="nav__figure">
-                <a href="https://sebastianboari.github.io/DelfOS.github.io/">
-                    <img class="figure__img" src="" alt="Logo de DelfOS.">
-                </a>
-            </figure>
-            <img src="" alt="">
-            <img src="" alt="">
+            <div class="container-xl">
+                <figure class="nav__figure">
+                    <a class="figure__link" href="https://sebastianboari.github.io/DelfOS.github.io/">
+                        <img class="figure__img" src="./assets/icons/delfos-logo.png" alt="Logo de DelfOS.">
+                    </a>
+                </figure>
+                <div class="nav__buttons">
+                    <img class="buttons__img" src="./assets/icons/bell-notification.svg" alt="">
+                    <img class="buttons__img" src="./assets/icons/account-circle.svg" alt="">
+                </div>      
+            </div>     
         </nav>
 
-        <article class="header__welcome">
+        <article id="header__welcome">
             <figure class="welcome__figure">
-                <img class="figure__img" src="" alt="Logo de Delfos ToBuild">
+                <img class="figure__img" src="./assets/icons/logo-tobuild-v1.png" alt="Logo de Delfos ToBuild">
             </figure>
         </article>
     </header>
 
     <main id="main">
         <section id="home">
+            <div class="container-xl">
                 <figure class="home__figure">
-                    <img src="" alt="Ilustracion de un calendario con tareas a cumplir.">
+                    <img src="./assets/misc/illustration1-tobuild.png" alt="Ilustracion de un calendario con tareas a cumplir.">
                 </figure>
                 <article class="home__article">
                     <div class="article__txt">
-                        <h2>DelfOS To Build</h2>
-                        <p>Welcome to To Build, your ultimate task management companion. Keep track of all your tasks, deadlines, and projects in one place. With To Build, you can easily create new tasks, set reminders, and prioritize your to-do list to stay on top of your work.</p>
+                        <h2 class="txt__title">DelfOS To <span>Build</span></h2>
+                        <p class="txt__p">Welcome to To Build, your ultimate task management companion. Keep track of all your tasks, deadlines, and projects in one place. With To Build, you can easily create new tasks, set reminders, and prioritize your to-do list to stay on top of your work.</p>
                     </div>
                     <div class="article__btn">
-                        <button>Get started</button>
+                        <button id="btn__getStarted">Get started</button>
                     </div>
                 </article>
+            </div>
         </section>
-
-        <section id="signIn">
-
-        </section>
-        <section id="signUp">
-
-        </section>
-
-        <section id="workflow">
-
-        </section>
-
     </main>
 
-
-    <footer>
-        <figure class="footer__figure">
-            <a href="https://sebastianboari.github.io/DelfOS.github.io/">
-                <img class="figure__img" src="" alt="Logo de DelfOS.">
-            </a>
-        </figure>
-        <div class="footer__contact">
-            <p>Redmond, Washington, United States.</p>
-            <p>(434) 546-4356</p>
-            <p>contact@panorama.com</p>
-        </div>
-        <div class="footer__social">
-            <div class="social__redirect">
-                <p>About</p>
-                <p>Delfos</p>
-                <p>Products</p>
-                <p>Partners</p>
-                <p>Store</p>
+    <footer id="footer" class="footer__theme--light">
+        <div class="container-l">
+            <figure class="footer__figure">
+                <a class="figure__link" href="https://sebastianboari.github.io/DelfOS.github.io/">
+                    <img class="figure__img" src="./assets/icons/delfos-logo.png" alt="Logo de DelfOS.">
+                </a>
+            </figure>
+            <div class="footer__contact">
+                <p class="address">Redmond, Washington, United States.</p>
+                <div class="footer__contact--down">
+                    <p class="telNumber">(434) 546-4356</p>
+                    <p class="contactMail">contact@panorama.com</p>
+                </div>
             </div>
-            <div class="social__link">
-                <p>Facebook</p>
-                <p>Twitter</p>
-                <p>LinkedinInstagram</p>
+            <div class="footer__social">
+                <div class="social__redirect">
+                    <a class="footer__link" href="https://sebastianboari.github.io/DelfOS.github.io/pages/nosotros.html">About</a>
+                    <a class="footer__link" href="https://sebastianboari.github.io/DelfOS.github.io/">Delfos</a>
+                    <a class="footer__link" href="https://sebastianboari.github.io/DelfOS.github.io/pages/productos.html">Products</a>
+                    <a class="footer__link" href="https://sebastianboari.github.io/DelfOS.github.io/pages/partners.html">Partners</a>
+                    <a class="footer__link" href="https://sebastianboari.github.io/DelfOS.github.io/pages/tienda.html">Store</a>
+                </div>
+                <div class="social__link">
+                    <a class="footer__link" href="https://github.com/microsoft">Github</a>
+                    <a class="footer__link" href="https://www.linkedin.com/company/microsoft/">Linkedin</a>
+                    <a class="footer__link" href="https://www.figma.com/@microsoft">Figma</a>
+                    <a class="footer__link" href="https://support.microsoft.com/ContactUs?culture=en-us&country=us#!">Contact</a>
+                </div>
+                <p class="signature">© 2023 Sebastian Boari. All rights reserved.</p>
             </div>
-            <p>© 2023 Sebastian Boari. All rights reserved.</p>
         </div>
     </footer>
     <script src="./js/main.js"></script>

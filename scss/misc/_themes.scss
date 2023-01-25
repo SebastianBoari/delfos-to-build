@@ -1,0 +1,116 @@
+// LIGHT 
+// BODY
+.body__theme--light{
+    background-color: white;
+}
+// HEADER
+.header__theme--light{
+    .header__nav{
+        background-color: $white-op80;
+    }
+}
+// FOOTER
+.footer__theme--light{
+    .container-l{
+        .footer__contact{
+            .address{
+                color: $navyBlue;
+            }
+            .footer__contact--down{
+                .telNumber, .contactMail{
+                    color: $navyBlue;
+                }
+            }
+        }
+        .footer__social{
+            .social__redirect, .social__link{
+                .footer__link{
+                    color: $navyBlue;
+                }
+            }
+            .signature{
+                color: $navyBlue;
+            }
+        }
+    }
+}
+
+// MIDNIGHT BLUE
+// BODY
+.body__theme--blueMidnight{
+    background: rgb(0,52,89);
+    background: radial-gradient(circle, rgba(0,52,89,1) 0%, rgba(0,23,31,1) 100%);
+}
+// HEADER
+.header__theme--blueMidnight{
+    .header__nav{
+        background-color: $navyBlue-op80;
+    }
+}
+
+// FOOTER
+.footer__theme--blueMidnight{
+    .container-l{
+        .footer__contact{
+            .address{
+                color: $white;
+            }
+            .footer__contact--down{
+                .telNumber, .contactMail{
+                    color: $white;
+                }
+            }
+        }
+        .footer__social{
+            .social__redirect, .social__link{
+                .footer__link{
+                    color: $white;
+                }
+            }
+            .signature{
+                color: $white;
+            }
+        }
+    }
+}
+
+// DARKMODE
+// BODY
+.body__theme--dark{
+    background: rgb(0,23,31);
+    background: radial-gradient(circle, rgba(0,23,31,1) 50%, rgba(0,0,0,1) 100%);
+}
+// HEADER
+.header__theme--dark{
+    .header__nav{
+        background-color: $blackBlue-op80;
+    }
+}
+
+// FOOTER
+.footer__theme--dark{
+    .container-l{
+        .footer__contact{
+            .address{
+                color: $white;
+            }
+            .footer__contact--down{
+                .telNumber, .contactMail{
+                    color: $white;
+                }
+            }
+        }
+        .footer__social{
+            .social__redirect, .social__link{
+                .footer__link{
+                    color: $white;
+                }
+            }
+            .signature{
+                color: $white;
+            }
+        }
+    }
+}
+
+

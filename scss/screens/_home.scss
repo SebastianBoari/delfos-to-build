@@ -1,0 +1,79 @@
+// GENERAL STYLES
+#home{
+    .container-xl{
+        @include grid-container(1fr 1fr, auto);
+        padding: $space-224 0;
+        .home__article{
+            @include grid-container(1fr, 1fr 1fr);
+            .article__txt{
+                @include grid-item($justify-self: center, $align-self: center);
+                @include grid-container(1fr, auto);
+                @include grid-gap(0, $space-32);
+                @include max-sizes(54rem, none);
+                .txt__title{
+                    text-align: center;
+                    font-family: 'Lato', sans-serif;
+                    font-size: $font-36;
+                    font-weight: 700;
+                    line-height: $space-32;
+                    color: $navyBlue;
+                    span{
+                        color: $deepSkyBlue;
+                    }
+                }
+                .txt__p{
+                    text-align: center;
+                    font-family: 'Lato', sans-serif;
+                    font-size: $font-18;
+                    font-weight: 300;
+                    line-height: $space-32;
+                    color: $deepSkyBlue;
+                }
+            }
+            .article__btn{
+                @include grid-item($justify-self: center, $align-self: center);
+                #btn__getStarted{
+                    @include sizes(25.8rem, 6rem);
+
+                    border: none;
+                    background-color: $skyBlue;
+
+                    color: $white;
+                    text-align: center;
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 400;
+                    font-size: $font-24;
+                    line-height: 2.9rem;
+
+                    transition: all .3s;
+                }
+                #btn__getStarted:hover{
+                    cursor: pointer;
+                    background-color: $deepSkyBlue;
+                }
+            }
+        }
+    }
+}
+
+// RESPONSIVE
+// 1200px
+@media (max-width: 1200px){
+    #home{
+        .container-xl{
+            @include grid-container(1fr, auto);
+            padding: $space-128  $space-32;
+            .home__figure{
+                display: none
+            }
+            .home__article{
+                @include grid-container(1fr, 1fr 1fr);
+                .article__btn{
+                    #btn__getStarted{
+                        @include sizes(25.8rem, 6rem);
+                    }
+                }
+            }
+        }
+    }
+}

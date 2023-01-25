@@ -1,0 +1,104 @@
+// GENERAL STYLES 
+#footer{
+    padding: $space-100;
+    .container-l{
+        @include grid-container(1fr 1fr 1fr, auto);
+        .footer__figure{
+            @include grid-container(auto, auto);
+            .figure__link{
+                @include grid-item($justify-self: start);
+                .figure__img{
+                    @include sizes(7rem, auto);
+                }
+            }
+        }
+        .footer__contact{
+            @include grid-item($justify-self: center);
+            @include grid-container(1fr, 1fr 1fr);
+            @include grid-gap(0, 3.2rem);
+            .address{
+                @include max-sizes(28rem, auto);
+                font-size: $font-18;
+                font-weight: 400;
+                font-family: 'Lato', sans-serif;
+                line-height: $space-36;
+            }
+            .footer__contact--down{
+                @include grid-container(1fr, 1fr 1fr);
+                @include grid-gap(0, $space-16);
+                .telNumber, .contactMail{
+                    @include max-sizes(15rem, auto);
+                    font-size: $font-14;
+                    font-weight: 400;
+                    font-family: 'Lato', sans-serif;
+                    line-height: $space-22;
+                    border-bottom: solid 2px;
+                }
+            }
+        }
+        .footer__social{
+            @include grid-item($justify-self: end);
+            @include grid-container(1fr 1fr, auto);
+            @include grid-gap(0, 3.2rem);
+            .social__redirect, .social__link{
+                @include grid-container(1fr, auto);
+                @include grid-gap(0, $space-20);
+                .footer__link{
+                    font-size: $font-14;
+                    font-weight: 400;
+                    font-family: 'Lato', sans-serif;
+                    line-height: $space-22;
+                    
+                    transition: all .3s;
+                }
+                .footer__link:hover{
+                    color: $deepSkyBlue;
+                }
+            }
+            .signature{
+                @include grid-item($column: 1, $column-span: 3);
+                font-size: $font-14;
+                font-weight: 400;
+                font-family: 'Lato', sans-serif;
+                line-height: $space-22;
+            }
+        }
+    }
+}
+
+// RESPONSIVE
+// 768PX
+@media (max-width: 768px){
+    #footer{
+        padding: $space-64 $space-32;
+        .container-l{
+            @include grid-container(1fr, auto auto);
+            @include grid-gap(o, $space-32);
+            .footer__figure{
+                display: none;
+            }
+            .footer__contact{
+                @include grid-item($justify-self: center);
+                text-align: center;
+                .footer__contact--down{
+                    @include grid-item($justify-self: center);
+                    .telNumber, .contactMail{
+                        border: none;
+                    }
+                }
+            }
+            .footer__social{
+                @include grid-item($justify-self: center);
+                .social__redirect{
+                    @include grid-item($justify-self: start);
+                }
+                .social__link{
+                    @include grid-item($justify-self: end);
+                }
+                .signature{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
