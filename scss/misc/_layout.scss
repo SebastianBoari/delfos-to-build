@@ -9,6 +9,19 @@
 .container-fluid{
     margin: 0 auto;
 }
+.container-logIn{
+    max-width: 128rem;
+    margin: 0 auto;
+}
+.container-signUp{
+    max-width: 128rem;
+    margin: 0 auto;
+}
+.container-workflow{
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
 body{
     @include grid-container(1fr, auto);
 }

@@ -1,0 +1,3 @@
+btnGetStartedEvent();
+btnSignUpEvent();
+btnSignInEvent();

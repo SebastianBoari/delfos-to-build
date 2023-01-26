@@ -1,0 +1,176 @@
+// GENERAL STYLES
+#logIn{
+    padding-top: $space-100;
+    .container-logIn{
+        @include grid-container(auto auto, 1fr);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        @include sizes(auto, 71.8rem);
+        .logIn__article{
+            background-color: $white;
+            padding: $space-64 12.5rem;
+            @include grid-container(1fr, auto auto auto);
+            .logIn__title{
+                @include grid-item($justify-self: center, $align-self: start);
+                font-family: 'Lato', sans-serif;
+                font-weight: 300;
+                font-size: $font-36;
+                color: $deepSkyBlue;
+            }
+            .logIn__panel{
+                @include grid-item($justify-self: center, $align-self: end);
+                @include grid-container(auto, auto 1fr);
+                @include grid-gap(0, $space-32);
+                .panel__title{
+                    @include grid-item($justify-self: center, $align-self: center);
+                    text-align: center;
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 700;
+                    font-size: $font-32;
+                    color: $navyBlue;
+                }
+                .logIn__form{
+                    @include grid-container(auto, 1fr 1fr 1fr);
+                    @include grid-gap(0, $space-32);
+                    .form__line{
+                        padding: $space-12 $space-12;
+                        @include sizes(32rem, auto);
+                        @include flex(row, nowrap, space-between, center, 0);
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        .form__input{
+                            @include sizes(26rem, auto);
+                            border: none;
+                            outline: none;
+
+                            font-family: 'Lato', sans-serif;
+                            font-weight: 400;
+                            font-size: $font-16;
+                            color: $navyBlue;
+                        }
+                        .form__input::placeholder{
+                            color: $gray;
+                        }
+                    }
+                    .form__buttons{
+                        @include flex(row, nowrap, space-between, center, 0);
+                        .buttons__forgotPsw{
+                            font-family: 'Lato', sans-serif;
+                            font-weight: 400;
+                            font-size: $font-16;
+                            color: $gray;
+                            transition: all .3s;
+                        }
+                        .buttons__forgotPsw:hover{
+                            color: $deepSkyBlue
+                        }
+                        #sumbit__logIn{
+                            @include sizes(14rem, 4rem);
+                            border: none;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                            font-family: 'Lato', sans-serif;
+                            font-weight: 700;
+                            font-size: $font-18;
+                            color: $navyBlue;
+                            transition: all .3s;
+                        }
+                        #sumbit__logIn:hover{
+                            cursor: pointer;
+                            box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
+                            color: $deepSkyBlue;
+                        }
+
+                    }
+                }
+            }
+        }
+        .logIn__options{
+            @include grid-item($justify-self: center, $align-self: end);
+            @include flex(column, nowrap, stretch, stretch, $space-32);
+            .themeDock{
+                @include sizes(21.3rem, 6rem);
+                @include flex(row, nowrap, space-around, center, $space-16);
+
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                padding:  $space-12 $space-36;
+                border-radius: 6rem;
+                button{
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    img{
+                        transition: all .3s;
+                    }
+                    img:hover{
+                        scale: 1.1;
+                    }
+                }
+            }
+            .options__signUp{
+                font-family: 'Lato', sans-serif;
+                font-weight: 700;
+                font-size: $font-16;
+                color: $navyBlue;
+                #btn__signUp{
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 700;
+                    font-size: $space-16;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    color: $deepSkyBlue;
+                    background-color: rgba(0, 0, 0, 0);
+                    transition: all .3s;
+                }
+                #btn__signUp:hover{
+                    color: $skyBlue;
+                }
+            }
+        }
+    }
+}
+
+// RESPONSIVE 
+// 1400PX
+@media (max-width: 1400px){
+    #logIn{
+        .container-logIn{
+            @include grid-container(auto, 1fr);
+            .logIn__figure{
+                display: none;
+            }
+        }
+    }
+}
+// 768PX
+@media (max-width: 768px){
+    #logIn{
+        padding-top: $space-32;
+        .container-logIn{
+            box-shadow: none;
+            @include grid-container(auto, 1fr);
+            @include sizes(100vw, 71.8rem);
+            .logIn__figure{
+                display: none;
+            }
+            .logIn__article{
+                padding: $space-64 $space-32;
+            }
+        }
+    }
+}
+// 576PX
+@media (max-width: 768px){
+    #logIn{
+        padding-top: $space-32;
+        .container-logIn{
+            box-shadow: none;
+            @include grid-container(auto, 1fr);
+            @include sizes(100vw, 71.8rem);
+            .logIn__figure{
+                display: none;
+            }
+            .logIn__article{
+                padding: $space-48 $space-16;
+            }
+        }
+    }
+}

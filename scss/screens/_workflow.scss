@@ -1,0 +1,35 @@
+#home{
+    display: none;
+}
+#logIn{
+    display: none;
+}
+#signUp{
+    display: none;
+}
+#header{
+    display: block;
+    overflow-x: hidden;
+    #header__welcome{
+        display: none;
+    }
+}
+
+#footer{
+    display: block;
+}
+
+
+
+#workflow{
+    margin-top: 8.25rem;
+    background-image: url(../assets/bg-img/workflow-light-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: $space-64 0;
+    .container-workflow{
+        background-color: $white-op80;
+        @include sizes(144rem, 118rem);
+        border-radius: .5rem;
+    }
+}

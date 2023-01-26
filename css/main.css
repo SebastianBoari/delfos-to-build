@@ -22,6 +22,18 @@ main {
 .container-fluid {
   margin: 0 auto; }
 
+.container-logIn {
+  max-width: 128rem;
+  margin: 0 auto; }
+
+.container-signUp {
+  max-width: 128rem;
+  margin: 0 auto; }
+
+.container-workflow {
+  max-width: 144rem;
+  margin: 0 auto; }
+
 body {
   display: grid;
   grid-template-columns: 1fr;
@@ -329,3 +341,409 @@ body {
       #home .container-xl .home__article .article__btn #btn__getStarted {
         width: 25.8rem;
         height: 6rem; } }
+
+#logIn {
+  padding-top: 10rem; }
+  #logIn .container-logIn {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: auto;
+    height: 71.8rem; }
+    #logIn .container-logIn .logIn__article {
+      background-color: white;
+      padding: 6.4rem 12.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto; }
+      #logIn .container-logIn .logIn__article .logIn__title {
+        grid-column: auto/span 1;
+        grid-row: auto/span 1;
+        justify-self: center;
+        align-self: start;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        font-size: 3.6em;
+        color: #007ea7; }
+      #logIn .container-logIn .logIn__article .logIn__panel {
+        grid-column: auto/span 1;
+        grid-row: auto/span 1;
+        justify-self: center;
+        align-self: end;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 3.2rem; }
+        #logIn .container-logIn .logIn__article .logIn__panel .panel__title {
+          grid-column: auto/span 1;
+          grid-row: auto/span 1;
+          justify-self: center;
+          align-self: center;
+          text-align: center;
+          font-family: 'Lato', sans-serif;
+          font-weight: 700;
+          font-size: 3.2em;
+          color: #003459; }
+        #logIn .container-logIn .logIn__article .logIn__panel .logIn__form {
+          display: grid;
+          grid-template-columns: auto;
+          grid-template-rows: 1fr 1fr 1fr;
+          grid-column-gap: 0;
+          grid-row-gap: 3.2rem; }
+          #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__line {
+            padding: 1.2rem 1.2rem;
+            width: 32rem;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); }
+            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__line .form__input {
+              width: 26rem;
+              height: auto;
+              border: none;
+              outline: none;
+              font-family: 'Lato', sans-serif;
+              font-weight: 400;
+              font-size: 1.6em;
+              color: #003459; }
+            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__line .form__input::placeholder {
+              color: #c5c6c4; }
+          #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0; }
+            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons .buttons__forgotPsw {
+              font-family: 'Lato', sans-serif;
+              font-weight: 400;
+              font-size: 1.6em;
+              color: #c5c6c4;
+              transition: all .3s; }
+            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons .buttons__forgotPsw:hover {
+              color: #007ea7; }
+            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons #sumbit__logIn {
+              width: 14rem;
+              height: 4rem;
+              border: none;
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+              font-family: 'Lato', sans-serif;
+              font-weight: 700;
+              font-size: 1.8em;
+              color: #003459;
+              transition: all .3s; }
+            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons #sumbit__logIn:hover {
+              cursor: pointer;
+              box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
+              color: #007ea7; }
+    #logIn .container-logIn .logIn__options {
+      grid-column: auto/span 1;
+      grid-row: auto/span 1;
+      justify-self: center;
+      align-self: end;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: stretch;
+      align-items: stretch;
+      gap: 3.2rem; }
+      #logIn .container-logIn .logIn__options .themeDock {
+        width: 21.3rem;
+        height: 6rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1.6rem;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 1.2rem 3.6rem;
+        border-radius: 6rem; }
+        #logIn .container-logIn .logIn__options .themeDock button {
+          border: none;
+          outline: none;
+          cursor: pointer; }
+          #logIn .container-logIn .logIn__options .themeDock button img {
+            transition: all .3s; }
+          #logIn .container-logIn .logIn__options .themeDock button img:hover {
+            scale: 1.1; }
+      #logIn .container-logIn .logIn__options .options__signUp {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 1.6em;
+        color: #003459; }
+        #logIn .container-logIn .logIn__options .options__signUp #btn__signUp {
+          font-family: 'Lato', sans-serif;
+          font-weight: 700;
+          font-size: 1.6rem;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          color: #007ea7;
+          background-color: rgba(0, 0, 0, 0);
+          transition: all .3s; }
+        #logIn .container-logIn .logIn__options .options__signUp #btn__signUp:hover {
+          color: #00a7e1; }
+
+@media (max-width: 1400px) {
+  #logIn .container-logIn {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr; }
+    #logIn .container-logIn .logIn__figure {
+      display: none; } }
+
+@media (max-width: 768px) {
+  #logIn {
+    padding-top: 3.2rem; }
+    #logIn .container-logIn {
+      box-shadow: none;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr;
+      width: 100vw;
+      height: 71.8rem; }
+      #logIn .container-logIn .logIn__figure {
+        display: none; }
+      #logIn .container-logIn .logIn__article {
+        padding: 6.4rem 3.2rem; } }
+
+@media (max-width: 768px) {
+  #logIn {
+    padding-top: 3.2rem; }
+    #logIn .container-logIn {
+      box-shadow: none;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr;
+      width: 100vw;
+      height: 71.8rem; }
+      #logIn .container-logIn .logIn__figure {
+        display: none; }
+      #logIn .container-logIn .logIn__article {
+        padding: 4.8rem 1.6rem; } }
+
+#signUp {
+  padding-top: 10rem; }
+  #signUp .container-signUp {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: auto;
+    height: 71.8rem; }
+    #signUp .container-signUp .signUp__article {
+      background-color: white;
+      padding: 6.4rem 12.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto; }
+      #signUp .container-signUp .signUp__article .signUp__title {
+        grid-column: auto/span 1;
+        grid-row: auto/span 1;
+        justify-self: center;
+        align-self: start;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        font-size: 3.6em;
+        color: #007ea7; }
+      #signUp .container-signUp .signUp__article .signUp__panel {
+        grid-column: auto/span 1;
+        grid-row: auto/span 1;
+        justify-self: center;
+        align-self: end;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 3.2rem; }
+        #signUp .container-signUp .signUp__article .signUp__panel .panel__title {
+          grid-column: auto/span 1;
+          grid-row: auto/span 1;
+          justify-self: center;
+          align-self: center;
+          text-align: center;
+          font-family: 'Lato', sans-serif;
+          font-weight: 700;
+          font-size: 3.2em;
+          color: #003459; }
+        #signUp .container-signUp .signUp__article .signUp__panel .signUp__form {
+          display: grid;
+          grid-template-columns: auto;
+          grid-template-rows: 1fr 1fr 1fr;
+          grid-column-gap: 0;
+          grid-row-gap: 2rem; }
+          #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__line {
+            padding: 1.2rem 1.2rem;
+            width: 32rem;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); }
+            #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__line .form__input {
+              width: 26rem;
+              height: auto;
+              border: none;
+              outline: none;
+              font-family: 'Lato', sans-serif;
+              font-weight: 400;
+              font-size: 1.6em;
+              color: #003459; }
+            #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__line .form__input::placeholder {
+              color: #c5c6c4; }
+          #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__buttons {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0; }
+            #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__buttons .buttons__forgotPsw {
+              font-family: 'Lato', sans-serif;
+              font-weight: 400;
+              font-size: 1.6em;
+              color: #c5c6c4;
+              transition: all .3s; }
+            #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__buttons .buttons__forgotPsw:hover {
+              color: #007ea7; }
+            #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__buttons #sumbit__signUp {
+              width: 14rem;
+              height: 4rem;
+              border: none;
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+              font-family: 'Lato', sans-serif;
+              font-weight: 700;
+              font-size: 1.8em;
+              color: #003459;
+              transition: all .3s; }
+            #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__buttons #sumbit__signUp:hover {
+              cursor: pointer;
+              box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
+              color: #007ea7; }
+    #signUp .container-signUp .signUp__options {
+      grid-column: auto/span 1;
+      grid-row: auto/span 1;
+      justify-self: center;
+      align-self: end;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: stretch;
+      align-items: stretch;
+      gap: 3.2rem; }
+      #signUp .container-signUp .signUp__options .themeDock {
+        width: 21.3rem;
+        height: 6rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1.6rem;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 1.2rem 3.6rem;
+        border-radius: 6rem; }
+        #signUp .container-signUp .signUp__options .themeDock button {
+          border: none;
+          outline: none;
+          cursor: pointer; }
+          #signUp .container-signUp .signUp__options .themeDock button img {
+            transition: all .3s; }
+          #signUp .container-signUp .signUp__options .themeDock button img:hover {
+            scale: 1.1; }
+      #signUp .container-signUp .signUp__options .options__signIn {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 1.6em;
+        color: #003459; }
+        #signUp .container-signUp .signUp__options .options__signIn #btn__signIn {
+          font-family: 'Lato', sans-serif;
+          font-weight: 700;
+          font-size: 1.6rem;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          color: #007ea7;
+          background-color: rgba(0, 0, 0, 0);
+          transition: all .3s; }
+        #signUp .container-signUp .signUp__options .options__signIn #btn__signIn:hover {
+          color: #00a7e1; }
+
+@media (max-width: 1400px) {
+  #signUp .container-signUp {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr; }
+    #signUp .container-signUp .signUp__figure {
+      display: none; } }
+
+@media (max-width: 768px) {
+  #signUp {
+    padding-top: 3.2rem; }
+    #signUp .container-signUp {
+      box-shadow: none;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr;
+      width: 100vw;
+      height: 71.8rem; }
+      #signUp .container-signUp .signUp__figure {
+        display: none; }
+      #signUp .container-signUp .signUp__article {
+        padding: 6.4rem 3.2rem; } }
+
+@media (max-width: 768px) {
+  #signUp {
+    padding-top: 3.2rem; }
+    #signUp .container-signUp {
+      box-shadow: none;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr;
+      width: 100vw;
+      height: 71.8rem; }
+      #signUp .container-signUp .signUp__figure {
+        display: none; }
+      #signUp .container-signUp .signUp__article {
+        padding: 4.8rem 1.6rem; } }
+
+#home {
+  display: none; }
+
+#logIn {
+  display: none; }
+
+#signUp {
+  display: none; }
+
+#header {
+  display: block;
+  overflow-x: hidden; }
+  #header #header__welcome {
+    display: none; }
+
+#footer {
+  display: block; }
+
+#workflow {
+  margin-top: 8.25rem;
+  background-image: url(../assets/bg-img/workflow-light-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 6.4rem 0; }
+  #workflow .container-workflow {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 144rem;
+    height: 118rem;
+    border-radius: .5rem; }
