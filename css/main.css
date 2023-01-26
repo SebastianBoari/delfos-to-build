@@ -165,7 +165,7 @@ body {
           font-weight: 400;
           font-family: 'Lato', sans-serif;
           line-height: 2.2rem;
-          transition: all .3s; }
+          transition: all .2s; }
         #footer .container-l .footer__social .social__redirect .footer__link:hover, #footer .container-l .footer__social .social__link .footer__link:hover {
           color: #007ea7; }
       #footer .container-l .footer__social .signature {
@@ -321,7 +321,7 @@ body {
         font-weight: 400;
         font-size: 2.4em;
         line-height: 2.9rem;
-        transition: all .3s; }
+        transition: all .2s; }
       #home .container-xl .home__article .article__btn #btn__getStarted:hover {
         cursor: pointer;
         background-color: #007ea7; }
@@ -402,7 +402,8 @@ body {
             justify-content: space-between;
             align-items: center;
             gap: 0;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); }
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            transition: all .2s; }
             #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__line .form__input {
               width: 26rem;
               height: auto;
@@ -414,6 +415,13 @@ body {
               color: #003459; }
             #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__line .form__input::placeholder {
               color: #c5c6c4; }
+          #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__line:focus-within {
+            box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35); }
+          #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .error {
+            border: solid 2px rgba(239, 35, 60, 0.6);
+            border-radius: 5px; }
+            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .error .form__input::placeholder {
+              color: rgba(239, 35, 60, 0.6); }
           #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons {
             display: flex;
             flex-direction: row;
@@ -426,10 +434,10 @@ body {
               font-weight: 400;
               font-size: 1.6em;
               color: #c5c6c4;
-              transition: all .3s; }
+              transition: all .2s; }
             #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons .buttons__forgotPsw:hover {
               color: #007ea7; }
-            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons #sumbit__logIn {
+            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons #submit__logIn {
               width: 14rem;
               height: 4rem;
               border: none;
@@ -438,8 +446,8 @@ body {
               font-weight: 700;
               font-size: 1.8em;
               color: #003459;
-              transition: all .3s; }
-            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons #sumbit__logIn:hover {
+              transition: all .2s; }
+            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons #submit__logIn:hover {
               cursor: pointer;
               box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
               color: #007ea7; }
@@ -471,7 +479,7 @@ body {
           outline: none;
           cursor: pointer; }
           #logIn .container-logIn .logIn__options .themeDock button img {
-            transition: all .3s; }
+            transition: all .2s; }
           #logIn .container-logIn .logIn__options .themeDock button img:hover {
             scale: 1.1; }
       #logIn .container-logIn .logIn__options .options__signUp {
@@ -488,7 +496,7 @@ body {
           cursor: pointer;
           color: #007ea7;
           background-color: rgba(0, 0, 0, 0);
-          transition: all .3s; }
+          transition: all .2s; }
         #logIn .container-logIn .logIn__options .options__signUp #btn__signUp:hover {
           color: #00a7e1; }
 
@@ -574,13 +582,13 @@ body {
           font-weight: 700;
           font-size: 3.2em;
           color: #003459; }
-        #signUp .container-signUp .signUp__article .signUp__panel .signUp__form {
+        #signUp .container-signUp .signUp__article .signUp__panel #signUp__form {
           display: grid;
           grid-template-columns: auto;
           grid-template-rows: 1fr 1fr 1fr;
           grid-column-gap: 0;
           grid-row-gap: 2rem; }
-          #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__line {
+          #signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__line {
             padding: 1.2rem 1.2rem;
             width: 32rem;
             height: auto;
@@ -590,8 +598,9 @@ body {
             justify-content: space-between;
             align-items: center;
             gap: 0;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); }
-            #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__line .form__input {
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            transition: all .2s; }
+            #signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__line .form__input {
               width: 26rem;
               height: auto;
               border: none;
@@ -600,24 +609,36 @@ body {
               font-weight: 400;
               font-size: 1.6em;
               color: #003459; }
-            #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__line .form__input::placeholder {
+            #signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__line .form__input::placeholder {
               color: #c5c6c4; }
-          #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__buttons {
+          #signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__line:focus-within {
+            box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35); }
+          #signUp .container-signUp .signUp__article .signUp__panel #signUp__form .error {
+            box-shadow: 0px 4px 4px 0px rgba(239, 35, 60, 0.6);
+            outline: solid 2px rgba(239, 35, 60, 0.6);
+            border-radius: 5px; }
+            #signUp .container-signUp .signUp__article .signUp__panel #signUp__form .error .form__input {
+              color: rgba(239, 35, 60, 0.6); }
+            #signUp .container-signUp .signUp__article .signUp__panel #signUp__form .error .form__input::placeholder {
+              color: rgba(239, 35, 60, 0.6); }
+          #signUp .container-signUp .signUp__article .signUp__panel #signUp__form .error:focus-within {
+            box-shadow: 0px 6px 6px 0px rgba(239, 35, 60, 0.6); }
+          #signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__buttons {
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-between;
             align-items: center;
             gap: 0; }
-            #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__buttons .buttons__forgotPsw {
+            #signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__buttons .buttons__forgotPsw {
               font-family: 'Lato', sans-serif;
               font-weight: 400;
               font-size: 1.6em;
               color: #c5c6c4;
-              transition: all .3s; }
-            #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__buttons .buttons__forgotPsw:hover {
+              transition: all .2s; }
+            #signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__buttons .buttons__forgotPsw:hover {
               color: #007ea7; }
-            #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__buttons #sumbit__signUp {
+            #signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__buttons #submit__signUp {
               width: 14rem;
               height: 4rem;
               border: none;
@@ -626,8 +647,8 @@ body {
               font-weight: 700;
               font-size: 1.8em;
               color: #003459;
-              transition: all .3s; }
-            #signUp .container-signUp .signUp__article .signUp__panel .signUp__form .form__buttons #sumbit__signUp:hover {
+              transition: all .2s; }
+            #signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__buttons #submit__signUp:hover {
               cursor: pointer;
               box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
               color: #007ea7; }
@@ -659,7 +680,7 @@ body {
           outline: none;
           cursor: pointer; }
           #signUp .container-signUp .signUp__options .themeDock button img {
-            transition: all .3s; }
+            transition: all .2s; }
           #signUp .container-signUp .signUp__options .themeDock button img:hover {
             scale: 1.1; }
       #signUp .container-signUp .signUp__options .options__signIn {
@@ -676,7 +697,7 @@ body {
           cursor: pointer;
           color: #007ea7;
           background-color: rgba(0, 0, 0, 0);
-          transition: all .3s; }
+          transition: all .2s; }
         #signUp .container-signUp .signUp__options .options__signIn #btn__signIn:hover {
           color: #00a7e1; }
 
@@ -718,23 +739,8 @@ body {
       #signUp .container-signUp .signUp__article {
         padding: 4.8rem 1.6rem; } }
 
-#home {
+#workflow {
   display: none; }
-
-#logIn {
-  display: none; }
-
-#signUp {
-  display: none; }
-
-#header {
-  display: block;
-  overflow-x: hidden; }
-  #header #header__welcome {
-    display: none; }
-
-#footer {
-  display: block; }
 
 #workflow {
   margin-top: 8.25rem;

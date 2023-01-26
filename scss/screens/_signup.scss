@@ -28,7 +28,7 @@
                     font-size: $font-32;
                     color: $navyBlue;
                 }
-                .signUp__form{
+                #signUp__form{
                     @include grid-container(auto, 1fr 1fr 1fr);
                     @include grid-gap(0, $space-20);
                     .form__line{
@@ -36,6 +36,8 @@
                         @include sizes(32rem, auto);
                         @include flex(row, nowrap, space-between, center, 0);
                         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        
+                        transition: all .2s;
                         .form__input{
                             @include sizes(26rem, auto);
                             border: none;
@@ -50,6 +52,23 @@
                             color: $gray;
                         }
                     }
+                    .form__line:focus-within{
+                        box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
+                    }
+                    .error{
+                        box-shadow: 0px 4px 4px 0px $imperialRed-op60;
+                        outline: solid 2px $imperialRed-op60;
+                        border-radius: 5px;
+                        .form__input{
+                            color:  $imperialRed-op60;
+                        }
+                        .form__input::placeholder{
+                            color: $imperialRed-op60;
+                        }
+                    }
+                    .error:focus-within{
+                        box-shadow: 0px 6px 6px 0px $imperialRed-op60;
+                    }
                     .form__buttons{
                         @include flex(row, nowrap, space-between, center, 0);
                         .buttons__forgotPsw{
@@ -57,12 +76,12 @@
                             font-weight: 400;
                             font-size: $font-16;
                             color: $gray;
-                            transition: all .3s;
+                            transition: all .2s;
                         }
                         .buttons__forgotPsw:hover{
                             color: $deepSkyBlue
                         }
-                        #sumbit__signUp{
+                        #submit__signUp{
                             @include sizes(14rem, 4rem);
                             border: none;
                             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -70,9 +89,9 @@
                             font-weight: 700;
                             font-size: $font-18;
                             color: $navyBlue;
-                            transition: all .3s;
+                            transition: all .2s;
                         }
-                        #sumbit__signUp:hover{
+                        #submit__signUp:hover{
                             cursor: pointer;
                             box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
                             color: $deepSkyBlue;
@@ -97,7 +116,7 @@
                     outline: none;
                     cursor: pointer;
                     img{
-                        transition: all .3s;
+                        transition: all .2s;
                     }
                     img:hover{
                         scale: 1.1;
@@ -118,7 +137,7 @@
                     cursor: pointer;
                     color: $deepSkyBlue;
                     background-color: rgba(0, 0, 0, 0);
-                    transition: all .3s;
+                    transition: all .2s;
                 }
                 #btn__signIn:hover{
                     color: $skyBlue;
