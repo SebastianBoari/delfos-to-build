@@ -57,6 +57,12 @@ body {
 .footer__theme--light .container-l .footer__social .signature {
   color: #003459; }
 
+#logIn .container-logIn .logInImg__theme--light {
+  background-image: url(../assets/misc/form-banner-light.png); }
+
+#signUp .container-signUp .signUpImg__theme--light {
+  background-image: url(../assets/misc/form-banner-light.png); }
+
 .body__theme--blueMidnight {
   background: #003459;
   background: radial-gradient(circle, #003459 0%, #00171f 100%); }
@@ -75,6 +81,12 @@ body {
 
 .footer__theme--blueMidnight .container-l .footer__social .signature {
   color: white; }
+
+#logIn .container-logIn .logInImg__theme--blueMidnight {
+  background-image: url(../assets/misc/form-banner-midnightblue.png); }
+
+#signUp .container-signUp .signUpImg__theme--blueMidnight {
+  background-image: url(../assets/misc/form-banner-midnightblue.png); }
 
 .body__theme--dark {
   background: #00171f;
@@ -95,7 +107,14 @@ body {
 .footer__theme--dark .container-l .footer__social .signature {
   color: white; }
 
+#logIn .container-logIn .logInImg__theme--dark {
+  background-image: url(../assets/misc/form-banner-dark.png); }
+
+#signUp .container-signUp .signUpImg__theme--dark {
+  background-image: url(../assets/misc/form-banner-dark.png); }
+
 #footer {
+  box-shadow: 0px -5px 5px 0px rgba(197, 198, 196, 0.8);
   padding: 10rem; }
   #footer .container-l {
     display: grid;
@@ -248,9 +267,37 @@ body {
         justify-content: space-between;
         align-items: center;
         gap: 3.2rem; }
-        #header .header__nav .container-xl .nav__buttons .buttons__img {
-          width: 3.5rem;
-          height: auto; }
+        #header .header__nav .container-xl .nav__buttons .buttons__panels {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: flex-end;
+          gap: 0; }
+          #header .header__nav .container-xl .nav__buttons .buttons__panels button {
+            cursor: pointer;
+            outline: none;
+            border: none;
+            background-color: rgba(25, 25, 25, 0); }
+            #header .header__nav .container-xl .nav__buttons .buttons__panels button .buttons__img {
+              width: 3.5rem;
+              height: auto; }
+          #header .header__nav .container-xl .nav__buttons .buttons__panels #navAccount__panel {
+            display: none;
+            position: absolute;
+            top: 60px;
+            width: 120px;
+            min-height: 120px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8); }
+          #header .header__nav .container-xl .nav__buttons .buttons__panels #navNotif__panel {
+            display: none;
+            position: absolute;
+            top: 60px;
+            width: 120px;
+            min-height: 120px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8); }
   #header #header__welcome {
     margin-top: 8.2rem;
     display: flex;
@@ -260,19 +307,41 @@ body {
     align-items: center;
     gap: 0;
     width: auto;
-    height: 49rem;
-    background-image: url(../assets/bg-img/header-welcome-bg.jpg);
+    height: 30rem;
+    background-image: url(../assets/bg-img/home-banner-1.jpg);
+    background-attachment: fixed;
     background-position: center;
     background-size: cover; }
     #header #header__welcome .welcome__figure .figure__img {
-      width: 16rem;
+      width: 12rem;
       height: auto; }
+
+.themeDock {
+  width: 21.3rem;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.6rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 1.2rem 3.6rem;
+  border-radius: 6rem; }
+  .themeDock .themeDock__label {
+    cursor: pointer; }
+    .themeDock .themeDock__label input {
+      display: none; }
+    .themeDock .themeDock__label img {
+      transition: all .2s; }
+    .themeDock .themeDock__label img:hover {
+      scale: 1.1; }
 
 #home .container-xl {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  padding: 22.4rem 0; }
+  padding: 12.8rem 0; }
   #home .container-xl .home__article {
     display: grid;
     grid-template-columns: 1fr;
@@ -351,6 +420,11 @@ body {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     width: auto;
     height: 71.8rem; }
+    #logIn .container-logIn #logIn__img {
+      width: 71.1rem;
+      height: 71.8rem;
+      background-position: center;
+      background-size: cover; }
     #logIn .container-logIn .logIn__article {
       background-color: white;
       padding: 6.4rem 12.5rem;
@@ -462,26 +536,6 @@ body {
       justify-content: stretch;
       align-items: stretch;
       gap: 3.2rem; }
-      #logIn .container-logIn .logIn__options .themeDock {
-        width: 21.3rem;
-        height: 6rem;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        gap: 1.6rem;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        padding: 1.2rem 3.6rem;
-        border-radius: 6rem; }
-        #logIn .container-logIn .logIn__options .themeDock button {
-          border: none;
-          outline: none;
-          cursor: pointer; }
-          #logIn .container-logIn .logIn__options .themeDock button img {
-            transition: all .2s; }
-          #logIn .container-logIn .logIn__options .themeDock button img:hover {
-            scale: 1.1; }
       #logIn .container-logIn .logIn__options .options__signUp {
         font-family: 'Lato', sans-serif;
         font-weight: 700;
@@ -505,7 +559,7 @@ body {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr; }
-    #logIn .container-logIn .logIn__figure {
+    #logIn .container-logIn #logIn__img {
       display: none; } }
 
 @media (max-width: 768px) {
@@ -547,6 +601,11 @@ body {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     width: auto;
     height: 71.8rem; }
+    #signUp .container-signUp #signUp__img {
+      width: 71.1rem;
+      height: 71.8rem;
+      background-position: center;
+      background-size: cover; }
     #signUp .container-signUp .signUp__article {
       background-color: white;
       padding: 6.4rem 12.5rem;
@@ -663,26 +722,6 @@ body {
       justify-content: stretch;
       align-items: stretch;
       gap: 3.2rem; }
-      #signUp .container-signUp .signUp__options .themeDock {
-        width: 21.3rem;
-        height: 6rem;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        gap: 1.6rem;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        padding: 1.2rem 3.6rem;
-        border-radius: 6rem; }
-        #signUp .container-signUp .signUp__options .themeDock button {
-          border: none;
-          outline: none;
-          cursor: pointer; }
-          #signUp .container-signUp .signUp__options .themeDock button img {
-            transition: all .2s; }
-          #signUp .container-signUp .signUp__options .themeDock button img:hover {
-            scale: 1.1; }
       #signUp .container-signUp .signUp__options .options__signIn {
         font-family: 'Lato', sans-serif;
         font-weight: 700;
@@ -706,7 +745,7 @@ body {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr; }
-    #signUp .container-signUp .signUp__figure {
+    #signUp .container-signUp #signUp__img {
       display: none; } }
 
 @media (max-width: 768px) {

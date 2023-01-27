@@ -41,27 +41,6 @@ function validateConfirmPassword(password, confirmPassword){
     }
 };
 
-// INPUTS
-const signUpform = document.getElementById('signUp__form');
-const signUpName = document.getElementById('signUp__name');
-const signUpPhone = document.getElementById('signUp__phone');
-const signUpEmail = document.getElementById('signUp__email');
-const signUpPassword = document.getElementById('signUp__password');
-const signUpConfirmPassword = document.getElementById('signUp__confirmPassword');
-const submitSignUp = document.getElementById('submit__signUp');
-// LABELS
-const formLine_signUpName = document.getElementById('form__line--signUpName');
-const formLine_signUpPhone = document.getElementById('form__line--signUpPhone');
-const formLine_signUpEmail = document.getElementById('form__line--signUpEmail');
-const formLine_signUpPassword = document.getElementById('form__line--signUpPassword');
-const formLine_signUpConfirmPassword = document.getElementById('form__line--signUpConfirmPassword');
-// ICONS
-const signUp_nameIcon = document.getElementById('signUp__nameIcon');
-const signUp_phoneIcon = document.getElementById('signUp__phoneIcon');
-const signUp_emailIcon = document.getElementById('signUp__emailIcon');
-const signUp_passwordIcon = document.getElementById('signUp__passwordIcon');
-const signUp_confirmPasswordIcon = document.getElementById('signUp__confirmPasswordIcon');
-
 // Manipulacion de estilos
 // Funcion de validacion con un solo parametro:
 function validateField(value, label, icon, iconPath, validationFunction){
@@ -84,18 +63,18 @@ function validateFieldParams(value1, value2, label, icon, iconPath, validationFu
     }
 };
 
-
-
-
-signUpform.addEventListener('submit', (e) => {
-    e.preventDefault()
-
-
+function errorInputStyles(){
     validateField(signUpName.value, formLine_signUpName, signUp_nameIcon, 'user-icon', validateName);
     validateField(signUpPhone.value, formLine_signUpPhone, signUp_phoneIcon, 'phone-icon', validatePhone);
     validateField(signUpEmail.value, formLine_signUpEmail, signUp_emailIcon, 'email-icon', validateEmail);
     validateField(signUpPassword.value, formLine_signUpPassword, signUp_passwordIcon, 'password-icon', validatePassword);
     validateFieldParams(signUpPassword.value, signUpConfirmPassword.value, formLine_signUpConfirmPassword, signUp_confirmPasswordIcon, 'password-icon', validateConfirmPassword);  
+};
+
+
+signUpform.addEventListener('submit', (e) => {
+    e.preventDefault();
+    errorInputStyles();
 });
 
 

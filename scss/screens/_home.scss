@@ -2,7 +2,7 @@
 #home{
     .container-xl{
         @include grid-container(1fr 1fr, auto);
-        padding: $space-224 0;
+        padding: $space-128 0;
         .home__article{
             @include grid-container(1fr, 1fr 1fr);
             .article__txt{

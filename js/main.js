@@ -1,3 +1,24 @@
-btnGetStartedEvent();
-btnSignUpEvent();
-btnSignInEvent();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.addEventListener('load', () => {
+    btnGetStartedEvent();
+    btnSignUpEvent();
+    btnSignInEvent();
+    dockEventsListeners();
+});

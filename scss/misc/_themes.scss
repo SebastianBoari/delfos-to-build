@@ -1,4 +1,5 @@
-// LIGHT 
+// LIGHT THEME
+
 // BODY
 .body__theme--light{
     background-color: white;
@@ -34,9 +35,32 @@
         }
     }
 }
+// LOGIN
+#logIn{
+    .container-logIn{
+        .logInImg__theme--light{
+            background-image: url(../assets/misc/form-banner-light.png);
+        }
+    }
+}
+// SIGNUP
+#signUp{
+    .container-signUp{
+        .signUpImg__theme--light{
+            background-image: url(../assets/misc/form-banner-light.png);
+        }
+    }
+}
+     
 
 
-// MIDNIGHT BLUE
+
+
+
+
+
+// MIDNIGHT BLUE THEME
+
 // BODY
 .body__theme--blueMidnight{
     background: rgb(0,52,89);
@@ -74,8 +98,40 @@
         }
     }
 }
+// LOGIN
+#logIn{
+    .container-logIn{
+        .logInImg__theme--blueMidnight{
+            background-image: url(../assets/misc/form-banner-midnightblue.png);
+        }
+    }
+}
+// SIGNUP
+#signUp{
+    .container-signUp{
+        .signUpImg__theme--blueMidnight{
+            background-image: url(../assets/misc/form-banner-midnightblue.png);
+        }
+    }
+}
 
-// DARKMODE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DARK THEME
 // BODY
 .body__theme--dark{
     background: rgb(0,23,31);
@@ -113,5 +169,20 @@
         }
     }
 }
-
+// LOGIN
+#logIn{
+    .container-logIn{
+        .logInImg__theme--dark{
+            background-image: url(../assets/misc/form-banner-dark.png);
+        }
+    }
+}
+// SIGNUP
+#signUp{
+    .container-signUp{
+        .signUpImg__theme--dark{
+            background-image: url(../assets/misc/form-banner-dark.png);
+        }
+    }
+}
 

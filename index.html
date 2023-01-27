@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./css/main.css">
     <title>Delfos: To Build</title>
 </head>
-<body class="body__theme--light">
+<body id="body" class="animate__animated animate__fadeIn animate__slow body__theme--light">
     <header id="header" class="header__theme--light">
         <nav class="header__nav">
             <div class="container-xl">
@@ -17,9 +18,21 @@
                     </a>
                 </figure>
                 <div class="nav__buttons">
-                    <img class="buttons__img" src="./assets/icons/bell-notification.svg" alt="">
-                    <img class="buttons__img" src="./assets/icons/account-circle.svg" alt="">
-                </div>      
+                    <div class="buttons__panels">
+                        <button id="btn__notif"><img class="buttons__img" src="./assets/icons/bell-notification.svg" alt="Notificaciones"></button>
+                        <div id="navNotif__panel">
+                            
+                        </div>   
+                    </div>
+                    <div class="buttons__panels">
+                        <button id="btn__account"><img class="buttons__img" src="./assets/icons/account-circle.svg" alt="Opciones de cuenta"></button>
+                        <div id="navAccount__panel">
+                            <button>Log In</button>
+                            <button>Log Out</button>
+                            <button>Configuration</button>
+                        </div>  
+                    </div>
+                </div>
             </div>     
         </nav>
 
@@ -34,7 +47,7 @@
         <section id="home">
             <div class="container-xl">
                 <figure class="home__figure">
-                    <img src="./assets/misc/illustration1-tobuild.png" alt="Ilustracion de un calendario con tareas a cumplir.">
+                    <img src="./assets/misc/home-illustration-1.png" alt="Ilustracion de un calendario con tareas a cumplir.">
                 </figure>
                 <article class="home__article">
                     <div class="article__txt">
@@ -48,10 +61,10 @@
             </div>
         </section>
 
-        <section id="logIn" class="logIn__theme--light">
+        <section id="logIn" class="logIn__theme--light animate__animated animate__fadeIn animate__slow">
             <div class="container-logIn">
-                <figure class="logIn__figure">
-                    <img class="figure__img" id="logIn__img" src="./assets/misc/logIn-light-img.png" alt="Paisaje de Santorini.">
+                <figure id="logIn__img" class="logInImg__theme--light">
+                    
                 </figure>
                 <article class="logIn__article">
                     <h2 class="logIn__title">PANORAMA</h2>
@@ -75,9 +88,18 @@
                     </div>
                     <div class="logIn__options">
                         <div class="themeDock">
-                            <button><img src="./assets/icons/light-dock.svg" alt="Ligth Theme"></button>
-                            <button><img src="./assets/icons/midnight-dock.svg" alt="Midnightblue Theme"></button>
-                            <button><img src="./assets/icons/dark-dock.svg" alt="Dark Theme"></button>
+                            <label class="themeDock__label">
+                                <img class="label__light--midnightblue" src="./assets/icons/light-dock.svg" alt="Light Theme">
+                                <input type="radio" name="theme" class="dock__input--light">
+                            </label>
+                            <label class="themeDock__label">
+                                <img class="label__light--midnightblue" src="./assets/icons/midnight-dock.svg" alt="Midnightblue Theme">
+                                <input type="radio" name="theme" class="dock__input--midnightblue">
+                            </label>
+                            <label class="themeDock__label">
+                                <img class="label__light--dark" src="./assets/icons/dark-dock.svg" alt="Dark Theme">
+                                <input type="radio" name="theme" class="dock__input--dark">
+                            </label>
                         </div>
                         <p class="options__signUp">Don't have an account? <button id="btn__signUp">Sign Up</button></p>
                     </div>
@@ -85,10 +107,10 @@
             </div>
         </section>
 
-        <section id="signUp" class="signUp__theme--light">
+        <section id="signUp" class="signUp__theme--light animate__animated animate__fadeIn animate__slow">
             <div class="container-signUp">
-                <figure class="signUp__figure">
-                    <img class="figure__img" id="signUp__img" src="./assets/misc/logIn-light-img.png" alt="Paisaje de Santorini.">
+                <figure id="signUp__img" class="signUpImg__theme--light">
+
                 </figure>
                 <article class="signUp__article">
                     <h2 class="signUp__title">PANORAMA</h2>
@@ -124,9 +146,18 @@
                     </div>
                     <div class="signUp__options">
                         <div class="themeDock">
-                            <button><img src="./assets/icons/light-dock.svg" alt="Ligth Theme"></button>
-                            <button><img src="./assets/icons/midnight-dock.svg" alt="Midnightblue Theme"></button>
-                            <button><img src="./assets/icons/dark-dock.svg" alt="Dark Theme"></button>
+                            <label class="themeDock__label">
+                                <img class="label__light--midnightblue" src="./assets/icons/light-dock.svg" alt="Light Theme">
+                                <input type="radio" name="theme" class="dock__input--light">
+                            </label>
+                            <label class="themeDock__label">
+                                <img class="label__light--midnightblue" src="./assets/icons/midnight-dock.svg" alt="Midnightblue Theme">
+                                <input type="radio" name="theme" class="dock__input--midnightblue">
+                            </label>
+                            <label class="themeDock__label">
+                                <img class="label__light--dark" src="./assets/icons/dark-dock.svg" alt="Dark Theme">
+                                <input type="radio" name="theme" class="dock__input--dark">
+                            </label>
                         </div>
                         <p class="options__signIn">Don't have an account? <button id="btn__signIn">Sign In</button></p>
                     </div>
@@ -138,7 +169,7 @@
 
 
 
-        <section id="workflow" class="workflow__theme--light">
+        <section id="workflow" class="animate__animated animate__fadeIn animate__slow workflow__theme--light">
             <div class="container-workflow">
 
             </div>
@@ -199,11 +230,12 @@
         </div>
     </footer>
 
-    
+    <!-- LIBRERIAS -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./js/components/themesDock.js"></script>
-    <script src="./js/components/validate.js"></script>
+    <!-- PROYECTO LOCAL -->
     <script src="./js/components/dom.js"></script>
+    <script src="./js/components/validate.js"></script>
+    <script src="./js/components/themesDock.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

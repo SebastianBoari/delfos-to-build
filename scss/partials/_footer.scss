@@ -1,5 +1,6 @@
 // GENERAL STYLES 
 #footer{
+    box-shadow: 0px -5px 5px 0px $gray-op80;
     padding: $space-100;
     .container-l{
         @include grid-container(1fr 1fr 1fr, auto);

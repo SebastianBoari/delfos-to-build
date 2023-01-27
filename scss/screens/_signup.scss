@@ -5,6 +5,11 @@
         @include grid-container(auto auto, 1fr);
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         @include sizes(auto, 71.8rem);
+        #signUp__img{
+            @include sizes(71.1rem, 71.8rem);
+            background-position: center;
+            background-size: cover;
+        }
         .signUp__article{
             background-color: $white;
             padding: $space-64 12.5rem;
@@ -104,25 +109,6 @@
         .signUp__options{
             @include grid-item($justify-self: center, $align-self: end);
             @include flex(column, nowrap, stretch, stretch, $space-32);
-            .themeDock{
-                @include sizes(21.3rem, 6rem);
-                @include flex(row, nowrap, space-around, center, $space-16);
-
-                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-                padding:  $space-12 $space-36;
-                border-radius: 6rem;
-                button{
-                    border: none;
-                    outline: none;
-                    cursor: pointer;
-                    img{
-                        transition: all .2s;
-                    }
-                    img:hover{
-                        scale: 1.1;
-                    }
-                }
-            }
             .options__signIn{
                 font-family: 'Lato', sans-serif;
                 font-weight: 700;
@@ -153,7 +139,7 @@
     #signUp{
         .container-signUp{
             @include grid-container(auto, 1fr);
-            .signUp__figure{
+            #signUp__img{
                 display: none;
             }
         }
