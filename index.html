@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/main.css">
     <title>Delfos: To Build</title>
 </head>
@@ -37,9 +39,24 @@
         </nav>
 
         <article id="header__welcome">
-            <figure class="welcome__figure">
-                <img class="figure__img" src="./assets/icons/tobuild-logo-v1.png" alt="Logo de Delfos ToBuild">
-            </figure>
+            <!-- Slider main container -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./assets/bg-img/home-banner-1.png" alt="asdasd">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/bg-img/home-banner-2.png" alt="asdasd">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/bg-img/home-banner-3.png" alt="asdasd">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/bg-img/home-banner-4.png" alt="asdasd">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
         </article>
     </header>
 
@@ -59,6 +76,31 @@
                     </div>
                 </article>
             </div>
+
+            <div id="home__wall">
+                <div class="container-xl">
+                    <article class="home__article--wall">
+                        <div class="article__txt--wall">
+                            <p class="txt__wall txtWall__left"><span>To <span>Build</span></span> paths, reach your goals, remember what is important.</p>
+                        </div>
+                    </article>
+                    <figure class="home__figure--wall">
+                        <img src="./assets/misc/home-illustration-2.png" alt="Ilustracion de una persona trabajando en su realizacion personal.">
+                    </figure>
+                </div>
+    
+                <div class="container-xl">
+                    <figure class="home__figure--wall">
+                        <img src="./assets/misc/home-illustration-3.png" alt="Ilustracion de dispositivos inteligentes.">
+                    </figure>
+                    <article class="home__article--wall">
+                        <div class="article__txt--wall">
+                            <p class="txt__wall txtWall__right">Wherever you are, wherever you can, wherever you want. Go <span>To <span>Build</span>!</span></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            
         </section>
 
         <section id="logIn" class="logIn__theme--light animate__animated animate__fadeIn animate__slow">
@@ -71,13 +113,13 @@
 
                     <div class="logIn__panel">
                         <h4 class="panel__title">Log In</h4>
-                        <form class="logIn__form">
-                            <label class="form__line">
-                                <img src="./assets/icons/user-icon-default.png" alt="User form icon">
-                                <input class="form__input" type="email" name="userEmail" id="logIn__email" placeholder="username phone or email">
+                        <form id="logIn__form">
+                            <label class="form__line" id="form__line--logInUser">
+                                <img id="logIn__userIcon" src="./assets/icons/user-icon-default.png" alt="User form icon">
+                                <input class="form__input" type="text" name="userName" id="logIn__user" placeholder="username phone or email">
                             </label>
-                            <label class="form__line">
-                                <img src="./assets/icons/password-icon-default.png" alt="Password form icon">
+                            <label class="form__line" id="form__line--logInPassword">
+                                <img id="logIn__passwordIcon" src="./assets/icons/password-icon-default.png" alt="Password form icon">
                                 <input class="form__input" type="password" name="userPassword" id="logIn__psw" placeholder="password">
                             </label>
                             <div class="form__buttons">
@@ -132,7 +174,7 @@
                             </label>
                             <label class="form__line" id="form__line--signUpPassword">
                                 <img src="./assets/icons/password-icon-default.png" alt="Password form icon" id="signUp__passwordIcon">
-                                <input class="form__input" type="password" name="userPassword" id="signUp__password" placeholder="password">
+                                <input class="form__input" type="password" name="userPassword" id="signUp__password" placeholder="Create password">
                             </label>
                             <label class="form__line" id="form__line--signUpConfirmPassword">
                                 <img src="./assets/icons/password-icon-default.png" alt="Password form icon" id="signUp__confirmPasswordIcon">
@@ -171,7 +213,9 @@
 
         <section id="workflow" class="animate__animated animate__fadeIn animate__slow workflow__theme--light">
             <div class="container-workflow">
-
+                <div class="container-xl">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=es.ar%23holiday%40group.v.calendar.google.com&ctz=America%2FArgentina%2FBuenos_Aires" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                </div>
             </div>
         </section>
 
@@ -189,6 +233,7 @@
 
 
 
+  
 
 
 
@@ -231,7 +276,9 @@
     </footer>
 
     <!-- LIBRERIAS -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <!-- PROYECTO LOCAL -->
     <script src="./js/components/dom.js"></script>
     <script src="./js/components/validate.js"></script>

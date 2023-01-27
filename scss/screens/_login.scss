@@ -33,7 +33,7 @@
                     font-size: $font-32;
                     color: $navyBlue;
                 }
-                .logIn__form{
+                #logIn__form{
                     @include grid-container(auto, 1fr 1fr 1fr);
                     @include grid-gap(0, $space-32);
                     .form__line{
@@ -61,11 +61,18 @@
                         box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
                     }
                     .error{
-                        border: solid 2px $imperialRed-op60;
+                        box-shadow: 0px 4px 4px 0px $imperialRed-op60;
+                        outline: solid 2px $imperialRed-op60;
                         border-radius: 5px;
+                        .form__input{
+                            color:  $imperialRed-op60;
+                        }
                         .form__input::placeholder{
                             color: $imperialRed-op60;
                         }
+                    }
+                    .error:focus-within{
+                        box-shadow: 0px 6px 6px 0px $imperialRed-op60;
                     }
                     .form__buttons{
                         @include flex(row, nowrap, space-between, center, 0);

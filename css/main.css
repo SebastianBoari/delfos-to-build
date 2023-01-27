@@ -8,7 +8,7 @@
 html {
   font-size: 62.5%; }
 
-main {
+body {
   font-family: 'Lato', sans-serif; }
 
 .container-xl {
@@ -112,6 +112,45 @@ body {
 
 #signUp .container-signUp .signUpImg__theme--dark {
   background-image: url(../assets/misc/form-banner-dark.png); }
+
+.swal-title {
+  color: #003459; }
+
+.swal-text {
+  color: #003459; }
+
+.swal-button--confirm {
+  background-color: #007ea7;
+  border-radius: 0px;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  transition: all .2s;
+  font-weight: 400;
+  opacity: 1; }
+
+.swal-button--confirm:hover {
+  border-radius: 0px;
+  outline: none;
+  border: none;
+  box-shadow: none; }
+
+.swal-button--confirm:focus {
+  border-radius: 0px;
+  outline: none;
+  box-shadow: none;
+  border: none; }
+
+.swal-button--cancel {
+  color: #003459;
+  transition: all .2s;
+  font-weight: 600; }
+
+.swal-button--cancel:hover {
+  color: #ef233c; }
+
+.swal-button--cancel:focus {
+  color: #ef233c; }
 
 #footer {
   box-shadow: 0px -5px 5px 0px rgba(197, 198, 196, 0.8);
@@ -245,7 +284,7 @@ body {
   #header .header__nav {
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     width: 100vw;
     height: auto; }
@@ -300,21 +339,13 @@ body {
             background-color: rgba(255, 255, 255, 0.8); }
   #header #header__welcome {
     margin-top: 8.2rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
     width: auto;
-    height: 30rem;
-    background-image: url(../assets/bg-img/home-banner-1.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover; }
-    #header #header__welcome .welcome__figure .figure__img {
-      width: 12rem;
-      height: auto; }
+    height: 30rem; }
+    #header #header__welcome .swiper {
+      position: absolute;
+      width: 1920px;
+      height: 30rem;
+      object-fit: cover; }
 
 .themeDock {
   width: 21.3rem;
@@ -337,65 +368,108 @@ body {
     .themeDock .themeDock__label img:hover {
       scale: 1.1; }
 
-#home .container-xl {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  padding: 12.8rem 0; }
-  #home .container-xl .home__article {
+#home {
+  padding: 3.2rem 0; }
+  #home .container-xl {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr; }
-    #home .container-xl .home__article .article__txt {
-      grid-column: auto/span 1;
-      grid-row: auto/span 1;
-      justify-self: center;
-      align-self: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 8rem 0; }
+    #home .container-xl .home__article--wall {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      grid-column-gap: 0;
-      grid-row-gap: 3.2rem;
-      max-width: 54rem;
-      max-height: none; }
-      #home .container-xl .home__article .article__txt .txt__title {
-        text-align: center;
-        font-family: 'Lato', sans-serif;
-        font-size: 3.6em;
-        font-weight: 700;
-        line-height: 3.2rem;
-        color: #003459; }
-        #home .container-xl .home__article .article__txt .txt__title span {
-          color: #007ea7; }
-      #home .container-xl .home__article .article__txt .txt__p {
-        text-align: center;
-        font-family: 'Lato', sans-serif;
-        font-size: 1.8em;
-        font-weight: 300;
-        line-height: 3.2rem;
-        color: #007ea7; }
-    #home .container-xl .home__article .article__btn {
+      grid-template-rows: 1fr; }
+      #home .container-xl .home__article--wall .article__txt--wall {
+        grid-column: auto/span 1;
+        grid-row: auto/span 1;
+        justify-self: center;
+        align-self: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 3.2rem;
+        max-width: 54rem;
+        max-height: none; }
+        #home .container-xl .home__article--wall .article__txt--wall .txt__wall {
+          grid-column: auto/span 1;
+          grid-row: auto/span 1;
+          justify-self: center;
+          align-self: center;
+          font-family: 'Lato', sans-serif;
+          font-weight: 300;
+          font-size: 6.4em;
+          color: #003459;
+          line-height: 10rem; }
+          #home .container-xl .home__article--wall .article__txt--wall .txt__wall span {
+            font-weight: 600; }
+            #home .container-xl .home__article--wall .article__txt--wall .txt__wall span span {
+              color: #007ea7; }
+        #home .container-xl .home__article--wall .article__txt--wall .txtWall__left {
+          text-align: start; }
+        #home .container-xl .home__article--wall .article__txt--wall .txtWall__right {
+          text-align: end; }
+    #home .container-xl .home__figure--wall {
       grid-column: auto/span 1;
       grid-row: auto/span 1;
-      justify-self: center;
+      justify-self: stretch;
       align-self: center; }
-      #home .container-xl .home__article .article__btn #btn__getStarted {
-        width: 25.8rem;
-        height: 6rem;
-        border: none;
-        background-color: #00a7e1;
-        color: white;
-        text-align: center;
-        font-family: 'Lato', sans-serif;
-        font-weight: 400;
-        font-size: 2.4em;
-        line-height: 2.9rem;
-        transition: all .2s; }
-      #home .container-xl .home__article .article__btn #btn__getStarted:hover {
-        cursor: pointer;
-        background-color: #007ea7; }
+    #home .container-xl .home__article {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr; }
+      #home .container-xl .home__article .article__txt {
+        grid-column: auto/span 1;
+        grid-row: auto/span 1;
+        justify-self: center;
+        align-self: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 3.2rem;
+        max-width: 54rem;
+        max-height: none; }
+        #home .container-xl .home__article .article__txt .txt__title {
+          text-align: center;
+          font-family: 'Lato', sans-serif;
+          font-size: 3.6em;
+          font-weight: 700;
+          line-height: 3.2rem;
+          color: #003459; }
+          #home .container-xl .home__article .article__txt .txt__title span {
+            color: #007ea7; }
+        #home .container-xl .home__article .article__txt .txt__p {
+          text-align: center;
+          font-family: 'Lato', sans-serif;
+          font-size: 1.8em;
+          font-weight: 300;
+          line-height: 3.2rem;
+          color: #007ea7; }
+      #home .container-xl .home__article .article__btn {
+        grid-column: auto/span 1;
+        grid-row: auto/span 1;
+        justify-self: center;
+        align-self: center; }
+        #home .container-xl .home__article .article__btn #btn__getStarted {
+          width: 25.8rem;
+          height: 6rem;
+          border: none;
+          background-color: #00a7e1;
+          color: white;
+          text-align: center;
+          font-family: 'Lato', sans-serif;
+          font-weight: 400;
+          font-size: 2.4em;
+          line-height: 2.9rem;
+          transition: all .2s; }
+        #home .container-xl .home__article .article__btn #btn__getStarted:hover {
+          cursor: pointer;
+          background-color: #007ea7; }
 
 @media (max-width: 1200px) {
+  #home #home__wall {
+    display: none; }
   #home .container-xl {
     display: grid;
     grid-template-columns: 1fr;
@@ -460,13 +534,13 @@ body {
           font-weight: 700;
           font-size: 3.2em;
           color: #003459; }
-        #logIn .container-logIn .logIn__article .logIn__panel .logIn__form {
+        #logIn .container-logIn .logIn__article .logIn__panel #logIn__form {
           display: grid;
           grid-template-columns: auto;
           grid-template-rows: 1fr 1fr 1fr;
           grid-column-gap: 0;
           grid-row-gap: 3.2rem; }
-          #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__line {
+          #logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__line {
             padding: 1.2rem 1.2rem;
             width: 32rem;
             height: auto;
@@ -478,7 +552,7 @@ body {
             gap: 0;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             transition: all .2s; }
-            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__line .form__input {
+            #logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__line .form__input {
               width: 26rem;
               height: auto;
               border: none;
@@ -487,31 +561,36 @@ body {
               font-weight: 400;
               font-size: 1.6em;
               color: #003459; }
-            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__line .form__input::placeholder {
+            #logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__line .form__input::placeholder {
               color: #c5c6c4; }
-          #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__line:focus-within {
+          #logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__line:focus-within {
             box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35); }
-          #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .error {
-            border: solid 2px rgba(239, 35, 60, 0.6);
+          #logIn .container-logIn .logIn__article .logIn__panel #logIn__form .error {
+            box-shadow: 0px 4px 4px 0px rgba(239, 35, 60, 0.6);
+            outline: solid 2px rgba(239, 35, 60, 0.6);
             border-radius: 5px; }
-            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .error .form__input::placeholder {
+            #logIn .container-logIn .logIn__article .logIn__panel #logIn__form .error .form__input {
               color: rgba(239, 35, 60, 0.6); }
-          #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons {
+            #logIn .container-logIn .logIn__article .logIn__panel #logIn__form .error .form__input::placeholder {
+              color: rgba(239, 35, 60, 0.6); }
+          #logIn .container-logIn .logIn__article .logIn__panel #logIn__form .error:focus-within {
+            box-shadow: 0px 6px 6px 0px rgba(239, 35, 60, 0.6); }
+          #logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__buttons {
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-between;
             align-items: center;
             gap: 0; }
-            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons .buttons__forgotPsw {
+            #logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__buttons .buttons__forgotPsw {
               font-family: 'Lato', sans-serif;
               font-weight: 400;
               font-size: 1.6em;
               color: #c5c6c4;
               transition: all .2s; }
-            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons .buttons__forgotPsw:hover {
+            #logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__buttons .buttons__forgotPsw:hover {
               color: #007ea7; }
-            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons #submit__logIn {
+            #logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__buttons #submit__logIn {
               width: 14rem;
               height: 4rem;
               border: none;
@@ -521,7 +600,7 @@ body {
               font-size: 1.8em;
               color: #003459;
               transition: all .2s; }
-            #logIn .container-logIn .logIn__article .logIn__panel .logIn__form .form__buttons #submit__logIn:hover {
+            #logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__buttons #submit__logIn:hover {
               cursor: pointer;
               box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
               color: #007ea7; }

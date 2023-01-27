@@ -20,12 +20,20 @@ const btnSignUp = document.getElementById('btn__signUp');
 // SIGNUP BTN (on SignUp screen, redirect to LogIn screen)
 const btnSignIn = document.getElementById('btn__signIn');
 
-
-
-
 //LOGIN
+let tryToLogIn = 0;
 const logInImg = document.getElementById('logIn__img');
-
+// INPUTS
+const logInForm = document.getElementById('logIn__form');
+const logInUser = document.getElementById('logIn__user');
+const logInPassword = document.getElementById('logIn__psw');
+const logInSubmit = document.getElementById('submit__logIn');
+// LABELS
+const formLine_logInUser = document.getElementById('form__line--logInUser');
+const formLine_logInPassword = document.getElementById('form__line--logInPassword');
+// ICONS
+const logIn_userIcon = document.getElementById('logIn__userIcon');
+const logIn_passwordIcon = document.getElementById('logIn__passwordIcon');
 
 // SIGNUP 
 const signUpImg = document.getElementById('signUp__img');
@@ -50,6 +58,9 @@ const signUp_emailIcon = document.getElementById('signUp__emailIcon');
 const signUp_passwordIcon = document.getElementById('signUp__passwordIcon');
 const signUp_confirmPasswordIcon = document.getElementById('signUp__confirmPasswordIcon');
 
+
+
+
 // NAVIGATION FLOW
 // HOME EVENTS
 const btnGetStartedEvent = () =>{
@@ -60,6 +71,7 @@ const btnGetStartedEvent = () =>{
         sectionHome.style.display = 'none';
         // SHOW
         sectionLogIn.style.display = 'grid';
+        initLogIn();
     });
 };
 
@@ -74,6 +86,8 @@ const btnSignUpEvent = () => {
         sectionLogIn.style.display = 'none';
         // SHOW
         sectionSignUp.style.display = 'grid';
+        // SIGNUP INIT
+        initSignUp();
     });
 };
 
@@ -88,6 +102,8 @@ const btnSignInEvent = () => {
         sectionSignUp.style.display = 'none';
         // SHOW
         sectionLogIn.style.display = 'grid';
+        // LOGIN INIT
+        initLogIn();
     });
 };
 

@@ -1,15 +1,50 @@
 // GENERAL STYLES
 #home{
+    padding: $space-32 0;
     .container-xl{
         @include grid-container(1fr 1fr, auto);
-        padding: $space-128 0;
+        padding: $space-80 0;
+        .home__article--wall{
+            @include grid-container(1fr, 1fr);
+            .article__txt--wall{
+                @include grid-item($justify-self: center, $align-self: center);
+                @include grid-container(1fr, 1fr);
+                @include grid-gap(0, $space-32);
+                @include max-sizes(54rem, none);
+                .txt__wall{
+                    @include grid-item($justify-self: center, $align-self: center);
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 300;
+                    font-size: $font-64;
+                    color: $navyBlue;
+                    line-height: $space-100;
+                    span{
+                        font-weight: 600;
+                        span{
+                            color: $deepSkyBlue;
+                        }
+                    }
+                }
+
+                .txtWall__left{
+                    text-align: start;
+                }
+                .txtWall__right{
+                    text-align: end;
+                }
+            }
+        }
+        .home__figure--wall{
+            @include grid-item($justify-self: stretch, $align-self: center);
+        }
         .home__article{
             @include grid-container(1fr, 1fr 1fr);
             .article__txt{
                 @include grid-item($justify-self: center, $align-self: center);
-                @include grid-container(1fr, auto);
+                @include grid-container(1fr, 1fr);
                 @include grid-gap(0, $space-32);
                 @include max-sizes(54rem, none);
+
                 .txt__title{
                     text-align: center;
                     font-family: 'Lato', sans-serif;
@@ -60,6 +95,9 @@
 // 1200px
 @media (max-width: 1200px){
     #home{
+        #home__wall{
+            display: none;
+        }
         .container-xl{
             @include grid-container(1fr, auto);
             padding: $space-128  $space-32;
