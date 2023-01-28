@@ -22,16 +22,16 @@
                 <div class="nav__buttons">
                     <div class="buttons__panels">
                         <button id="btn__notif"><img class="buttons__img" src="./assets/icons/bell-notification.svg" alt="Notificaciones"></button>
-                        <div id="navNotif__panel">
+                        <div id="navNotif__panel" class="display-none">
                             
                         </div>   
                     </div>
                     <div class="buttons__panels">
                         <button id="btn__account"><img class="buttons__img" src="./assets/icons/account-circle.svg" alt="Opciones de cuenta"></button>
-                        <div id="navAccount__panel">
-                            <button>Log In</button>
-                            <button>Log Out</button>
-                            <button>Configuration</button>
+                        <div id="navAccount__panel" class="display-none">
+                            <button id="panelBtn__logIn">Log In</button>
+                            <button id="panelBtn__logOut">Log Out</button>
+                            <button id="panelBtn__Config">Configuration</button>
                         </div>  
                     </div>
                 </div>
@@ -280,9 +280,8 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <!-- PROYECTO LOCAL -->
-    <script src="./js/components/dom.js"></script>
+    <script src="./js/dom.js"></script>
     <script src="./js/components/validate.js"></script>
     <script src="./js/components/themesDock.js"></script>
-    <script src="./js/main.js"></script>
 </body>
 </html>

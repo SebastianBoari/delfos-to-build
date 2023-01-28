@@ -1,7 +1,5 @@
 // SIGNUP
-
 // Funciones de validacion:
-
 function validateEmail(email){
     let re = /^[^@]+@[^@.]+\.[^@]{2,}$/;
     if(re.test(String(email).toLowerCase())){
@@ -10,7 +8,6 @@ function validateEmail(email){
         return false;
     };
 };
-    
 function validatePhone(phoneNumber){
     if(phoneNumber.length > 9){
         return true;
@@ -18,7 +15,6 @@ function validatePhone(phoneNumber){
         return false;
     }
 };
-    
 function validateName(name){
 let nameRegex = /^[a-zA-Z\s]*$/;
     if(name.match(nameRegex) && name.length > 8) {
@@ -27,7 +23,6 @@ let nameRegex = /^[a-zA-Z\s]*$/;
         return false;
     };
 };
-
 function validatePassword(password){
     if (password.length < 8) {
         return false;
@@ -44,10 +39,9 @@ function validateConfirmPassword(password, confirmPassword){
 };
 
 // Manipulacion de estilos
-
 // Funcion de validacion con un solo parametro:
 function validateFieldStyles(value, label, icon, iconPath, validationFunction){
-    if(validationFunction(value) == false || validationFunction(value) == null){
+    if(validationFunction(value) == false){
         label.classList.add('error');
         icon.src = `./assets/icons/${iconPath}-error.png`;
     } else if(validationFunction(value) == true){
@@ -57,7 +51,7 @@ function validateFieldStyles(value, label, icon, iconPath, validationFunction){
 };
 // Funcion de validacion con 2 parametros:
 function validateFieldStylesParams(value1, value2, label, icon, iconPath, validationFunction){
-    if(validationFunction(value1, value2) == false || validationFunction(value1, value2) == null){
+    if(validationFunction(value1, value2) == false){
         label.classList.add('error');
         icon.src = `./assets/icons/${iconPath}-error.png`;
     } else if(validationFunction(value1, value2) == true){
@@ -66,21 +60,19 @@ function validateFieldStylesParams(value1, value2, label, icon, iconPath, valida
     }
 };
 
-
-
 // Estilos de los inputs
-function signUpErrorFieldStyles(){
+const signUpErrorFieldStyles = () => {
     validateFieldStyles(signUpName.value, formLine_signUpName, signUp_nameIcon, 'user-icon', validateName);
     validateFieldStyles(signUpPhone.value, formLine_signUpPhone, signUp_phoneIcon, 'phone-icon', validatePhone);
     validateFieldStyles(signUpEmail.value, formLine_signUpEmail, signUp_emailIcon, 'email-icon', validateEmail);
     validateFieldStyles(signUpPassword.value, formLine_signUpPassword, signUp_passwordIcon, 'password-icon', validatePassword);
-    validateFieldStylesParams(signUpPassword.value, signUpConfirmPassword.value, formLine_signUpConfirmPassword, signUp_confirmPasswordIcon, 'password-icon', validateConfirmPassword);  
+
+    validateFieldStylesParams(signUpPassword.value, signUpConfirmPassword.value, formLine_signUpConfirmPassword, signUp_confirmPasswordIcon, 'password-icon', validateConfirmPassword); 
 };
 
 // Validacion de informacion
 function saveUserData(){
-    if (validateName(signUpName.value) == true && validatePhone(signUpPhone.value) == true && validateEmail(signUpEmail.value) == true && validateConfirmPassword(signUpPassword.value, signUpConfirmPassword.value) == true){
-        console.log('Estoy funcionando xd')
+    if (validateName(signUpName.value) == true && validatePhone(signUpPhone.value) == true && validateEmail(signUpEmail.value) == true && validatePassword(signUpPassword.value) == true && validateConfirmPassword(signUpPassword.value, signUpConfirmPassword.value) == true){
         localStorage.setItem('userName', signUpName.value);
         localStorage.setItem('userPhone', signUpPhone.value);
         localStorage.setItem('userEmail', signUpEmail.value);
@@ -144,7 +136,6 @@ function initSignUp(){
 };
 
 
-
 // LOGIN
 
 // Validacion de datos:
@@ -168,6 +159,7 @@ function logInErrorFieldStyles(){
     validateFieldStyles(logInPassword.value, formLine_logInPassword, logIn_passwordIcon, 'password-icon', validatePasswordLogIn);
 }
 // Validacion de credenciales
+let tryToLogIn = 0;
 function validateCredentials(){
     if(tryToLogIn < 3){
         if(validateUserLogIn() == true && validatePasswordLogIn() == true){
@@ -218,20 +210,8 @@ function initLogIn(){
         validateCredentials();
         
         if(validateCredentials){
-            // HIDE
-            sectionHome.style.display = 'none';
-            sectionSignUp.style.display = 'none';
-            sectionLogIn.style.display = 'none';
-            // SHOW
-            header.style.display = 'grid';
-            footer.style.display = 'grid';
-            const workflow = document.getElementById('workflow').style.display = 'grid';
+            sessionStorage.setItem('session', 'active');
+            displayWorkflow();
         };
     });
 };
-
-
-
-
-
-

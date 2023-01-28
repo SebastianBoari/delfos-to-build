@@ -34,6 +34,9 @@ body {
   max-width: 144rem;
   margin: 0 auto; }
 
+.display-none {
+  display: none; }
+
 body {
   display: grid;
   grid-template-columns: 1fr;
@@ -322,7 +325,6 @@ body {
               width: 3.5rem;
               height: auto; }
           #header .header__nav .container-xl .nav__buttons .buttons__panels #navAccount__panel {
-            display: none;
             position: absolute;
             top: 60px;
             width: 120px;
@@ -330,7 +332,6 @@ body {
             border-radius: 5px;
             background-color: rgba(255, 255, 255, 0.8); }
           #header .header__nav .container-xl .nav__buttons .buttons__panels #navNotif__panel {
-            display: none;
             position: absolute;
             top: 60px;
             width: 120px;

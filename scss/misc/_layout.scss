@@ -21,7 +21,9 @@
     max-width: 144rem;
     margin: 0 auto;
 }
-
+.display-none{
+    display: none;
+}
 body{
     @include grid-container(1fr, auto);
 }
