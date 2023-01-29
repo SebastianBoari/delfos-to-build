@@ -9,7 +9,9 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  height: 100%; }
 
 .container-xl {
   max-width: 138rem;
@@ -35,7 +37,7 @@ body {
   margin: 0 auto; }
 
 .display-none {
-  display: none; }
+  display: none !important; }
 
 body {
   display: grid;
@@ -289,7 +291,7 @@ body {
     top: 0;
     z-index: 2;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    width: 100vw;
+    width: 100%;
     height: auto; }
     #header .header__nav .container-xl {
       display: flex;
@@ -325,26 +327,48 @@ body {
               width: 3.5rem;
               height: auto; }
           #header .header__nav .container-xl .nav__buttons .buttons__panels #navAccount__panel {
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3.2rem;
+            width: 12rem;
+            height: auto;
+            padding: 1.6rem;
             position: absolute;
             top: 60px;
-            width: 120px;
-            min-height: 120px;
             border-radius: 5px;
             background-color: rgba(255, 255, 255, 0.8); }
-          #header .header__nav .container-xl .nav__buttons .buttons__panels #navNotif__panel {
-            position: absolute;
-            top: 60px;
-            width: 120px;
-            min-height: 120px;
-            border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.8); }
+            #header .header__nav .container-xl .nav__buttons .buttons__panels #navAccount__panel #panelBtn__logIn {
+              font-family: 'Lato', sans-serif;
+              font-size: 1.6em;
+              font-weight: 600;
+              color: #007ea7;
+              transition: all .2s; }
+            #header .header__nav .container-xl .nav__buttons .buttons__panels #navAccount__panel #panelBtn__logIn {
+              color: #00a7e1; }
+            #header .header__nav .container-xl .nav__buttons .buttons__panels #navAccount__panel #panelBtn__logOut {
+              font-family: 'Lato', sans-serif;
+              font-size: 1.6em;
+              font-weight: 600;
+              color: #ef233c;
+              transition: all .2s; }
+            #header .header__nav .container-xl .nav__buttons .buttons__panels #navAccount__panel #panelBtn__logOut {
+              color: #d90429; }
+            #header .header__nav .container-xl .nav__buttons .buttons__panels #navAccount__panel #panelBtn__Config {
+              align-self: flex-end; }
+              #header .header__nav .container-xl .nav__buttons .buttons__panels #navAccount__panel #panelBtn__Config img {
+                width: 2.4rem;
+                height: auto; }
   #header #header__welcome {
     margin-top: 8.2rem;
-    width: auto;
+    width: 100%;
     height: 30rem; }
     #header #header__welcome .swiper {
       position: absolute;
-      width: 1920px;
+      width: 100%;
       height: 30rem;
       object-fit: cover; }
 
@@ -370,7 +394,7 @@ body {
       scale: 1.1; }
 
 #home {
-  padding: 3.2rem 0; }
+  padding: 3.2rem 0 6.4rem; }
   #home .container-xl {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -485,6 +509,174 @@ body {
       #home .container-xl .home__article .article__btn #btn__getStarted {
         width: 25.8rem;
         height: 6rem; } }
+
+#configuration {
+  z-index: 1;
+  position: fixed;
+  top: 12.8rem;
+  left: 45rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  max-width: 128rem;
+  max-height: auto; }
+  #configuration .configuration__user {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.2rem;
+    max-width: 128rem;
+    max-height: 51.2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 3.2rem; }
+    #configuration .configuration__user .configUser__figure img {
+      width: 12rem;
+      height: auto; }
+    #configuration .configuration__user #configUser__form {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-column-gap: 0;
+      grid-row-gap: 2.4rem; }
+      #configuration .configuration__user #configUser__form .form__line {
+        padding: 1.2rem 1.2rem;
+        width: 32rem;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        transition: all .2s; }
+        #configuration .configuration__user #configUser__form .form__line .form__input {
+          width: 26rem;
+          height: auto;
+          border: none;
+          outline: none;
+          background-color: rgba(25, 25, 25, 0);
+          font-family: 'Lato', sans-serif;
+          font-weight: 400;
+          font-size: 1.6em;
+          color: #003459; }
+        #configuration .configuration__user #configUser__form .form__line .form__input::placeholder {
+          color: #c5c6c4; }
+      #configuration .configuration__user #configUser__form .form__line:focus-within {
+        box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35); }
+      #configuration .configuration__user #configUser__form .error {
+        box-shadow: 0px 4px 4px 0px rgba(239, 35, 60, 0.6);
+        outline: solid 2px rgba(239, 35, 60, 0.6);
+        border-radius: 5px; }
+        #configuration .configuration__user #configUser__form .error .form__input {
+          color: rgba(239, 35, 60, 0.6); }
+        #configuration .configuration__user #configUser__form .error .form__input::placeholder {
+          color: rgba(239, 35, 60, 0.6); }
+      #configuration .configuration__user #configUser__form .error:focus-within {
+        box-shadow: 0px 6px 6px 0px rgba(239, 35, 60, 0.6); }
+      #configuration .configuration__user #configUser__form .form__buttons #submit__configUser {
+        width: 14rem;
+        height: 4rem;
+        border: none;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 1.8em;
+        color: #003459;
+        transition: all .2s; }
+      #configuration .configuration__user #configUser__form .form__buttons #submit__configUser:hover {
+        cursor: pointer;
+        box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
+        color: #007ea7; }
+  #configuration .configuration__profileImg {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 3.2rem;
+    padding: 3.2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 5px; }
+    #configuration .configuration__profileImg .profileImge__title {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 1.8em;
+      color: #007ea7; }
+    #configuration .configuration__profileImg .profileImg__options {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      grid-template-rows: repeat(3, auto);
+      grid-column-gap: 3.2rem;
+      grid-row-gap: 3.2rem; }
+      #configuration .configuration__profileImg .profileImg__options img {
+        width: 11rem;
+        height: auto; }
+
+@media (max-width: 1520px) {
+  #configuration {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 100vw;
+    height: auto; }
+    #configuration .configuration__user {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3.2rem;
+      width: 100vw;
+      height: 51.2rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      padding: 2rem; }
+      #configuration .configuration__user .configUser__figure img {
+        width: 12rem;
+        height: auto; }
+    #configuration .configuration__profileImg {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 3.2rem;
+      width: 100vw;
+      height: auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 5px; }
+      #configuration .configuration__profileImg .profileImge__title {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 1.8em;
+        color: #007ea7;
+        text-align: center; }
+      #configuration .configuration__profileImg .profileImg__options {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto;
+        grid-column-gap: 1.6rem;
+        grid-row-gap: 3.2rem;
+        align-self: center; }
+        #configuration .configuration__profileImg .profileImg__options img {
+          width: 11rem;
+          height: auto; } }
 
 #logIn {
   padding-top: 10rem; }

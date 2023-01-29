@@ -22,7 +22,7 @@
     margin: 0 auto;
 }
 .display-none{
-    display: none;
+    display: none!important;
 }
 body{
     @include grid-container(1fr, auto);

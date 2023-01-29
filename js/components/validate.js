@@ -1,4 +1,5 @@
-// SIGNUP
+// SIGN UP
+
 // Funciones de validacion:
 function validateEmail(email){
     let re = /^[^@]+@[^@.]+\.[^@]{2,}$/;
@@ -136,9 +137,22 @@ function initSignUp(){
 };
 
 
-// LOGIN
+
+
+
+
+
+
+
+
+
+
+
+// LOG IN
 
 // Validacion de datos:
+
+// Validacion de Usuario, nombre/mail/numero
 function validateUserLogIn(){
     if(logInUser.value == localStorage.getItem('userName') || logInUser.value == localStorage.getItem('userEmail') || logInUser.value == localStorage.getItem('userPhone')){
         return true;
@@ -146,6 +160,8 @@ function validateUserLogIn(){
         return false;
     };
 };
+
+// Validacion de contrasenia
 function validatePasswordLogIn(){
     if(logInPassword.value == localStorage.getItem('userPassword')){
         return true;
@@ -153,65 +169,59 @@ function validatePasswordLogIn(){
         return false;
     };
 };
+
 // Estilos de los inputs
-function logInErrorFieldStyles(){
+const logInErrorFieldStyles = () => {
     validateFieldStyles(logInUser.value, formLine_logInUser, logIn_userIcon, 'user-icon', validateUserLogIn);
     validateFieldStyles(logInPassword.value, formLine_logInPassword, logIn_passwordIcon, 'password-icon', validatePasswordLogIn);
-}
-// Validacion de credenciales
-let tryToLogIn = 0;
-function validateCredentials(){
-    if(tryToLogIn < 3){
-        if(validateUserLogIn() == true && validatePasswordLogIn() == true){
-            tryToLogIn = 0;
-            return true;
-        } else {
-            logInErrorFieldStyles();
-            tryToLogIn++;
-            return false;
-        };
-    } else if (tryToLogIn >= 3 && tryToLogIn < 6) {
-        swal({
-            title: "Hey",
-            text: "Is it a brute force attack or have you just forgotten your password?",
-            icon: "warning",
-            button: "Continue",
-        });
-        if(validateUserLogIn() == true && validatePasswordLogIn() == true){
-            tryToLogIn = 0;
-            return true;
-        } else {
-            logInErrorFieldStyles();
-            tryToLogIn++;
-            return false;
-        };
-    } else if (tryToLogIn >= 6){
-        swal({
-            title: "Stop",
-            text: "First you must create an account and then log in.",
-            icon: "error",
-            button: "Continue",
-        });
-        if(validateUserLogIn() == true && validatePasswordLogIn() == true){
-            tryToLogIn = 0;
-            return true;
-        } else {
-            logInErrorFieldStyles();
-            tryToLogIn++;
-            return false;
-        };
-    };
 };
 
+let tryToLogIn = 0;
 // Funcion inicializadora
 function initLogIn(){
     logInForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        validateCredentials();
-        
-        if(validateCredentials){
-            sessionStorage.setItem('session', 'active');
-            displayWorkflow();
+
+        if(tryToLogIn < 3){
+            if(validateUserLogIn() == true && validatePasswordLogIn() == true){
+                tryToLogIn = 0;
+                sessionStorage.setItem('session', 'active');
+                location.reload();
+            } else {
+                logInErrorFieldStyles();
+                tryToLogIn++;
+            };
+        } else if (tryToLogIn >= 3 && tryToLogIn < 6) {
+            swal({
+                title: "Hey",
+                text: "Is it a brute force attack or have you just forgotten your password?",
+                icon: "warning",
+                button: "Continue",
+            });
+            if(validateUserLogIn() == true && validatePasswordLogIn() == true){
+                tryToLogIn = 0;
+                sessionStorage.setItem('session', 'active');
+                location.reload();
+            } else {
+                logInErrorFieldStyles();
+                tryToLogIn++;
+            };
+        } else if (tryToLogIn >= 6){
+            swal({
+                title: "Stop",
+                text: "First you must create an account and then log in.",
+                icon: "error",
+                button: "Continue",
+            });
+            if(validateUserLogIn() == true && validatePasswordLogIn() == true){
+                tryToLogIn = 0;
+                sessionStorage.setItem('session', 'active');
+                location.reload();
+            } else {
+                logInErrorFieldStyles();
+                tryToLogIn++;
+            };
         };
+        
     });
 };

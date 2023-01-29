@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/main.css">
     <title>Delfos: To Build</title>
 </head>
 <body id="body" class="animate__animated animate__fadeIn animate__slow body__theme--light">
+    <!-- HEADER -->
     <header id="header" class="header__theme--light">
         <nav class="header__nav">
             <div class="container-xl">
@@ -21,46 +22,87 @@
                 </figure>
                 <div class="nav__buttons">
                     <div class="buttons__panels">
-                        <button id="btn__notif"><img class="buttons__img" src="./assets/icons/bell-notification.svg" alt="Notificaciones"></button>
-                        <div id="navNotif__panel" class="display-none">
-                            
-                        </div>   
-                    </div>
-                    <div class="buttons__panels">
-                        <button id="btn__account"><img class="buttons__img" src="./assets/icons/account-circle.svg" alt="Opciones de cuenta"></button>
+                        <button id="btn__account"><img id="headerUserIcon" class="buttons__img userIcon" src="./assets/icons/account-circle.svg" alt="Opciones de cuenta"></button>
                         <div id="navAccount__panel" class="display-none">
                             <button id="panelBtn__logIn">Log In</button>
                             <button id="panelBtn__logOut">Log Out</button>
-                            <button id="panelBtn__Config">Configuration</button>
+                            <button id="panelBtn__Config"><img src="./assets/icons/config-icon.svg" alt=""></button>
                         </div>  
                     </div>
                 </div>
             </div>     
         </nav>
-
         <article id="header__welcome">
-            <!-- Slider main container -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="./assets/bg-img/home-banner-1.png" alt="asdasd">
+                        <img src="./assets/bg-img/home-banner-1.png" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="./assets/bg-img/home-banner-2.png" alt="asdasd">
+                        <img src="./assets/bg-img/home-banner-2.png" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="./assets/bg-img/home-banner-3.png" alt="asdasd">
+                        <img src="./assets/bg-img/home-banner-3.png" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="./assets/bg-img/home-banner-4.png" alt="asdasd">
+                        <img src="./assets/bg-img/home-banner-4.png" alt="">
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
               </div>
         </article>
     </header>
 
     <main id="main">
+        <!-- CONFIGURATION -->
+        <section id="configuration" class="display-none">
+            <article class="configuration__user">
+                <figure class="configUser__figure">
+                    <img id="configUserIcon" class="figure__img userIcon" src="./assets/icons/account-circle.svg" alt="">
+                </figure>
+                <form id="configUser__form">
+                    <label class="form__line">
+                        <img src="./assets/icons/user-icon-default.png" alt="User form icon">
+                        <input class="form__input" type="text" name="userName" id="userName">
+                    </label>
+                    <label class="form__line">
+                        <img src="./assets/icons/phone-icon-default.png" alt="User form icon">
+                        <input class="form__input" type="number" name="userPhone" id="userPhone">
+                    </label>
+                    <label class="form__line">
+                        <img src="./assets/icons/email-icon-default.png" alt="User form icon">
+                        <input class="form__input" type="email" name="userEmail" id="userEmail">
+                    </label>
+                    <label class="form__line">
+                        <img src="./assets/icons/password-icon-default.png" alt="Password form icon">
+                        <input class="form__input" type="password" name="userPassword" id="userPassword">
+                    </label>
+                    <div class="form__buttons">
+                        <input id="submit__configUser" type="submit" value="Send changes">    
+                    </div>
+                </form>
+            </article>
+            <article class="configuration__profileImg">
+                <h4 class="profileImge__title">Choose a new profile image:</h4>
+                <div class="profileImg__options">
+                    <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op1.png" alt="">
+                    <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op2.png" alt="">
+                    <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op3.png" alt="">
+                    <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op4.png" alt="">
+                    <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op5.png" alt="">
+                    <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op6.png" alt="">
+                    <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op7.png" alt="">
+                    <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op8.png" alt="">
+                    <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op9.png" alt="">
+                    <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op10.png" alt="">
+                    <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op11.png" alt="">
+                    <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op12.png" alt="">
+                </div>
+            </article>
+        </section>
+
+
+
+        <!-- HOME -->
         <section id="home">
             <div class="container-xl">
                 <figure class="home__figure">
@@ -100,9 +142,12 @@
                     </article>
                 </div>
             </div>
-            
         </section>
 
+
+
+
+        <!-- LOG IN -->
         <section id="logIn" class="logIn__theme--light animate__animated animate__fadeIn animate__slow">
             <div class="container-logIn">
                 <figure id="logIn__img" class="logInImg__theme--light">
@@ -149,6 +194,9 @@
             </div>
         </section>
 
+
+
+        <!-- SIGN UP -->
         <section id="signUp" class="signUp__theme--light animate__animated animate__fadeIn animate__slow">
             <div class="container-signUp">
                 <figure id="signUp__img" class="signUpImg__theme--light">
@@ -209,8 +257,7 @@
 
 
 
-
-
+        <!-- WORKFLOW -->
         <section id="workflow" class="animate__animated animate__fadeIn animate__slow workflow__theme--light">
             <div class="container-workflow">
                 <div class="container-xl">
@@ -218,22 +265,10 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
-
-
-
-
-
-
     </main>
 
 
 
-  
 
 
 
@@ -241,7 +276,7 @@
 
 
 
-
+    <!-- FOOTER -->
     <footer id="footer" class="footer__theme--light">
         <div class="container-l">
             <figure class="footer__figure">
@@ -275,13 +310,17 @@
         </div>
     </footer>
 
+
+
     <!-- LIBRERIAS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+   
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- PROYECTO LOCAL -->
-    <script src="./js/dom.js"></script>
+    <script src="./js/components/dom.js"></script>
     <script src="./js/components/validate.js"></script>
     <script src="./js/components/themesDock.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
