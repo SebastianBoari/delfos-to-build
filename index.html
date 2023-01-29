@@ -62,19 +62,19 @@
                 <form id="configUser__form">
                     <label class="form__line">
                         <img src="./assets/icons/user-icon-default.png" alt="User form icon">
-                        <input class="form__input" type="text" name="userName" id="userName">
+                        <input class="form__input" type="text" name="userName" id="userNameConfig">
                     </label>
                     <label class="form__line">
                         <img src="./assets/icons/phone-icon-default.png" alt="User form icon">
-                        <input class="form__input" type="number" name="userPhone" id="userPhone">
+                        <input class="form__input" type="number" name="userPhone" id="userPhoneConfig">
                     </label>
                     <label class="form__line">
                         <img src="./assets/icons/email-icon-default.png" alt="User form icon">
-                        <input class="form__input" type="email" name="userEmail" id="userEmail">
+                        <input class="form__input" type="email" name="userEmail" id="userEmailConfig">
                     </label>
                     <label class="form__line">
                         <img src="./assets/icons/password-icon-default.png" alt="Password form icon">
-                        <input class="form__input" type="password" name="userPassword" id="userPassword">
+                        <input class="form__input" type="password" name="userPassword" id="userPasswordConfig">
                     </label>
                     <div class="form__buttons">
                         <input id="submit__configUser" type="submit" value="Send changes">    
@@ -259,11 +259,30 @@
 
         <!-- WORKFLOW -->
         <section id="workflow" class="animate__animated animate__fadeIn animate__slow workflow__theme--light">
-            <div class="container-workflow">
-                <div class="container-xl">
-                    <iframe src="https://calendar.google.com/calendar/embed?src=es.ar%23holiday%40group.v.calendar.google.com&ctz=America%2FArgentina%2FBuenos_Aires" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-                </div>
+
+            <div class=".container-workflow">
+                <nav class="workstation__nav">
+                    <div>
+                        <label>
+                            <img src="" alt="">
+                            <input type="radio">
+                        </label>
+                        <label>
+                            <img src="" alt="">
+                            <input type="radio">
+                        </label>
+                        <label>
+                            <img src="" alt="">
+                            <input type="radio">
+                        </label>
+                    </div>
+                    <button><img src="" alt=""></button>
+                </nav>
+                <section class="workstation__body">
+
+                </section>
             </div>
+
         </section>
     </main>
 
@@ -313,13 +332,11 @@
 
 
     <!-- LIBRERIAS -->
-   
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- PROYECTO LOCAL -->
     <script src="./js/components/dom.js"></script>
-    <script src="./js/components/validate.js"></script>
     <script src="./js/components/themesDock.js"></script>
     <script src="./js/main.js"></script>
 </body>
