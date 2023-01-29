@@ -1,18 +1,178 @@
-
-
 #workflow{
     display: none;
-}
-
-#workflow{
-    margin-top: 8.25rem;
-    background-image: url(../assets/bg-img/workflow-light-bg.jpg);
-    background-position: center;
-    background-size: cover;
+    margin-top: 9.6rem;
     padding: $space-64 0;
+    background-image: url(/assets/bg-img/workflow-background-light.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     .container-workflow{
+        @include sizes(128rem, auto);
+        border: solid 2px $skyBlue;
+        border-radius: 5px;
         background-color: $white-op80;
-        @include sizes(144rem, 118rem);
-        border-radius: .5rem;
+        .workstation__nav{
+            @include flex(row, nowrap, space-between, center, 0);
+            @include grid-container(repeat(2, 1fr), auto);
+            background-color: white;
+            border-bottom: solid 2px $skyBlue;
+            padding: $space-8 $space-16;
+            .workstation__nav--left{
+                @include flex(row, nowrap, flex-start, center, $space-16);
+                .workstationNav__label{
+                    border-radius: 5px;
+                    padding: $space-6;
+                    background-color: rgba(25, 25, 25, 0);
+                    transition: all .2s;
+                    cursor: pointer;
+                    input{
+                        display: none;
+                    }
+                }
+                .workstationNav__label:hover{
+                    background-color: $gray-op80;
+                    scale: 1.1;
+                }
+            }
+            .workstation__nav--right{
+                @include flex(row, nowrap, flex-end, center, $space-32);
+                img{
+                    padding: $space-6;
+                }
+                #addNewTaskBtn{
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    padding: $space-6;
+                    background-color: rgba(25, 25, 25, 0);
+                    transition: all .2s;
+                }
+                #addNewTaskBtn:hover{
+                    background-color: $gray-op80;
+                    scale: 1.1;
+                }
+            }
+        }
+
+        .workstation__body{
+            @include sizes(128rem, 128rem);
+
+
+
+
+
+
+
+
+            // CREATE A NEW TASK PANEL 
+            #createNewTask{
+                @include max-sizes(48rem, none);
+                background-color: $white;
+                border-radius: 5px;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .newTask__header{
+                    @include sizes(100%, auto);
+                    @include flex(row, nowrap, space-between, center, 0);
+                    background-color: $yellow;
+                    border-radius: 5px 5px 0 0;
+                    padding: $space-6 $space-16;
+                    .newTask__label{
+                        cursor: pointer;
+                        img{
+                            @include sizes(2.5rem, auto);
+                            transition: all .2s;
+                        }
+                        img:hover{
+                            scale: 1.1;
+                        }
+                        input{
+                            display: none;
+                        }
+                    }
+                    #cancelNewTask{
+                        cursor: pointer;
+                        border: none;
+                        outline: none;
+                        background-color: rgba(25, 25, 25, 0);
+                        transition: all .2s;
+                    }
+                    #cancelNewTask:hover{
+                        scale: 1.1;
+                    }
+                }
+                .newTask__body{
+                    @include grid-container(auto, auto auto auto);
+                    @include grid-gap(0, $space-32);
+                    @include sizes(100%, 100%);
+                    padding: $space-16 $space-32 $space-32;
+                    .newTask__label{
+                        padding: 0;
+                        margin: 0;
+                        h4{
+                            font-family: 'Lato', sans-serif;
+                            font-weight: 400;
+                            font-size: $font-24;
+                            color: $gray;
+                        }
+                        p{
+                            font-family: 'Lato', sans-serif;
+                            font-weight: 400;
+                            font-size: $font-18;
+                            color: $gray;
+                        }
+                        #newTaskTitle{
+                            @include sizes(100%, 5rem);
+                            border: none;
+                            outline: none;
+                            font-family: 'Lato', sans-serif;
+                            font-weight: 400;
+                            font-size: $font-24;
+                            color: $navyBlue
+                        }
+                        
+                        #newTaskDescrip{
+                            @include sizes(100%, 25rem);
+                            padding: 0;
+                            margin: 0;
+                            border: none;
+                            outline: none;
+                            font-family: 'Lato', sans-serif;
+                            font-weight: 400;
+                            font-size: $font-16;
+                            color: $navyBlue;
+                            resize: vertical;
+                            line-height: 1.4;
+                        }
+                         
+                    }
+                    #newTaskSubmit{
+                        @include grid-item($justify-self: end);
+                        @include sizes(15rem, auto);
+                        cursor: pointer;
+                        border: none;
+                        outline: none;
+                        padding: $space-8;
+                        align-self: flex-end;
+                        background-color: $skyBlue;
+                        font-family: 'Lato', sans-serif;
+                        font-weight: 400;
+                        font-size: $font-18;
+                        color: $white;
+                        transition: all .2s;
+                    }
+                    #newTaskSubmit:hover{
+                        background-color: $deepSkyBlue;
+                    }
+                }
+
+
+            }
+        }
     }
 }
+

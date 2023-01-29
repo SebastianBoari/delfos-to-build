@@ -46,7 +46,11 @@ const checkSession = () =>{
 // Muestra la informacion del usuario en pantalla y permite editar los datos
 const userDataConfig = () =>{
   // Muestro la informacion en pantalla
-  configUserIcon.setAttribute('src', `${userOnStorage.userIcon}`);
+  if(userOnStorage.userIcon != null || userOnStorage.userIcon != undefined){
+    configUserIcon.setAttribute('src', `${userOnStorage.userIcon}`);
+  } else {
+    configUserIcon.setAttribute('src', userOnStorage.defaultIcon);
+  };
   userNameConfig.value = userOnStorage.userName;
   userPhoneConfig.value = userOnStorage.userPhone;
   userEmailConfig.value = userOnStorage.userEmail;
@@ -130,7 +134,12 @@ const btnAccountNoActiveSession = () => {
 
 // HEADER EN SESION ACTIVA
 const headerActiveSession = () => {
-
+  //Verifico si ya hay un icono en localeStorage
+  if(userOnStorage.userIcon != null || userOnStorage.userIcon != undefined){
+    headerUserIcon.setAttribute('src', userOnStorage.userIcon);
+  } else {
+    headerUserIcon.setAttribute('src', userOnStorage.defaultIcon);
+  };
   btnAccountActiveSession();
 };
 // HEADER EN SESION INACTIVA
@@ -146,13 +155,6 @@ const swiper = new Swiper(".mySwiper", {
 // FUNCION INICIALIZADORA DEL HEADER COMPLETO
 function headerInit(){ 
   header.style.display = 'block';
-
-  //Verifico si ya hay un icono en localeStorage
-  if(userOnStorage.userIcon !== null || userOnStorage.userIcon !== undefined){
-    headerUserIcon.setAttribute('src', userOnStorage.userIcon);
-  } else {
-    headerUserIcon.setAttribute('src', userOnStorage.defaultIcon);
-  };
 
   if(checkSession() == true){
     headerActiveSession();
@@ -227,10 +229,6 @@ function homeInit(){
 
 
 
-
-
-
-
 // WORKFLOW
 const workflow = document.getElementById('workflow');
 workflow.style.display = 'none';
@@ -238,22 +236,14 @@ workflow.style.display = 'none';
 // Mostrar Workflow
 const displayWorkflow = () =>{
   // Hide
+  headerWelcome.style.display = 'none';
   sectionHome.style.display = 'none';
   sectionSignUp.style.display = 'none';
   sectionLogIn.style.display = 'none';
   // Show
   displayHeaderAndFooter();
-  workflow.style.display = 'grid';
+  workflow.style.display = 'block';
 };
-
-
-
-
-
-
-
-
-
 
 
 
@@ -311,8 +301,6 @@ const displaySignUp = () => {
   initSignUp();
 };
 
-
-
 // LOG IN
 const sectionLogIn = document.getElementById('logIn');
 sectionLogIn.style.display = 'none';
@@ -349,15 +337,6 @@ const displayLogIn = () =>{
     btnSignUpEvent();
     initLogIn();
 };
-
-
-
-
-
-
-
-
-
 
 // SIGN UP
 
@@ -460,13 +439,7 @@ function saveUserData(){
           classes: "succes",
       }).showToast();
       
-      // HIDE
-      header.style.display = 'none';
-      footer.style.display = 'none';
-      sectionHome.style.display = 'none';
-      sectionSignUp.style.display = 'none';
-      // SHOW
-      sectionLogIn.style.display = 'grid';
+      displayLogIn();
 
   } else {
       signUpErrorFieldStyles();

@@ -16,8 +16,8 @@
         <nav class="header__nav">
             <div class="container-xl">
                 <figure class="nav__figure">
-                    <a class="figure__link" href="https://sebastianboari.github.io/DelfOS.github.io/">
-                        <img class="figure__img" src="./assets/icons/delfos-logo.png" alt="Logo de DelfOS.">
+                    <a class="figure__link" href="#">
+                        <img class="figure__img" src="./assets/icons/tobuild-logo-v1.png" alt="Logo de DelfOS.">
                     </a>
                 </figure>
                 <div class="nav__buttons">
@@ -260,32 +260,72 @@
         <!-- WORKFLOW -->
         <section id="workflow" class="animate__animated animate__fadeIn animate__slow workflow__theme--light">
 
-            <div class=".container-workflow">
+            <div class="container-workflow">
                 <nav class="workstation__nav">
-                    <div>
-                        <label>
-                            <img src="" alt="">
-                            <input type="radio">
+                    <div class="workstation__nav--left">
+                        <label class="workstationNav__label" id="label__viewALlTasks" >
+                            <img src="./assets/icons/task-icon.svg" alt="">
+                            <input type="radio" name="workstation_nav">
                         </label>
-                        <label>
-                            <img src="" alt="">
-                            <input type="radio">
+                        <label class="workstationNav__label" id="label__viewWeather">
+                            <img src="./assets/icons/weather-icon.svg" alt="">
+                            <input type="radio" name="workstation_nav">
                         </label>
-                        <label>
-                            <img src="" alt="">
-                            <input type="radio">
+                        <label class="workstationNav__label" id="label__viewCalendar">
+                            <img src="./assets/icons/calendar-icon.svg" alt="">
+                            <input type="radio" name="workstation_nav">
+                        </label>
+                        <label class="workstationNav__label" id="label__viewOnlyImportants">
+                            <img src="./assets/icons/important-icon.svg" alt="">
+                            <input type="radio" name="workstation_nav">
                         </label>
                     </div>
-                    <button><img src="" alt=""></button>
+                    <div class="workstation__nav--right">
+                        <img src="./assets/icons/info-icon.svg" alt="" title="Desde izquierda a derecha: El primer icono es para ver todas las tareas creadas. El segundo icono es para ir al pronostico del tiempo, el tercer icono es para ir al calendario y el ultimo icono (el verde, que esta al lado mio) es para crear una nueva tarea. // From left to right: The first icon is for viewing all created tasks. The second icon is for accessing the weather forecast, the third icon is for accessing the calendar, and the last icon (the green one, which is next to me) is for creating a new task.">
+                        <button id="addNewTaskBtn"><img src="./assets/icons/addnew-icon.svg" alt=""></button>
+                    </div>
                 </nav>
                 <section class="workstation__body">
-
+                    <article id="createNewTask" class="display-none">
+                        <div class="newTask__header">
+                            <label class="newTask__label">
+                                <img src="./assets/icons/important-icon-checked.svg" alt="">
+                                <input type="checkbox" name="important" id="newTaskImportant">
+                            </label>
+                            <button id="cancelNewTask"><img src="./assets/icons/cancel-icon.svg" alt=""></button>
+                        </div>
+                        <div class="newTask__body">
+                            <div class="newTask__label">
+                                <label for="newTaskTitle"><h4>Title</h4></label>
+                                <input type="text" name="title" id="newTaskTitle" required>
+                            </div>
+                            <div class="newTask__label">
+                                <label for="newTaskDescrip"><p>Description</p></label>
+                                <textarea name="description" id="newTaskDescrip" ></textarea>
+                            </div>
+                            <input type="submit" value="Create Task" id="newTaskSubmit">
+                        </div>
+                    </article>
                 </section>
             </div>
-
+                <script>
+                    var textarea = document.getElementById("newTaskDescrip");
+                    textarea.addEventListener("click", function() {
+                        var text = textarea.value;
+                        var length = text.length;
+                        if (length > 0) {
+                            textarea.setSelectionRange(length, length);
+                        } else {
+                            textarea.setSelectionRange(0, 0);
+                        }
+                    })
+                </script>
         </section>
     </main>
 
+    
+    
+    
 
 
 

@@ -372,7 +372,7 @@ body {
                 width: 2.4rem;
                 height: auto; }
   #header #header__welcome {
-    margin-top: 8.2rem;
+    margin-top: 9.6rem;
     width: 100%;
     height: 30rem; }
     #header #header__welcome .swiper {
@@ -1060,16 +1060,174 @@ body {
         padding: 4.8rem 1.6rem; } }
 
 #workflow {
-  display: none; }
-
-#workflow {
-  margin-top: 8.25rem;
-  background-image: url(../assets/bg-img/workflow-light-bg.jpg);
+  display: none;
+  margin-top: 9.6rem;
+  padding: 6.4rem 0;
+  background-image: url(/assets/bg-img/workflow-background-light.jpg);
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  padding: 6.4rem 0; }
+  background-attachment: fixed; }
   #workflow .container-workflow {
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 144rem;
-    height: 118rem;
-    border-radius: .5rem; }
+    width: 128rem;
+    height: auto;
+    border: solid 2px #00a7e1;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); }
+    #workflow .container-workflow .workstation__nav {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      background-color: white;
+      border-bottom: solid 2px #00a7e1;
+      padding: 0.8rem 1.6rem; }
+      #workflow .container-workflow .workstation__nav .workstation__nav--left {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.6rem; }
+        #workflow .container-workflow .workstation__nav .workstation__nav--left .workstationNav__label {
+          border-radius: 5px;
+          padding: 0.6rem;
+          background-color: rgba(25, 25, 25, 0);
+          transition: all .2s;
+          cursor: pointer; }
+          #workflow .container-workflow .workstation__nav .workstation__nav--left .workstationNav__label input {
+            display: none; }
+        #workflow .container-workflow .workstation__nav .workstation__nav--left .workstationNav__label:hover {
+          background-color: rgba(197, 198, 196, 0.8);
+          scale: 1.1; }
+      #workflow .container-workflow .workstation__nav .workstation__nav--right {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 3.2rem; }
+        #workflow .container-workflow .workstation__nav .workstation__nav--right img {
+          padding: 0.6rem; }
+        #workflow .container-workflow .workstation__nav .workstation__nav--right #addNewTaskBtn {
+          outline: none;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+          padding: 0.6rem;
+          background-color: rgba(25, 25, 25, 0);
+          transition: all .2s; }
+        #workflow .container-workflow .workstation__nav .workstation__nav--right #addNewTaskBtn:hover {
+          background-color: rgba(197, 198, 196, 0.8);
+          scale: 1.1; }
+    #workflow .container-workflow .workstation__body {
+      width: 128rem;
+      height: 128rem; }
+      #workflow .container-workflow .workstation__body #createNewTask {
+        max-width: 48rem;
+        max-height: none;
+        background-color: white;
+        border-radius: 5px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+        #workflow .container-workflow .workstation__body #createNewTask .newTask__header {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: center;
+          gap: 0;
+          background-color: #f8c548;
+          border-radius: 5px 5px 0 0;
+          padding: 0.6rem 1.6rem; }
+          #workflow .container-workflow .workstation__body #createNewTask .newTask__header .newTask__label {
+            cursor: pointer; }
+            #workflow .container-workflow .workstation__body #createNewTask .newTask__header .newTask__label img {
+              width: 2.5rem;
+              height: auto;
+              transition: all .2s; }
+            #workflow .container-workflow .workstation__body #createNewTask .newTask__header .newTask__label img:hover {
+              scale: 1.1; }
+            #workflow .container-workflow .workstation__body #createNewTask .newTask__header .newTask__label input {
+              display: none; }
+          #workflow .container-workflow .workstation__body #createNewTask .newTask__header #cancelNewTask {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: rgba(25, 25, 25, 0);
+            transition: all .2s; }
+          #workflow .container-workflow .workstation__body #createNewTask .newTask__header #cancelNewTask:hover {
+            scale: 1.1; }
+        #workflow .container-workflow .workstation__body #createNewTask .newTask__body {
+          display: grid;
+          grid-template-columns: auto;
+          grid-template-rows: auto auto auto;
+          grid-column-gap: 0;
+          grid-row-gap: 3.2rem;
+          width: 100%;
+          height: 100%;
+          padding: 1.6rem 3.2rem 3.2rem; }
+          #workflow .container-workflow .workstation__body #createNewTask .newTask__body .newTask__label {
+            padding: 0;
+            margin: 0; }
+            #workflow .container-workflow .workstation__body #createNewTask .newTask__body .newTask__label h4 {
+              font-family: 'Lato', sans-serif;
+              font-weight: 400;
+              font-size: 2.4em;
+              color: #c5c6c4; }
+            #workflow .container-workflow .workstation__body #createNewTask .newTask__body .newTask__label p {
+              font-family: 'Lato', sans-serif;
+              font-weight: 400;
+              font-size: 1.8em;
+              color: #c5c6c4; }
+            #workflow .container-workflow .workstation__body #createNewTask .newTask__body .newTask__label #newTaskTitle {
+              width: 100%;
+              height: 5rem;
+              border: none;
+              outline: none;
+              font-family: 'Lato', sans-serif;
+              font-weight: 400;
+              font-size: 2.4em;
+              color: #003459; }
+            #workflow .container-workflow .workstation__body #createNewTask .newTask__body .newTask__label #newTaskDescrip {
+              width: 100%;
+              height: 25rem;
+              padding: 0;
+              margin: 0;
+              border: none;
+              outline: none;
+              font-family: 'Lato', sans-serif;
+              font-weight: 400;
+              font-size: 1.6em;
+              color: #003459;
+              resize: vertical;
+              line-height: 1.4; }
+          #workflow .container-workflow .workstation__body #createNewTask .newTask__body #newTaskSubmit {
+            grid-column: auto/span 1;
+            grid-row: auto/span 1;
+            justify-self: end;
+            align-self: start;
+            width: 15rem;
+            height: auto;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            padding: 0.8rem;
+            align-self: flex-end;
+            background-color: #00a7e1;
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 1.8em;
+            color: white;
+            transition: all .2s; }
+          #workflow .container-workflow .workstation__body #createNewTask .newTask__body #newTaskSubmit:hover {
+            background-color: #007ea7; }
