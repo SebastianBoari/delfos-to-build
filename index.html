@@ -261,32 +261,26 @@
         <section id="workflow" class="animate__animated animate__fadeIn animate__slow workflow__theme--light">
 
             <div class="container-workflow">
+                <!-- NAV -->
                 <nav class="workstation__nav">
                     <div class="workstation__nav--left">
-                        <label class="workstationNav__label" id="label__viewALlTasks" >
-                            <img src="./assets/icons/task-icon.svg" alt="">
-                            <input type="radio" name="workstation_nav">
-                        </label>
-                        <label class="workstationNav__label" id="label__viewWeather">
-                            <img src="./assets/icons/weather-icon.svg" alt="">
-                            <input type="radio" name="workstation_nav">
-                        </label>
-                        <label class="workstationNav__label" id="label__viewCalendar">
-                            <img src="./assets/icons/calendar-icon.svg" alt="">
-                            <input type="radio" name="workstation_nav">
-                        </label>
-                        <label class="workstationNav__label" id="label__viewOnlyImportants">
-                            <img src="./assets/icons/important-icon.svg" alt="">
-                            <input type="radio" name="workstation_nav">
-                        </label>
+
+                        <label class="workstationNav__btn" id="viewALlTasksBtn" ><img src="./assets/icons/task-icon.svg" alt=""></label>
+                        <label class="workstationNav__btn" id="viewWeatherBtn"><img src="./assets/icons/weather-icon.svg" alt=""></label>
+                        <label class="workstationNav__btn" id="viewCalendarBtn"><img src="./assets/icons/calendar-icon.svg" alt=""></label>
+                        <label class="workstationNav__btn" id="viewOnlyImportantsBtn"><img src="./assets/icons/important-icon.svg" alt=""></label>
+
                     </div>
                     <div class="workstation__nav--right">
                         <img src="./assets/icons/info-icon.svg" alt="" title="Desde izquierda a derecha: El primer icono es para ver todas las tareas creadas. El segundo icono es para ir al pronostico del tiempo, el tercer icono es para ir al calendario y el ultimo icono (el verde, que esta al lado mio) es para crear una nueva tarea. // From left to right: The first icon is for viewing all created tasks. The second icon is for accessing the weather forecast, the third icon is for accessing the calendar, and the last icon (the green one, which is next to me) is for creating a new task.">
                         <button id="addNewTaskBtn"><img src="./assets/icons/addnew-icon.svg" alt=""></button>
                     </div>
                 </nav>
+
+
                 <section class="workstation__body">
-                    <article id="createNewTask" class="display-none">
+                    <!-- CREATE TASK -->
+                    <form id="createNewTask" class="display-none">
                         <div class="newTask__header">
                             <label class="newTask__label">
                                 <img src="./assets/icons/important-icon-checked.svg" alt="">
@@ -305,21 +299,26 @@
                             </div>
                             <input type="submit" value="Create Task" id="newTaskSubmit">
                         </div>
+                    </form>
+
+                    <!-- EDIT TASK -->
+                    <article id="editTask" class="display-none">
+                        <p>Formulario para editar tareas</p>
                     </article>
+
+                    <!-- CALENDAR -->
+                    <article id="calendar" class="display-none">
+                        <p>Calendario</p>
+                    </article>
+
+                    <!-- WEATHER -->
+                    <article id="weather" class="display-none">
+                        <p>Clima</p>
+                    </article>
+
                 </section>
             </div>
-                <script>
-                    var textarea = document.getElementById("newTaskDescrip");
-                    textarea.addEventListener("click", function() {
-                        var text = textarea.value;
-                        var length = text.length;
-                        if (length > 0) {
-                            textarea.setSelectionRange(length, length);
-                        } else {
-                            textarea.setSelectionRange(0, 0);
-                        }
-                    })
-                </script>
+
         </section>
     </main>
 

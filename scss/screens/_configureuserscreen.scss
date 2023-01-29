@@ -97,6 +97,7 @@
             @include grid-gap($space-32, $space-32);
             img{
                 @include sizes(11rem, auto);
+                cursor: pointer;
             }
         }
 

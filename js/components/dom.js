@@ -218,20 +218,158 @@ function homeInit(){
 
 
 
-
-
-
-
-
-
-
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
 // WORKFLOW
 const workflow = document.getElementById('workflow');
 workflow.style.display = 'none';
+
+// Nav elements
+const addNewTaskBtn = document.getElementById('addNewTaskBtn');
+const viewALlTasksBtn = document.getElementById('viewALlTasksBtn');
+const viewWeatherBtn = document.getElementById('viewWeatherBtn');
+const viewCalendarBtn = document.getElementById('viewCalendarBtn');
+const viewOnlyImportantsBtn = document.getElementById('viewOnlyImportantsBtn');
+let countTasks = 0;
+const workflowNav = {
+  addTask: addNewTaskBtn,
+  viewAll: viewALlTasksBtn,
+  viewWeather: viewWeatherBtn,
+  viewCalendar: viewCalendarBtn,
+  viewImporants: viewOnlyImportantsBtn
+};
+
+// form elements
+const createNewTaskForm = document.getElementById('createNewTask');
+const newTaskImportantCheckbox = document.getElementById('newTaskImportant');
+const newTaskTitleInput = document.getElementById('newTaskTitle');
+const newTaskDescripTextArea = document.getElementById('newTaskDescrip');
+const cancelNewTaskBtn = document.getElementById('cancelNewTask');
+const newTaskSubmit = document.getElementById('newTaskSubmit');
+
+const createTaskForm = {
+  form: createNewTaskForm,
+  checkbox: newTaskImportantCheckbox,
+  title: newTaskTitleInput,
+  descrip: newTaskDescripTextArea,
+  cancel: cancelNewTaskBtn,
+  submit: newTaskSubmit
+};
+
+// CREAR UNA TAREA
+
+// Mostrar en pantalla el formulario de creacion
+const displayAddNewTask = () =>{
+  workflowNav.addTask.addEventListener('click', () =>{
+    createTaskForm.form.classList.toggle('display-none');
+  });
+};
+// Guardar tarea en el JSON
+const submitNewTask = () =>{
+  createTaskForm.form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+
+    const task = {
+      id: countTasks++, 
+      title: createTaskForm.title.value,
+      descrip: createTaskForm.descrip.value,
+      important: createTaskForm.checkbox.checked
+    };
+
+    fetch('../data/tasks.json', {
+      method: 'POST',
+      body: JSON.stringify(task),
+      headers: {
+      'Content-Type': 'application/json'
+      }
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Eh maquina creo que esto anda')
+    })
+    .catch((error) => {
+      // aqui puedes manejar el error en caso de que ocurra algo
+      console.log('Va pa tra esto maquina')
+    });
+  });
+
+};
+
+
+
+
+
+
+
+
+
+// Edit tasks
+const editTask = document.getElementById('editTask');
+
+const editTaskElem = {
+  form: editTask,
+};
+
+
+// Calendar
+const calendar = document.getElementById('calendar');
+
+const calendarElem = {
+  panel: calendar,
+};
+
+
+// Weather App
+const weather = document.getElementById('weather');
+const weatherElem = {
+  panel: weather,
+};
+// Mostrar en pantalla el clima
+const displayWeather = () =>{
+  workflowNav.viewWeather.addEventListener('click', () =>{
+    weatherElem.panel.classList.toggle('display-none');
+  });
+}
+
+
+
+// VER TODAS LAS TAREAS
+const displayAllTasks = () =>{
+
+
+};
+
+
+
+
+function workflowNavigation(){
+
+
+
+};
+
+
+
+
+
+
+
+
+// Boton de descartar tarea nueva
+const cancelNewTask = () =>{
+  cancelNewTaskBtn.addEventListener('click', () =>{
+    createTaskForm.cancel.form.classList.toggle('display-none');
+  });
+};
+
+
+
+
+
+
 
 // Mostrar Workflow
 const displayWorkflow = () =>{
@@ -241,9 +379,26 @@ const displayWorkflow = () =>{
   sectionSignUp.style.display = 'none';
   sectionLogIn.style.display = 'none';
   // Show
+  displayAddNewTask();
+  submitNewTask();
+  displayWeather();
   displayHeaderAndFooter();
   workflow.style.display = 'block';
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
