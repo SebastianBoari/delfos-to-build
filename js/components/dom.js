@@ -175,13 +175,6 @@ const hideHeaderAndFooter = () => {
   footer.style.display = 'none';
 };
 
-// Mostrar Configuracion
-const displayConfig = () =>{
-workflow.style.display = 'none';
-sectionHome.style.display = 'none';
-sectionConfig.style.display = 'grid';
-};
-
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -245,6 +238,7 @@ const workflowNav = {
 // form elements
 const createNewTaskForm = document.getElementById('createNewTask');
 const newTaskImportantCheckbox = document.getElementById('newTaskImportant');
+const isImportantImg = document.getElementById('isImportantImg');
 const newTaskTitleInput = document.getElementById('newTaskTitle');
 const newTaskDescripTextArea = document.getElementById('newTaskDescrip');
 const cancelNewTaskBtn = document.getElementById('cancelNewTask');
@@ -263,11 +257,21 @@ const createTaskForm = {
 
 // Mostrar en pantalla el formulario de creacion
 const displayAddNewTask = () =>{
+  // Toggle para mostrar AddNewTask
   workflowNav.addTask.addEventListener('click', () =>{
     createTaskForm.form.classList.toggle('display-none');
+    // Muestro si esta checked el checkbox
+    newTaskImportantCheckbox.addEventListener('change', () => {
+      if(newTaskImportantCheckbox.checked){
+        isImportantImg.setAttribute('src', './assets/icons/important-icon-checked.svg');
+      } else {
+        isImportantImg.setAttribute('src', './assets/icons/important-icon-default.svg');
+      }
+    });
+    resetFormNewTask();
   });
 };
-// Guardar tarea en el JSON
+// Guardar tarea en mockAPI
 const submitNewTask = () =>{
   createTaskForm.form.addEventListener('submit', (e) =>{
     e.preventDefault();
@@ -276,10 +280,11 @@ const submitNewTask = () =>{
       id: countTasks++, 
       title: createTaskForm.title.value,
       descrip: createTaskForm.descrip.value,
-      important: createTaskForm.checkbox.checked
+      isImportant: createTaskForm.checkbox.checked,
+      date: new Date()
     };
 
-    fetch('../data/tasks.json', {
+    fetch('https://63ced1bc6d27349c2b7650e2.mockapi.io/to-build-tasks/tasks', {
       method: 'POST',
       body: JSON.stringify(task),
       headers: {
@@ -288,87 +293,339 @@ const submitNewTask = () =>{
     })
     .then((response) => response.json())
     .then((data) => {
-      console.log('Eh maquina creo que esto anda')
+      // Reseteo el form y lo dejo de mostrar en pantalla
+      createTaskForm.form.reset();
+      createTaskForm.form.classList.add('display-none');
+  
+      // Refresco los elementos (Me costo 3hs darme cuenta de esto)
+      const allTasksOnScreen = document.querySelectorAll('.task');
+      const arrayAllTasksOnScreen = Array.from(allTasksOnScreen);
+      arrayAllTasksOnScreen.forEach((element) => {
+        element.remove();
+      });
+      bringTasks();
+
+      // Notifico que salio bien
+      Toastify({
+        text: "Task successfully added!",
+        backgroundColor: "green",
+        classes: "succes",
+    }).showToast();
+
     })
     .catch((error) => {
-      // aqui puedes manejar el error en caso de que ocurra algo
-      console.log('Va pa tra esto maquina')
+      Toastify({
+        text: "An error occurred while adding the task. Please try again later.",
+        backgroundColor: "red",
+        classes: "error",
+    }).showToast();
     });
   });
+};
 
+// Descartar crear una tarea
+const resetFormNewTask = () =>{
+  cancelNewTaskBtn.addEventListener('click', () => {
+    // Reseteo el form y lo dejo de mostrar en pantalla
+    createTaskForm.form.classList.add('display-none');
+    createTaskForm.form.reset();
+    newTaskImportantCheckbox.checked = false;
+  });
+};
+
+
+// Contenedor padre donde se iran mostrando las tareas
+const tasksSection = document.getElementById('tasks');
+// Elementos de las notas
+let deleteTaskButtons; 
+let editTaskButtons;
+let isImportantImgs;
+
+
+// Creo un array para tener disponibles todas las tareas en todo mi codigo
+let allTasks = [];
+
+const bringTasks = () =>{
+  fetch('https://63ced1bc6d27349c2b7650e2.mockapi.io/to-build-tasks/tasks', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then((response) => response.json())
+  .then((tasks) => {
+    allTasks = tasks;
+    displayOnScreenTasks();
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+};
+
+// Filtrar traeas
+const tasksFilters = () =>{
+  // Filtro en base a lo que haya en el array
+  const filterTasks = (filterType) => {
+    allTasks.forEach(task => {
+      const allTasksDom = document.getElementById(`${task.id}`);
+      if (filterType === 'all') {
+        allTasksDom.style.display = 'flex';
+      } else if (filterType === 'important') {
+        if (task.isImportant == true) {
+          allTasksDom.style.display = 'flex';
+        } else {
+          allTasksDom.style.display = 'none';
+        }
+      }
+    });
+  };
+  
+  // Event Listeners
+  workflowNav.viewAll.addEventListener('click', () => filterTasks('all'));
+  workflowNav.viewImporants.addEventListener('click', () => filterTasks('important'));
+};
+
+
+// Muestra las tareas en pantalla
+const displayOnScreenTasks = () =>{
+  // Verifico que el array contenga tareas cargadas y que sea un array para evitar errores
+  if (Array.isArray(allTasks) && allTasks.length) {
+    allTasks.forEach((task) => {
+      const taskElement = document.createElement('article');
+      taskElement.classList.add('task');
+      taskElement.setAttribute('id', `${task.id}`);
+  
+      if (task.isImportant == true){
+        taskElement.innerHTML = `
+        <div class="task__header">
+        <div class="task__header--left">
+            <img class="isImportant__img" src="./assets/icons/important-icon-checked.svg" alt="">
+        </div>
+        <div class="task__header--right">
+            <button class="editTaskBtn" id="edit-${task.id}"><img src="./assets/icons/task-edit-icon.svg" alt=""></button>
+            <button class="deleteTask" id="delete-${task.id}"><img src="./assets/icons/task=delete-icon.svg" alt=""></button>
+        </div>
+        </div>
+        <div class="task__body">
+            <h5 class="task__title">${task.title}</h5>
+            <p class="task__descrip">${task.descrip}</p>
+        </div>
+      `;
+      }else {
+        taskElement.innerHTML = `
+        <div class="task__header">
+        <div class="task__header--left">
+            <img class="isImportant__img" src="./assets/icons/important-icon-default.svg" alt="">
+        </div>
+        <div class="task__header--right">
+            <button class="editTaskBtn" id="edit-${task.id}"><img src="./assets/icons/task-edit-icon.svg" alt=""></button>
+            <button class="deleteTask" id="delete-${task.id}"><img src="./assets/icons/task=delete-icon.svg" alt=""></button>
+        </div>
+        </div>
+        <div class="task__body">
+            <h5 class="task__title">${task.title}</h5>
+            <p class="task__descrip">${task.descrip}</p>
+        </div>
+      `;
+      };
+      // Agregar el elemento al contenedor padre
+      tasksSection.appendChild(taskElement);
+    });
+    // Ahora que existen los elementos en el arbol DOM puedo asignar los valores a las variables
+    isImportantImgs = document.getElementsByClassName('isImportant__img');
+    editTaskButtons = document.getElementsByClassName('editTaskBtn');
+    deleteTaskButtons = document.getElementsByClassName('deleteTask');
+    deleteTasks();
+    displayEditTasks();
+    tasksFilters();
+
+  } else {
+    console.error('No tasks on allTasks');
+  }
+};
+
+// Delete tasks: Solo de la variable global
+let  arrayDeleteTaskButtons;
+const deleteTasks = () =>{
+  arrayDeleteTaskButtons = Array.from(deleteTaskButtons)
+
+  arrayDeleteTaskButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        // Mostrar una alerta de confirmación
+        swal({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          buttons: ["Cancel", "Confirm"]
+        }).then((result) => {
+          // Si el usuario confirma, eliminar la tarea
+          if (result) {
+            const taskId = button.getAttribute("id").split("-")[1];
+            const taskElement = document.getElementById(taskId);
+            taskElement.remove();
+            deleteTasksOnDb(taskId);
+          }
+        })
+    })
+  })
+};
+
+// Delete tasks: En el servidor
+const deleteTasksOnDb = (taskId) =>{
+  fetch(`https://63ced1bc6d27349c2b7650e2.mockapi.io/to-build-tasks/tasks/${taskId}`, {
+    method: 'DELETE'
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Notifico que salio bien
+    console.log(data); 
+
+    Toastify({
+      text: "Task successfully deleted!",
+      backgroundColor: "green",
+      classes: "succes",
+    }).showToast();
+  })
+  .catch(error => {
+    console.error('Error to try delete:', error);
+  });
 };
 
 
 
 
+const editTaskForm = document.getElementById('editTask');
+const editTaskImportant = document.getElementById('editTaskImportant');
+const isImportantImgEdit = document.getElementById('isImportantImgEdit');
+const cancelEditTask = document.getElementById('cancelEditTask');
+const editTaskTitle = document.getElementById('editTaskTitle');
+const editTaskDescrip = document.getElementById('editTaskDescrip');
+const editTaskSubmit = document.getElementById('editTaskSubmit');
 
 
+let  arrayEditTaskButtons;
+// Mostrar en pantalla el formulario de edicion
+const displayEditTasks = () =>{
+  arrayEditTaskButtons = Array.from(editTaskButtons)
+  cancelEdit();
+
+  arrayEditTaskButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+
+    const taskId = button.getAttribute("id").split("-")[1];
+    const taskElement = document.getElementById(taskId);
+
+    editTaskForm.classList.toggle('display-none');
+    const taskToEdit = allTasks.filter(task => task.id === taskId)[0];
+    
+    editTaskTitle.value = `${taskToEdit.title}`;
+    editTaskDescrip.value = `${taskToEdit.descrip}`;
 
 
+    if(taskToEdit.isImportant == true){
+      isImportantImgEdit.setAttribute('src', './assets/icons/important-icon-checked.svg');
+      editTaskImportant.checked == true;
 
-// Edit tasks
-const editTask = document.getElementById('editTask');
+      editTaskImportant.addEventListener('change', () => {
+        if(editTaskImportant.checked){
+          isImportantImgEdit.setAttribute('src', './assets/icons/important-icon-checked.svg');
+        } else{
+          isImportantImgEdit.setAttribute('src', './assets/icons/important-icon-default.svg');
+        }
+      });
+    } else{
+      isImportantImgEdit.setAttribute('src', './assets/icons/important-icon-default.svg');
+      editTaskImportant.checked == false;
 
-const editTaskElem = {
-  form: editTask,
+      editTaskImportant.addEventListener('change', () => {
+        if(editTaskImportant.checked){
+          isImportantImgEdit.setAttribute('src', './assets/icons/important-icon-checked.svg');
+        } else{
+          isImportantImgEdit.setAttribute('src', './assets/icons/important-icon-default.svg');
+        }
+      });
+    };
+
+    editTaskOnArray(taskToEdit);
+    });
+  })
+};
+// Edit tasks: Solo de la variable global
+const editTaskOnArray = (taskToEdit) =>{
+  editTaskForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    taskToEdit.title = editTaskTitle.value;
+    taskToEdit.descrip = editTaskDescrip.value;
+
+    if(editTaskImportant.checked){
+      taskToEdit.isImportant = true;
+    } else {
+      taskToEdit.isImportant = false;
+    }
+
+    editTaskOnDb(taskToEdit);
+  });
+};
+
+// Edit task on server
+const editTaskOnDb = (taskToEdit) => {
+  const options = {
+    method: 'PUT',
+    headers: {
+    'Content-Type': 'application/json'
+  },
+    body: JSON.stringify(taskToEdit)
+  };
+  fetch(`https://63ced1bc6d27349c2b7650e2.mockapi.io/to-build-tasks/tasks/${taskToEdit.id}`, options)
+  .then(response => response.json())
+  .then(data => {  
+    // Actualizo en el DOM la informacion
+    const taskElement = document.getElementById(`${taskToEdit.id}`);
+    taskElement.querySelector('.task__title').textContent = taskToEdit.title;
+    taskElement.querySelector('.task__descrip').textContent = taskToEdit.descrip;
+    if(taskToEdit.isImportant == true){
+      isImportantImgEdit.setAttribute('src', './assets/icons/important-icon-checked.svg');
+    } else {
+      isImportantImgEdit.setAttribute('src', './assets/icons/important-icon-default.svg');
+    }
+
+  })
+  .catch(error => {
+    Toastify({
+      text: "Error",
+      backgroundColor: "red",
+      classes: "error",
+    }).showToast();
+  });
+
+};
+
+// Descartar cambios
+const cancelEdit = () =>{
+  cancelEditTask.addEventListener('click', () => {
+    editTaskForm.classList.toggle('display-none');
+  });
 };
 
 
 // Calendar
 const calendar = document.getElementById('calendar');
-
-const calendarElem = {
-  panel: calendar,
+const displayCalendar = () => {
+  viewCalendarBtn.addEventListener('click', () => {
+    calendar.classList.toggle('display-none');
+  });
 };
 
 
 // Weather App
 const weather = document.getElementById('weather');
-const weatherElem = {
-  panel: weather,
-};
 // Mostrar en pantalla el clima
 const displayWeather = () =>{
   workflowNav.viewWeather.addEventListener('click', () =>{
-    weatherElem.panel.classList.toggle('display-none');
+    weather.classList.toggle('display-none');
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
   });
 }
-
-
-
-// VER TODAS LAS TAREAS
-const displayAllTasks = () =>{
-
-
-};
-
-
-
-
-function workflowNavigation(){
-
-
-
-};
-
-
-
-
-
-
-
-
-// Boton de descartar tarea nueva
-const cancelNewTask = () =>{
-  cancelNewTaskBtn.addEventListener('click', () =>{
-    createTaskForm.cancel.form.classList.toggle('display-none');
-  });
-};
-
-
-
-
-
 
 
 // Mostrar Workflow
@@ -378,37 +635,17 @@ const displayWorkflow = () =>{
   sectionHome.style.display = 'none';
   sectionSignUp.style.display = 'none';
   sectionLogIn.style.display = 'none';
+  
   // Show
   displayAddNewTask();
   submitNewTask();
   displayWeather();
+  displayCalendar();
   displayHeaderAndFooter();
+  bringTasks();
+
   workflow.style.display = 'block';
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // SIGN UP
 const sectionSignUp = document.getElementById('signUp');
@@ -452,6 +689,7 @@ const displaySignUp = () => {
   // Show
   sectionSignUp.style.display = 'grid';
   // Init logica y eventos
+  dockEventsListeners();
   btnSignInEvent();
   initSignUp();
 };
@@ -489,6 +727,7 @@ const displayLogIn = () =>{
     // Show
     sectionLogIn.style.display = 'grid';
     // Init logica y eventos
+    dockEventsListeners();
     btnSignUpEvent();
     initLogIn();
 };
@@ -567,8 +806,6 @@ const signUpErrorFieldStyles = () => {
 };
 
 
-
-
 // Validacion de informacion
 function saveUserData(){
   if (validateName(signUpName.value) == true && validatePhone(signUpPhone.value) == true && validateEmail(signUpEmail.value) == true && validatePassword(signUpPassword.value) == true && validateConfirmPassword(signUpPassword.value, signUpConfirmPassword.value) == true){
@@ -581,13 +818,9 @@ function saveUserData(){
       userOnStorage.userEmail = localStorage.getItem('userEmail');
       userOnStorage.userPhone = localStorage.getItem('userPhone');
       userOnStorage.userPassword = localStorage.getItem('userPassword');
-
-      signUpName.value = "";
-      signUpPhone.value = "";
-      signUpEmail.value = "";
-      signUpPassword.value = "";
-      signUpConfirmPassword.value = "";
-
+      // Reseteo el formulario
+      signUpform.form.reset();
+      // Notifico que se han cargado los datos
       Toastify({
           text: "It has been successfully registered",
           backgroundColor: "rgba(37, 108, 41, 0.80)",
@@ -711,13 +944,3 @@ function initLogIn(){
       
   });
 };
-
-
-
-
-
-
-
-
-
-

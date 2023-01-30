@@ -279,11 +279,21 @@
 
 
                 <section class="workstation__body">
+                    <article id="calendar" class="display-none">
+                        <iframe src="https://calendar.google.com/calendar/embed?height=500&wkst=1&bgcolor=%23039BE5&ctz=America%2FArgentina%2FBuenos_Aires&src=ZXMuYXIub2ZmaWNpYWwjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%230B8043" style="border-width:0" width="920" height="500" frameborder="0" scrolling="no"></iframe>
+                    </article>
+                    <article id="weather" class="display-none">
+                        <a class="weatherwidget-io" href="https://forecast7.com/es/n34d60n58d38/buenos-aires/" data-label_1="BUENOS AIRES" data-label_2="WEATHER" data-font="Roboto" data-icons="Climacons Animated" data-theme="gray" data-highcolor="#ff2f2f" data-suncolor="#f7d72e" data-cloudfill="#ffffff" >BUENOS AIRES WEATHER</a>
+                    </article>
+                    <!-- TASKS -->
+                    <section id="tasks">
+
+                    </section>
                     <!-- CREATE TASK -->
                     <form id="createNewTask" class="display-none">
                         <div class="newTask__header">
                             <label class="newTask__label">
-                                <img src="./assets/icons/important-icon-checked.svg" alt="">
+                                <img id="isImportantImg" src="./assets/icons/important-icon-default.svg" alt="">
                                 <input type="checkbox" name="important" id="newTaskImportant">
                             </label>
                             <button id="cancelNewTask"><img src="./assets/icons/cancel-icon.svg" alt=""></button>
@@ -302,19 +312,32 @@
                     </form>
 
                     <!-- EDIT TASK -->
-                    <article id="editTask" class="display-none">
-                        <p>Formulario para editar tareas</p>
-                    </article>
+                    <form id="editTask" class="display-none">
+                        <div class="editTask__header">
+                            <label class="editTask__label" for="editTaskImportant">
+                                <img id="isImportantImgEdit" src="./assets/icons/important-icon-default.svg" alt="">
+                                <input type="checkbox" name="important" id="editTaskImportant">
+                            </label>
+                            <button id="cancelEditTask"><img src="./assets/icons/cancel-icon.svg" alt=""></button>
+                        </div>
+                        <div class="editTask__body">
+                            <div class="editTask__label">
+                                <label for="editTaskTitle"><h4>Title</h4></label>
+                                <input type="text" name="title" id="editTaskTitle">
+                            </div>
+                            <div class="editTask__label">
+                                <label for="editTaskDescrip"><p>Description</p></label>
+                                <textarea name="description" id="editTaskDescrip" ></textarea>
+                            </div>
+                            <input type="submit" value="Send changes" id="editTaskSubmit">
+                        </div>
+                    </form>
 
                     <!-- CALENDAR -->
-                    <article id="calendar" class="display-none">
-                        <p>Calendario</p>
-                    </article>
+
 
                     <!-- WEATHER -->
-                    <article id="weather" class="display-none">
-                        <p>Clima</p>
-                    </article>
+
 
                 </section>
             </div>

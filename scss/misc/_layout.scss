@@ -25,6 +25,9 @@
 .display-none{
     display: none!important;
 }
+.display-none2{
+    display: none!important;
+}
 body{
     @include grid-container(1fr, auto);
 }
