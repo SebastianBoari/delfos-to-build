@@ -13,13 +13,14 @@ module.exports = {
         filename: "[name].[contenthash].js",
         assetModuleFilename: "assets/images/[hash][ext][query]"
     },
+    mode: "production",
     resolve: {
         extensions: [".js"],
         alias: {
             "@utils": path.resolve(__dirname, "src/utils/"),
             "@templates": path.resolve(__dirname, "src/templates/"),
             "@pages": path.resolve(__dirname, "src/pages/"),
-            "@styles": path.resolve(__dirname, "src/styles/"),
+            "@css": path.resolve(__dirname, "src/css/"),
             "@images": path.resolve(__dirname, "src/assets/images/"),
         }
     },
@@ -33,9 +34,9 @@ module.exports = {
                 }
             },
             {
-                test: /\.s?css$/i,
+                test: /\.css$/i,
                 use: [
-                    MiniCssExtractPlugin.loader, "css-loader", "sass-loader"
+                    MiniCssExtractPlugin.loader, "css-loader"
                 ]
             },
             {
@@ -43,12 +44,12 @@ module.exports = {
                 type: "asset/resource"
             },
             {
-                test: /\.(woff|woff2)$/,
+                test: /\.(ttf)$/,
                 use: {
                     loader: "url-loader",
                     options: {
                         limit: 10000,
-                        mimetype: "application/font-woff",
+                        mimetype: "application/font-sfnt",
                         name: "[name].[contenthash].[ext]",
                         outputPath: "./assets/fonts/",
                         publicPath: "./assets/fonts/",
@@ -65,13 +66,17 @@ module.exports = {
             filename: "./index.html"
         }),
         new MiniCssExtractPlugin({
-            filename: "assets/[name].[contenthash].css"
+            filename: "./[name].[contenthash].css"
         }),
         new CopyPlugin({
             patterns: [
                 {
                     from: path.resolve(__dirname, "src", "assets/images"),
                     to: "assets/images"
+                },
+                {
+                    from: path.resolve(__dirname, "src", "assets/fonts"),
+                    to: "assets/fonts"
                 }
             ]
         }),

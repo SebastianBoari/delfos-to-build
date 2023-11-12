@@ -1,57 +1,68 @@
 // LIGHT THEME
 
 // BODY
-.body__theme--light{
+.body__theme--light {
     background-color: white;
 }
+
 // HEADER
-.header__theme--light{
-    .header__nav{
+.header__theme--light {
+    .header__nav {
         background-color: $white-op80;
     }
 }
+
 // FOOTER
-.footer__theme--light{
-    .container-l{
-        .footer__contact{
-            .address{
+.footer__theme--light {
+    .container-l {
+        .footer__contact {
+            .address {
                 color: $navyBlue;
             }
-            .footer__contact--down{
-                .telNumber, .contactMail{
+
+            .footer__contact--down {
+
+                .telNumber,
+                .contactMail {
                     color: $navyBlue;
                 }
             }
         }
-        .footer__social{
-            .social__redirect, .social__link{
-                .footer__link{
+
+        .footer__social {
+
+            .social__redirect,
+            .social__link {
+                .footer__link {
                     color: $navyBlue;
                 }
             }
-            .signature{
+
+            .signature {
                 color: $navyBlue;
             }
         }
     }
 }
+
 // LOGIN
-#logIn{
-    .container-logIn{
-        .logInImg__theme--light{
-            background-image: url(../assets/misc/form-banner-light.png);
+#logIn {
+    .container-logIn {
+        .logInImg__theme--light {
+            //background-image: url(../assets/misc/form-banner-light.png);
         }
     }
 }
+
 // SIGNUP
-#signUp{
-    .container-signUp{
-        .signUpImg__theme--light{
-            background-image: url(../assets/misc/form-banner-light.png);
+#signUp {
+    .container-signUp {
+        .signUpImg__theme--light {
+            //background-image: url(../assets/misc/form-banner-light.png);
         }
     }
 }
-     
+
 
 
 
@@ -62,55 +73,65 @@
 // MIDNIGHT BLUE THEME
 
 // BODY
-.body__theme--blueMidnight{
-    background: rgb(0,52,89);
-    background: radial-gradient(circle, rgba(0,52,89,1) 0%, rgba(0,23,31,1) 100%);
+.body__theme--blueMidnight {
+    background: rgb(0, 52, 89);
+    background: radial-gradient(circle, rgba(0, 52, 89, 1) 0%, rgba(0, 23, 31, 1) 100%);
 }
+
 // HEADER
-.header__theme--blueMidnight{
-    .header__nav{
+.header__theme--blueMidnight {
+    .header__nav {
         background-color: $navyBlue-op80;
     }
 }
 
 // FOOTER
-.footer__theme--blueMidnight{
-    .container-l{
-        .footer__contact{
-            .address{
+.footer__theme--blueMidnight {
+    .container-l {
+        .footer__contact {
+            .address {
                 color: $white;
             }
-            .footer__contact--down{
-                .telNumber, .contactMail{
+
+            .footer__contact--down {
+
+                .telNumber,
+                .contactMail {
                     color: $white;
                 }
             }
         }
-        .footer__social{
-            .social__redirect, .social__link{
-                .footer__link{
+
+        .footer__social {
+
+            .social__redirect,
+            .social__link {
+                .footer__link {
                     color: $white;
                 }
             }
-            .signature{
+
+            .signature {
                 color: $white;
             }
         }
     }
 }
+
 // LOGIN
-#logIn{
-    .container-logIn{
-        .logInImg__theme--blueMidnight{
-            background-image: url(../assets/misc/form-banner-midnightblue.png);
+#logIn {
+    .container-logIn {
+        .logInImg__theme--blueMidnight {
+            //background-image: url(../assets/misc/form-banner-midnightblue.png);
         }
     }
 }
+
 // SIGNUP
-#signUp{
-    .container-signUp{
-        .signUpImg__theme--blueMidnight{
-            background-image: url(../assets/misc/form-banner-midnightblue.png);
+#signUp {
+    .container-signUp {
+        .signUpImg__theme--blueMidnight {
+            //background-image: url(../assets/misc/form-banner-midnightblue.png);
         }
     }
 }
@@ -133,56 +154,65 @@
 
 // DARK THEME
 // BODY
-.body__theme--dark{
-    background: rgb(0,23,31);
-    background: radial-gradient(circle, rgba(0,23,31,1) 50%, rgba(0,0,0,1) 100%);
+.body__theme--dark {
+    background: rgb(0, 23, 31);
+    background: radial-gradient(circle, rgba(0, 23, 31, 1) 50%, rgba(0, 0, 0, 1) 100%);
 }
+
 // HEADER
-.header__theme--dark{
-    .header__nav{
+.header__theme--dark {
+    .header__nav {
         background-color: $blackBlue-op80;
     }
 }
 
 // FOOTER
-.footer__theme--dark{
-    .container-l{
-        .footer__contact{
-            .address{
+.footer__theme--dark {
+    .container-l {
+        .footer__contact {
+            .address {
                 color: $white;
             }
-            .footer__contact--down{
-                .telNumber, .contactMail{
+
+            .footer__contact--down {
+
+                .telNumber,
+                .contactMail {
                     color: $white;
                 }
             }
         }
-        .footer__social{
-            .social__redirect, .social__link{
-                .footer__link{
+
+        .footer__social {
+
+            .social__redirect,
+            .social__link {
+                .footer__link {
                     color: $white;
                 }
             }
-            .signature{
+
+            .signature {
                 color: $white;
             }
-        }
-    }
-}
-// LOGIN
-#logIn{
-    .container-logIn{
-        .logInImg__theme--dark{
-            background-image: url(../assets/misc/form-banner-dark.png);
-        }
-    }
-}
-// SIGNUP
-#signUp{
-    .container-signUp{
-        .signUpImg__theme--dark{
-            background-image: url(../assets/misc/form-banner-dark.png);
         }
     }
 }
 
+// LOGIN
+#logIn {
+    .container-logIn {
+        .logInImg__theme--dark {
+            //background-image: url(../assets/misc/form-banner-dark.png);
+        }
+    }
+}
+
+// SIGNUP
+#signUp {
+    .container-signUp {
+        .signUpImg__theme--dark {
+            //background-image: url(../assets/misc/form-banner-dark.png);
+        }
+    }
+}

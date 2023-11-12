@@ -1,13 +1,15 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
-html{
+
+html {
     font-size: 62.5%;
 }
-body{
+
+body {
     font-family: 'Lato', sans-serif;
     position: relative;
     height: 100%;
@@ -18,8 +20,8 @@ body::-webkit-scrollbar {
     width: 0.5rem;
     background-color: $gray-op80;
 }
+
 body::-webkit-scrollbar-thumb {
     background-color: $skyBlue-op80;
     border-radius: 25px;
 }
-  
