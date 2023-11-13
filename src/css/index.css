@@ -188,31 +188,31 @@ body {
   color: rgb(239, 35, 60);
 }
 
-#footer {
+.footer {
   box-shadow: 0px -5px 5px 0px rgba(197, 198, 196, 0.8);
   padding: 10rem;
 }
-#footer .container-l {
+.footer .footer-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
 }
-#footer .container-l .footer__figure {
+.footer .footer-container .footer_brand {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
 }
-#footer .container-l .footer__figure .figure__link {
+.footer .footer-container .footer_brand .footer_brand-link {
   grid-column: auto/span 1;
   grid-row: auto/span 1;
   justify-self: start;
   align-self: start;
 }
-#footer .container-l .footer__figure .figure__link .figure__img {
+.footer .footer-container .footer_brand .footer_brand-link .footer_brand-image {
   width: 7rem;
   height: auto;
 }
-#footer .container-l .footer__contact {
+.footer .footer-container .footer_contact {
   grid-column: auto/span 1;
   grid-row: auto/span 1;
   justify-self: center;
@@ -223,7 +223,7 @@ body {
   grid-column-gap: 0;
   grid-row-gap: 3.2rem;
 }
-#footer .container-l .footer__contact .address {
+.footer .footer-container .footer_contact .address {
   max-width: 28rem;
   max-height: auto;
   font-size: 1.8em;
@@ -231,14 +231,15 @@ body {
   font-family: "Lato", sans-serif;
   line-height: 3.6rem;
 }
-#footer .container-l .footer__contact .footer__contact--down {
+.footer .footer-container .footer_contact .footer_contact-footer {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 0;
   grid-row-gap: 1.6rem;
 }
-#footer .container-l .footer__contact .footer__contact--down .telNumber, #footer .container-l .footer__contact .footer__contact--down .contactMail {
+.footer .footer-container .footer_contact .footer_contact-footer .telephone,
+.footer .footer-container .footer_contact .footer_contact-footer .mail {
   max-width: 15rem;
   max-height: auto;
   font-size: 1.4em;
@@ -247,7 +248,7 @@ body {
   line-height: 2.2rem;
   border-bottom: solid 2px;
 }
-#footer .container-l .footer__social {
+.footer .footer-container .footer_social {
   grid-column: auto/span 1;
   grid-row: auto/span 1;
   justify-self: end;
@@ -258,24 +259,24 @@ body {
   grid-column-gap: 0;
   grid-row-gap: 3.2rem;
 }
-#footer .container-l .footer__social .social__redirect, #footer .container-l .footer__social .social__link {
+.footer .footer-container .footer_social .footer_social-container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-column-gap: 0;
   grid-row-gap: 2rem;
 }
-#footer .container-l .footer__social .social__redirect .footer__link, #footer .container-l .footer__social .social__link .footer__link {
+.footer .footer-container .footer_social .footer_social-container .link {
   font-size: 1.4em;
   font-weight: 400;
   font-family: "Lato", sans-serif;
   line-height: 2.2rem;
   transition: all 0.2s;
 }
-#footer .container-l .footer__social .social__redirect .footer__link:hover, #footer .container-l .footer__social .social__link .footer__link:hover {
+.footer .footer-container .footer_social .footer_social-container .link:hover {
   color: rgb(0, 126, 167);
 }
-#footer .container-l .footer__social .signature {
+.footer .footer-container .footer_social .copyright {
   grid-column: 1/span 3;
   grid-row: auto/span 1;
   justify-self: start;
@@ -287,54 +288,55 @@ body {
 }
 
 @media (max-width: 768px) {
-  #footer {
+  .footer {
     padding: 6.4rem 3.2rem;
   }
-  #footer .container-l {
+  .footer .footer-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     grid-column-gap: o;
     grid-row-gap: 3.2rem;
   }
-  #footer .container-l .footer__figure {
+  .footer .footer-container .footer_brand {
     display: none;
   }
-  #footer .container-l .footer__contact {
+  .footer .footer-container .footer_contact {
     grid-column: auto/span 1;
     grid-row: auto/span 1;
     justify-self: center;
     align-self: start;
     text-align: center;
   }
-  #footer .container-l .footer__contact .footer__contact--down {
+  .footer .footer-container .footer_contact .footer_contact-footer {
     grid-column: auto/span 1;
     grid-row: auto/span 1;
     justify-self: center;
     align-self: start;
   }
-  #footer .container-l .footer__contact .footer__contact--down .telNumber, #footer .container-l .footer__contact .footer__contact--down .contactMail {
+  .footer .footer-container .footer_contact .footer_contact-footer .telephone,
+  .footer .footer-container .footer_contact .footer_contact-footer .mail {
     border: none;
   }
-  #footer .container-l .footer__social {
+  .footer .footer-container link .footer_social {
     grid-column: auto/span 1;
     grid-row: auto/span 1;
     justify-self: center;
     align-self: start;
   }
-  #footer .container-l .footer__social .social__redirect {
+  .footer .footer-container link .footer_social .footer_social-container .one {
     grid-column: auto/span 1;
     grid-row: auto/span 1;
     justify-self: start;
     align-self: start;
   }
-  #footer .container-l .footer__social .social__link {
+  .footer .footer-container link .footer_social .footer_social-container .two {
     grid-column: auto/span 1;
     grid-row: auto/span 1;
     justify-self: end;
     align-self: start;
   }
-  #footer .container-l .footer__social .signature {
+  .footer .footer-container link .footer_social .copyright {
     text-align: center;
   }
 }

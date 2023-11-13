@@ -1,9 +1,10 @@
 const resolveRoutes = (route) => {
-    if (route.length <= 1) {
-        return '/';
+    if (route.length <= 3) {
+        const validRoute = route === '/' ? route : '/:task'
+
+        return validRoute
     } else {
-        const formattedRoute = route.toLowerCase();
-        return formattedRoute;
+        return `${route}`
     }
 }
 

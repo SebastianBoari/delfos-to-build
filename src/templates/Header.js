@@ -1,20 +1,18 @@
-import UserIcon from '@icons/UserIcon'
 
-const Header = async (user) => {
+const Header = async () => {
     const view = `
     <header class="header header-light">
-        
-        <nav class="header_navbar">
-            <div class="container-xl">
-                <figure class="header_navbar-brand">
-                    <a class="brand_link">
-                        <img class="brand_image" src="https://i.imgur.com/ldRlR3A.png" alt="Logo de DelfOS.">
-                    </a>
-                </figure>
-
-                <div class="header_navbar-buttons">
+    
+    <nav class="header_navbar">
+    <div class="container-xl">
+    <figure class="header_navbar-brand">
+    <a class="brand_link">
+    <img class="brand_image" src="https://i.imgur.com/ldRlR3A.png" alt="Logo de DelfOS.">
+    </a>
+    </figure>
+    
+    <div class="header_navbar-buttons">
                     <button class="toggle_buttons">
-                        ${user ? user.userimage() : UserIcon()}
                     </button>
 
                     <div class="buttons_panel display-none">

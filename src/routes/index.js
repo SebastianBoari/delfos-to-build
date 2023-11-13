@@ -34,11 +34,9 @@ const routes = {
 }
 
 const router = async () => {
+    const root = document.getElementById('root')
     const hash = getHash()
     const route = resolveRoutes(hash)
-
-
-    const root = document.getElementById('root')
 
     const render = async () => {
         if (!routes[route]) {
@@ -56,7 +54,7 @@ const router = async () => {
         }
     }
 
-    const scriptsUp = async () => {
+    const scripts = async () => {
         if (routes[route][1]) {
             if (routes[route][2].header && routes[route][2].footer) {
                 await HeaderScripts.forEach((cb) => {
@@ -77,7 +75,7 @@ const router = async () => {
     }
 
     await render()
-    await scriptsUp()
+    await scripts()
 }
 
 export default router

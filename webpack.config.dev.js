@@ -9,7 +9,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "[name].[contenthash].js",
-        assetModuleFilename: "assets/images/[hash][ext][query]"
+        assetModuleFilename: "assets/images/[hash][ext][query]",
+        publicPath: '/'
     },
     mode: "development",
     devtool: "source-map",
@@ -68,7 +69,9 @@ module.exports = {
     devServer: {
         static: path.join(__dirname, "dist"),
         compress: true,
-        historyApiFallback: true,
+        historyApiFallback: {
+            index: '/'
+        },
         port: 3000,
     }
 }
