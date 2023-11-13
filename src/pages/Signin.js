@@ -1,5 +1,5 @@
 
-const SignIn = () => {
+const SignIn = async () => {
     const view = `
     <section id="signUp" class="signUp__theme--light animate__animated animate__fadeIn animate__slow">
         <div class="container-signUp">

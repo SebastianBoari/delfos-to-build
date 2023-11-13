@@ -1,6 +1,5 @@
 
-
-const Workbench = () => {
+const Workbench = async () => {
     const view = `
   <section id="workflow" class="animate__animated animate__fadeIn animate__slow workflow__theme--light">
 
@@ -94,13 +93,6 @@ const Workbench = () => {
                                   <input type="submit" value="Send changes" id="editTaskSubmit">
                               </div>
                           </form>
-
-                          <!-- CALENDAR -->
-
-
-                          <!-- WEATHER -->
-
-
                       </section>
               </div>
       </section>

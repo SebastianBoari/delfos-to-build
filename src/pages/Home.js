@@ -1,9 +1,9 @@
-const Home = () => {
+const Home = async () => {
     const view = `
     <section id="home">
         <div class="container-xl">
             <figure class="home__figure">
-                <img src="./assets/misc/home-illustration-1.png" alt="Ilustracion de un calendario con tareas a cumplir.">
+                <img src="" alt="Ilustracion de un calendario con tareas a cumplir.">
             </figure>
             <article class="home__article">
                 <div class="article__txt">
@@ -24,13 +24,13 @@ const Home = () => {
                     </div>
                 </article>
                 <figure class="home__figure--wall">
-                    <img src="./assets/misc/home-illustration-2.png" alt="Ilustracion de una persona trabajando en su realizacion personal.">
+                    <img src="" alt="Ilustracion de una persona trabajando en su realizacion personal.">
                 </figure>
             </div>
 
             <div class="container-xl">
                 <figure class="home__figure--wall">
-                    <img src="./assets/misc/home-illustration-3.png" alt="Ilustracion de dispositivos inteligentes.">
+                    <img src="" alt="Ilustracion de dispositivos inteligentes.">
                 </figure>
                 <article class="home__article--wall">
                     <div class="article__txt--wall">

@@ -1,10 +1,9 @@
 const resolveRoutes = (route) => {
     if (route.length <= 1) {
-        return '/'
+        return '/';
     } else {
-        const formattedRoute = route.toLowerCase()
-
-        return `${formattedRoute}`
+        const formattedRoute = route.toLowerCase();
+        return formattedRoute;
     }
 }
 

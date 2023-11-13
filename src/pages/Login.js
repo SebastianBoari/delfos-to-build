@@ -1,4 +1,4 @@
-const Login = () => {
+const Login = async () => {
     const view = `
     <section id="logIn" class="logIn__theme--light animate__animated animate__fadeIn animate__slow">
         <div class="container-logIn">

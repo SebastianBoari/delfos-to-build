@@ -1,5 +1,5 @@
 const getHash = () => {
-    return window.location.pathname || '/'
+    return window.location.hash.slice(1) || '/';
 }
 
 export default getHash

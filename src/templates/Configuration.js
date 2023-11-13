@@ -1,4 +1,4 @@
-const Configuration = () => {
+const Configuration = async () => {
     const view = `
     <section id="configuration" class="display-none">
         <article class="configuration__user">

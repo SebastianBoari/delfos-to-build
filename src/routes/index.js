@@ -1,38 +1,68 @@
-import Header from '@templates/Header'
-import Footer from '@templates/Footer'
+import HeaderRender from '@templates/Header'
+import FooterRender from '@templates/Footer'
+import HomeRender from '@pages/Home'
+import LoginRender from '@pages/Login'
+import SigninRender from '@pages/Signin'
+import WorkbenchRender from '@pages/Workbench'
+import Error404Render from '@pages/Error404'
 
-import Home from '@pages/Home'
-import Login from '@pages/Login'
-import Signin from '@pages/Signin'
-import Workbench from '@pages/Workbench'
-import Error404 from '@pages/Error404'
+import {
+    HomeScripts,
+    LoginScripts,
+    SigninScripts,
+    WorkbenchScripts
+} from '../js'
+
+import {
+    HomeRules,
+    LoginRules,
+    SigninRules,
+    WorkbenchRules
+} from '../js/rules'
 
 import getHash from '@utils/getHash'
 import resolveRoutes from '@utils/resolveRoutes'
 
 const routes = {
-    '/': Home,
-    '/home': Home,
-    '/login': Login,
-    '/signin': Signin,
-    '/workbench': Workbench,
+    '/': [HomeRender, HomeScripts, HomeRules],
+    '/home': [HomeRender, HomeScripts, HomeRules],
+    '/login': [LoginRender, LoginScripts, LoginRules],
+    '/signin': [SigninRender, SigninScripts, SigninRules],
+    '/workbench': [WorkbenchRender, WorkbenchScripts, WorkbenchRules],
 }
 
 const router = async () => {
-    // HEADER
-    const header = document.getElementById('header')
-    header.innerHTML = await Header()
-
-    // CONTENT
-    const content = document.getElementById('content')
     const hash = getHash()
     const route = resolveRoutes(hash)
-    const render = routes[route] ? routes[route] : Error404
-    content.innerHTML = await render()
 
-    // FOOTER
-    const footer = document.getElementById('footer')
-    footer.innerHTML = await Footer()
+    const init = async () => {
+        const root = document.getElementById('root')
+        const render = async () => {
+            if (!routes[route]) {
+                root.innerHTML = await HeaderRender()
+                root.innerHTML += await Error404Render()
+                root.innerHTML += await FooterRender()
+            }
+
+            if (routes[route][2].header && routes[route][2].footer) {
+                root.innerHTML = await HeaderRender()
+                root.innerHTML += await routes[route][0]()
+                root.innerHTML += await FooterRender()
+            } else {
+                root.innerHTML = await routes[route][0]()
+            }
+        }
+
+        await render()
+
+        if (routes[route][1]) {
+            routes[route][1].forEach((cb) => {
+                cb()
+            })
+        }
+    }
+
+    await init()
 }
 
 export default router

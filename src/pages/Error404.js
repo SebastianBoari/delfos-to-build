@@ -1,4 +1,4 @@
-const Error404 = () => {
+const Error404 = async () => {
     const view = `
         <div class="error404-container">
             <div class="error404">

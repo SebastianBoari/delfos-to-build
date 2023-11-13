@@ -21,6 +21,7 @@ module.exports = {
             "@pages": path.resolve(__dirname, "src/pages/"),
             "@css": path.resolve(__dirname, "src/css/"),
             "@images": path.resolve(__dirname, "src/assets/images/"),
+            "@routes": path.resolve(__dirname, "src/routes/"),
         }
     },
     module: {
@@ -39,23 +40,9 @@ module.exports = {
                 ]
             },
             {
-                test: /\.png/,
+                test: /\.(png|jpg|svg)$/,
                 type: "asset/resource"
             },
-            {
-                test: /\.(ttf)$/,
-                use: {
-                    loader: "url-loader",
-                    options: {
-                        limit: 10000,
-                        mimetype: "application/font-sfnt",
-                        name: "[name].[contenthash].[ext]",
-                        outputPath: "./assets/fonts/",
-                        publicPath: "./assets/fonts/",
-                        esModule: false,
-                    }
-                }
-            }
         ]
     },
     plugins: [
