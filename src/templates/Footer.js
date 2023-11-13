@@ -1,10 +1,10 @@
 const Footer = async () => {
     const view = `
-    <footer footer id = "footer" class="footer__theme--light" >
+    <footer footer id="footer" class="footer__theme--light" >
         <div class="container-l">
             <figure class="footer__figure">
                 <a class="figure__link" href="https://sebastianboari.github.io/DelfOS.github.io/">
-                    <img class="figure__img" src="" alt="Logo de DelfOS.">
+                    <img class="figure__img" src="https://i.imgur.com/rOnwNMf.png" alt="Logo de DelfOS.">
                 </a>
             </figure>
             <div class="footer__contact">

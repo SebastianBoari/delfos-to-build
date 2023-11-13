@@ -1,5 +1,6 @@
+import UserIcon from '@icons/UserIcon'
 
-const Header = async () => {
+const Header = async (user) => {
     const view = `
     <header class="header header-light">
         
@@ -13,7 +14,7 @@ const Header = async () => {
 
                 <div class="header_navbar-buttons">
                     <button class="toggle_buttons">
-                        <img class="toggle_buttons-icon" src="" alt="">
+                        ${user ? user.userimage() : UserIcon()}
                     </button>
 
                     <div class="buttons_panel display-none">

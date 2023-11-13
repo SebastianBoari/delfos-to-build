@@ -3,7 +3,7 @@ const Home = async () => {
     <section id="home">
         <div class="container-xl">
             <figure class="home__figure">
-                <img src="" alt="Ilustracion de un calendario con tareas a cumplir.">
+                <img src="https://i.imgur.com/EM0cX54.png" alt="Ilustracion de un calendario con tareas a cumplir.">
             </figure>
             <article class="home__article">
                 <div class="article__txt">
@@ -24,13 +24,13 @@ const Home = async () => {
                     </div>
                 </article>
                 <figure class="home__figure--wall">
-                    <img src="" alt="Ilustracion de una persona trabajando en su realizacion personal.">
+                    <img src="https://i.imgur.com/UTsnszn.png" alt="Ilustracion de una persona trabajando en su realizacion personal.">
                 </figure>
             </div>
 
             <div class="container-xl">
                 <figure class="home__figure--wall">
-                    <img src="" alt="Ilustracion de dispositivos inteligentes.">
+                    <img src="https://i.imgur.com/6i5Mx0p.png" alt="Ilustracion de dispositivos inteligentes.">
                 </figure>
                 <article class="home__article--wall">
                     <div class="article__txt--wall">
