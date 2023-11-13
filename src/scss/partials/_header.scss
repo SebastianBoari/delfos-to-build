@@ -1,84 +1,43 @@
-#header{
+.header {
     @include max-sizes(none, 138rem);
-    .header__nav{
+
+    .header_navbar {
         position: fixed;
         top: 0;
         z-index: 2;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         @include sizes(100%, auto);
-        .container-xl{
+
+        .container-xl {
             @include flex(row, nowrap, space-between, center, 0);
             padding: 1.2rem 3.2rem;
-            .nav__figure{
-                .figure__link{
-                    .figure__img{
+
+            .header_navbar-brand {
+                .brand_link {
+                    .brand_image {
                         @include sizes(6rem, auto);
                     }
                 }
             }
-            .nav__buttons{
+
+            .header_navbar-buttons {
                 @include flex(row, nowrap, space-between, center, 3.2rem);
-                .buttons__panels{
+
+                .buttons_panel {
                     @include flex(column, nowrap, space-between, flex-end, 0);
-                    button{
-                        cursor: pointer;
-                        outline: none;
-                        border: none;
-                        background-color: rgba(25, 25, 25, 0);
-                        .buttons__img{
-                            @include sizes(3.5rem, auto);
-                        }
-                    }
-                    #navAccount__panel{
-                        z-index: 3;
-                        @include flex(column, nowrap, space-between, center, $space-32);
-                        @include sizes(12rem, auto);
-                        padding: $space-16;
-                        position: absolute;
-                        top: 60px;
-                        border-radius: 5px;
-                        background-color: $white-op80;
-                        #panelBtn__logIn{
-                            font-family: 'Lato', sans-serif;
-                            font-size: $font-16;
-                            font-weight: 600;
-                            color: $deepSkyBlue;
-                            transition: all .2s;
-                        }
-                        #panelBtn__logIn{
-                            color: $skyBlue;
-                        }
-
-                        #panelBtn__logOut{
-                            font-family: 'Lato', sans-serif;
-                            font-size: $font-16;
-                            font-weight: 600;
-                            color: $imperialRed;
-                            transition: all .2s;
-                        }
-                        #panelBtn__logOut{
-                            color: $amaranthRed;
-                        }
-
-                        #panelBtn__Config{
-                            align-self: flex-end;
-                            img{
-                                @include sizes(2.4rem, auto);
-                            }
-                        }
-                    }
                 }
             }
         }
     }
-    #header__welcome{
+
+    #header_banner {
         margin-top: 9.6rem;
         @include sizes(100%, 30rem);
-        .swiper{
+
+        .swiper {
             position: absolute;
             @include sizes(100%, 30rem);
             object-fit: cover;
         }
     }
 }
-
