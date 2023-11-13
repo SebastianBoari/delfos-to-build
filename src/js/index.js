@@ -2,12 +2,15 @@ import homeScript from './home'
 import loginScript from './login'
 import signinScript from './signin'
 import workbenchScript from './workbench'
+import headerScript from './header'
+import footerScript from './footer'
 
 export const HomeScripts = [homeScript]
 export const LoginScripts = [loginScript]
 export const SigninScripts = [signinScript]
 export const WorkbenchScripts = [workbenchScript]
-
+export const HeaderScripts = [headerScript]
+export const FooterScripts = [footerScript]
 
 /* 
 // Body
@@ -158,10 +161,6 @@ const headerActiveSession = () => {
 const headerNoActiveSession = () => {
     btnAccountNoActiveSession();
 };
-// Inicializo Carrusel
-const swiper = new Swiper(".mySwiper", {
-    autoplay: true,
-});
 
 
 // FUNCION INICIALIZADORA DEL HEADER COMPLETO

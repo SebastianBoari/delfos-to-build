@@ -1,5 +1,5 @@
-const signinScript = () => {
-    console.log('hola sign in')
+const signinScript = async () => {
+    console.log('signin')
 }
 
 export default signinScript

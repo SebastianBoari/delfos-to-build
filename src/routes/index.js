@@ -10,7 +10,9 @@ import {
     HomeScripts,
     LoginScripts,
     SigninScripts,
-    WorkbenchScripts
+    WorkbenchScripts,
+    HeaderScripts,
+    FooterScripts
 } from '../js'
 
 import {
@@ -35,34 +37,47 @@ const router = async () => {
     const hash = getHash()
     const route = resolveRoutes(hash)
 
-    const init = async () => {
-        const root = document.getElementById('root')
-        const render = async () => {
-            if (!routes[route]) {
-                root.innerHTML = await HeaderRender()
-                root.innerHTML += await Error404Render()
-                root.innerHTML += await FooterRender()
-            }
 
-            if (routes[route][2].header && routes[route][2].footer) {
-                root.innerHTML = await HeaderRender()
-                root.innerHTML += await routes[route][0]()
-                root.innerHTML += await FooterRender()
-            } else {
-                root.innerHTML = await routes[route][0]()
-            }
+    const root = document.getElementById('root')
+
+    const render = async () => {
+        if (!routes[route]) {
+            root.innerHTML = await HeaderRender()
+            root.innerHTML += await Error404Render()
+            root.innerHTML += await FooterRender()
         }
 
-        await render()
-
-        if (routes[route][1]) {
-            routes[route][1].forEach((cb) => {
-                cb()
-            })
+        if (routes[route][2].header && routes[route][2].footer) {
+            root.innerHTML = await HeaderRender()
+            root.innerHTML += await routes[route][0]()
+            root.innerHTML += await FooterRender()
+        } else {
+            root.innerHTML = await routes[route][0]()
         }
     }
 
-    await init()
+    const scriptsUp = async () => {
+        if (routes[route][1]) {
+            if (routes[route][2].header && routes[route][2].footer) {
+                await HeaderScripts.forEach((cb) => {
+                    cb()
+                })
+
+                await FooterScripts.forEach((cb) => {
+                    cb()
+                })
+            }
+
+            await routes[route][1].forEach((cb) => {
+                cb()
+            })
+            return
+        }
+        return
+    }
+
+    await render()
+    await scriptsUp()
 }
 
 export default router

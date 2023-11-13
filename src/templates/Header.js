@@ -1,45 +1,50 @@
+
 const Header = async () => {
     const view = `
-    <div class="header__theme--light">
-        <nav class="header__nav">
-            <div class="container-xl">
-                <figure class="nav__figure">
-                    <a class="figure__link" href="#">
-                        <img class="figure__img" src="" alt="Logo de DelfOS.">
-                    </a>
-                </figure>
-                <div class="nav__buttons">
-                    <div class="buttons__panels">
-                        <button id="btn__account"><img id="headerUserIcon" class="buttons__img userIcon"
-                            src="" alt="Opciones de cuenta"></button>
-                        <div id="navAccount__panel" class="display-none">
-                            <button id="panelBtn__logIn">Log In</button>
-                            <button id="panelBtn__logOut">Log Out</button>
-                            <button id="panelBtn__Config"><img src="" alt=""></button>
-                        </div>
-                    </div>
+    <header class="header header-light">
+        
+        <nav class="header_navbar">
+            <figure class="header_navbar-brand">
+                <a class="brand_link">
+                    <img class="brand_image" src="" alt="Logo de DelfOS.">
+                </a>
+            </figure>
+
+            <div class="header_navbar-buttons">
+                <button class="toggle_buttons">
+                    <img class="toggle_buttons-icon" src="" alt="">
+                </button>
+
+                <div class="buttons_panel display-none">
+                    <button id="login_button">Log In</button>
+                    <button id="logout_button">Log Out</button>
+                    
+                    <button id="config_button">
+                        <img class="config_button-icon" src="" alt="">
+                    </button>
                 </div>
             </div>
         </nav>
-        <div id="header__welcome">
+        
+        <div id="header_banner">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="" alt="">
+                        <img src="https://i.imgur.com/AWSiYxy.png">
                     </div>
                     <div class="swiper-slide">
-                        <img src="" alt="">
+                        <img src="https://i.imgur.com/lJbEBaT.png">
                     </div>
                     <div class="swiper-slide">
-                        <img src="" alt="">
+                        <img src="https://i.imgur.com/lSpBMkO.png">
                     </div>
                     <div class="swiper-slide">
-                        <img src="" alt="">
+                        <img src="https://i.imgur.com/oeH7XsJ.jpg">
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
     `
     return view
 }

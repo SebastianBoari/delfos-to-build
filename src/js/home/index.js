@@ -1,5 +1,5 @@
-const homeScript = () => {
-    console.log('hola1')
+const homeScript = async () => {
+    console.log('home')
 }
 
 export default homeScript
