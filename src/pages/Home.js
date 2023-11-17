@@ -11,7 +11,7 @@ const Home = async () => {
                     <p class="txt__p">Welcome to To Build, your ultimate task management companion. Keep track of all your tasks, deadlines, and projects in one place. With To Build, you can easily create new tasks, set reminders, and prioritize your to-do list to stay on top of your work.</p>
                 </div>
                 <div class="article__btn">
-                    <button id="btn__getStarted">Get started</button>
+                    <a href="/workbench"><button id="btn__getStarted">Get started</button></a>
                 </div>
             </article>
         </div>
