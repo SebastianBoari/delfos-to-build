@@ -75,6 +75,8 @@ class Router {
 
             const search = this.#match(path, this.#routes, route)
 
+            if (!search) return
+
             if (search && search != undefined) {
                 await this.#render(renderFunctions)
                 await this.#execute(logicFunctions)

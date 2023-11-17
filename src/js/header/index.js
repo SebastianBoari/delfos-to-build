@@ -5,7 +5,6 @@ const headerScript = async () => {
     const swiper = new Swiper(".mySwiper", {
         autoplay: true,
     })
-
     console.log('header')
 }
 

@@ -20,7 +20,7 @@ const Header = async () => {
                         <button id="logout_button">Log Out</button>
                         
                         <button id="config_button">
-                            <img class="config_button-icon" src="" alt="">
+                            <img id="config_button-icon" src="" alt="">
                         </button>
                     </div>
                 </div>
