@@ -17,12 +17,12 @@ class Router {
         return currentPath
     }
 
-    async #execute(scripts) {
+    async #execute(session, scripts) {
         try {
             if (!scripts) throw Error('scripts is a mandatory parameter')
 
             for (const script of scripts) {
-                await script()
+                await script(session)
             }
 
             return
@@ -31,7 +31,7 @@ class Router {
         }
     }
 
-    async #render(renderFunctions) {
+    async #render(session, renderFunctions) {
         try {
             if (!renderFunctions) throw Error('render functions is a mandatory parameter')
 
@@ -41,7 +41,7 @@ class Router {
             root.innerHTML = ''
 
             for (const fun of renderFunctions) {
-                root.innerHTML += await fun()
+                root.innerHTML += await fun(session)
             }
 
             return
@@ -66,7 +66,7 @@ class Router {
         this.#routes = routes
     }
 
-    async addRoute(route, renderFunctions, logicFunctions) {
+    async addRoute(route, session, renderFunctions, logicFunctions) {
         try {
             if (!route) throw Error('route is a mandatory parameter')
 
@@ -78,11 +78,11 @@ class Router {
             if (!search) return
 
             if (search && search != undefined) {
-                await this.#render(renderFunctions)
-                await this.#execute(logicFunctions)
+                await this.#render(session, renderFunctions)
+                await this.#execute(session, logicFunctions)
             } else if (search === undefined) {
-                await this.#render([HeaderRender, Error404Render, FooterRender])
-                await this.#execute([HeaderScript, FooterScript])
+                await this.#render(session, [HeaderRender, Error404Render, FooterRender])
+                await this.#execute(session, [HeaderScript, FooterScript])
             }
         } catch (error) {
             console.error(error.message)

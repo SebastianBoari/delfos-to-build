@@ -1,11 +1,19 @@
 import Swiper from 'swiper'
 import 'swiper/css'
 
-const headerScript = async () => {
+import userManager from '@managers/UserManager'
+
+import UserIcon from "@icons/UserIcon"
+
+const headerScript = async (session) => {
+    console.log('header')
+
     const swiper = new Swiper(".mySwiper", {
         autoplay: true,
     })
-    console.log('header')
+
+    const headerUserButton = document.getElementById('header-user-button')
+    headerUserButton.innerHTML = UserIcon(session)
 }
 
 export default headerScript

@@ -1,8 +1,10 @@
 class UserManager {
     #users
+    #sessionStorageOnChangeEvent
 
     constructor() {
         this.#users = JSON.parse(localStorage.getItem('delfos-to-build-users')) || []
+        this.#sessionStorageOnChangeEvent = new Event('sessionStorageOnChange')
     }
 
     #getUsers() {
@@ -49,6 +51,7 @@ class UserManager {
 
         try {
             await sessionStorage.setItem('delfos-to-build-session', JSON.stringify(user))
+            window.dispatchEvent(this.#sessionStorageOnChangeEvent)
 
             const currentSession = await sessionStorage.getItem('delfos-to-build-session')
 
@@ -83,6 +86,7 @@ class UserManager {
             if (!currentSession) throw Error('session not exists')
 
             await sessionStorage.clear()
+            window.dispatchEvent(this.#sessionStorageOnChangeEvent)
 
             return
         } catch (error) {

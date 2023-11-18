@@ -1,4 +1,3 @@
-
 const Header = async () => {
     const view = `
     <header class="header header-light">
@@ -10,18 +9,19 @@ const Header = async () => {
     <img class="brand_image" src="https://i.imgur.com/ldRlR3A.png" alt="Logo de DelfOS.">
     </a>
     </figure>
-    
+
     <div class="header_navbar-buttons">
-                    <button class="toggle_buttons">
+                    <button class="toggle_buttons" id="header-user-button">
                     </button>
 
                     <div class="buttons_panel display-none">
+
                         <button id="login_button">Log In</button>
                         <button id="logout_button">Log Out</button>
                         
                         <button id="config_button">
-                            <img id="config_button-icon" src="" alt="">
                         </button>
+
                     </div>
                 </div>
             </div>

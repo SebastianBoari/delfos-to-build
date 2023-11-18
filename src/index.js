@@ -3,3 +3,4 @@ import '@css/index.css'
 
 window.addEventListener('load', routing)
 window.addEventListener('hashchange', routing)
+window.addEventListener('sessionStorageOnChange', routing)
