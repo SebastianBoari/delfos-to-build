@@ -340,17 +340,15 @@ body {
     text-align: center;
   }
 }
-.header {
-  max-width: none;
-  max-height: 138rem;
-}
 .header .header_navbar {
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 2;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  width: 100%;
-  height: auto;
+  background: rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .header .header_navbar .container-xl {
   display: flex;
@@ -359,11 +357,10 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 0;
-  padding: 1.2rem 3.2rem;
+  padding: 1.6rem 0;
 }
 .header .header_navbar .container-xl .header_navbar-brand .brand_link .brand_image {
-  width: 6rem;
-  height: auto;
+  width: 4.8rem;
 }
 .header .header_navbar .container-xl .header_navbar-buttons {
   display: flex;
@@ -372,24 +369,90 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 3.2rem;
+  position: relative;
 }
-.header .header_navbar .container-xl .header_navbar-buttons .buttons_panel {
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons {
+  display: grid;
+  place-items: center;
+  color: rgb(197, 198, 196);
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons:focus {
+  outline: none;
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons:hover #user-icon {
+  color: rgb(158, 158, 158);
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons #user-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  transition: all 0.2s ease-in;
+}
+.header .header_navbar .container-xl .header_navbar-buttons .focused {
+  -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: flex-end;
-  gap: 0;
+  align-items: flex-start;
+  gap: 1.6rem;
+  position: absolute;
+  top: 4rem;
+  right: 1.6rem;
+  background: rgb(255, 255, 255);
+  padding: 1.6rem 3.2rem 4.8rem 3.2rem;
+  border-radius: 0.4rem;
+  -webkit-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15), 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15), 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15), 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #login_button,
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #register_button,
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  color: rgb(197, 198, 196);
+  cursor: pointer;
+  transition: color 0.2s ease-in;
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #login_button:focus,
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #register_button:focus,
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button:focus {
+  outline: none;
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #login_button:hover,
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #register_button:hover,
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button:hover {
+  color: rgb(158, 158, 158);
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 1.6rem;
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button #config-icon {
+  width: 2rem;
+  height: 2rem;
 }
 .header #header_banner {
-  margin-top: 9.6rem;
+  margin-top: 9rem;
   width: 100%;
-  height: 30rem;
+  height: 34rem;
 }
 .header #header_banner .swiper {
   position: absolute;
   width: 100%;
-  height: 30rem;
+  height: 34rem;
   object-fit: cover;
 }
 

@@ -1,27 +1,28 @@
+import ConfigIcon from "@icons/ConfigIcon"
+
 const Header = async () => {
     const view = `
     <header class="header header-light">
     
-    <nav class="header_navbar">
-    <div class="container-xl">
-    <figure class="header_navbar-brand">
-    <a class="brand_link">
-    <img class="brand_image" src="https://i.imgur.com/ldRlR3A.png" alt="Logo de DelfOS.">
-    </a>
-    </figure>
+        <nav class="header_navbar">
+            <div class="container-xl">
+                <figure class="header_navbar-brand">
+                    <a class="brand_link">
+                        <img class="brand_image" src="https://i.imgur.com/ldRlR3A.png" alt="Logo de DelfOS.">
+                    </a>
+                </figure>
 
-    <div class="header_navbar-buttons">
-                    <button class="toggle_buttons" id="header-user-button">
+                <div class="header_navbar-buttons">
+                    <button id="toggle_buttons">
                     </button>
 
-                    <div class="buttons_panel display-none">
-
+                    <div id="toggle_buttons-panel" class="display-none">
                         <button id="login_button">Log In</button>
-                        <button id="logout_button">Log Out</button>
+                        <button id="register_button">Register</button>
                         
                         <button id="config_button">
+                            ${ConfigIcon()}
                         </button>
-
                     </div>
                 </div>
             </div>

@@ -1,42 +1,135 @@
 .header {
-    @include max-sizes(none, 138rem);
-
     .header_navbar {
+        width: 100%;
+
         position: fixed;
         top: 0;
         z-index: 2;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        @include sizes(100%, auto);
+
+        background: $white;
+
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
 
         .container-xl {
             @include flex(row, nowrap, space-between, center, 0);
-            padding: 1.2rem 3.2rem;
+            padding: 1.6rem 0;
 
             .header_navbar-brand {
                 .brand_link {
                     .brand_image {
-                        @include sizes(6rem, auto);
+                        width: 4.8rem;
                     }
                 }
             }
 
             .header_navbar-buttons {
                 @include flex(row, nowrap, space-between, center, 3.2rem);
+                position: relative;
 
-                .buttons_panel {
-                    @include flex(column, nowrap, space-between, flex-end, 0);
+                #toggle_buttons {
+                    display: grid;
+                    place-items: center;
+
+                    color: $gray;
+
+                    border: none;
+                    border-radius: 50%;
+
+                    background: rgba(0, 0, 0, 0);
+                    cursor: pointer;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &:hover {
+                        #user-icon {
+                            color: $strong-grey;
+                        }
+                    }
+
+
+                    #user-icon {
+                        width: 3.2rem;
+                        height: 3.2rem;
+                        transition: all .2s ease-in;
+                    }
+                }
+
+                .focused {
+                    -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+                    -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+                    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+                }
+
+                #toggle_buttons-panel {
+                    @include flex(column, nowrap, space-between, flex-start, 1.6rem);
+
+                    position: absolute;
+                    top: 4rem;
+                    right: 1.6rem;
+
+                    background: $white;
+                    padding: 1.6rem 3.2rem 4.8rem 3.2rem;
+                    border-radius: .4rem;
+
+                    -webkit-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15), 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
+                    -moz-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15), 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
+                    box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15), 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
+
+                    #login_button,
+                    #register_button,
+                    #config_button {
+                        font-family: 'Lato', sans-serif;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+
+                        border: none;
+
+                        background: rgba(0, 0, 0, 0);
+                        color: $grey;
+
+                        cursor: pointer;
+
+                        transition: color .2s ease-in;
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        &:hover {
+                            color: $strong-grey;
+                        }
+                    }
+
+                    #config_button {
+                        position: absolute;
+                        bottom: .8rem;
+                        right: 1.6rem;
+
+                        #config-icon {
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                    }
+
                 }
             }
         }
     }
 
     #header_banner {
-        margin-top: 9.6rem;
-        @include sizes(100%, 30rem);
+        margin-top: 9rem;
+        width: 100%;
+        height: 34rem;
 
         .swiper {
             position: absolute;
-            @include sizes(100%, 30rem);
+            width: 100%;
+            height: 34rem;
             object-fit: cover;
         }
     }

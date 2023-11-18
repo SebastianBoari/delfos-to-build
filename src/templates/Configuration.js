@@ -1,7 +1,7 @@
 const Configuration = async () => {
     const view = `
     <section id="configuration" class="display-none">
-        <article class="configuration__user">
+        <div class="configuration__user">
             <figure class="configUser__figure">
                 <img id="configUserIcon" class="figure__img userIcon" src="./assets/icons/account-circle.svg"
                 alt="">
@@ -32,9 +32,9 @@ const Configuration = async () => {
                     <input id="submit__configUser" type="submit" value="Send changes">
                 </div>
             </form>
-        </article>
+        </div>
  
-        <article class="configuration__profileImg">
+        <div class="configuration__profileImg">
             <h4 class="profileImge__title">Choose a new profile image:</h4>
             <div class="profileImg__options">
                 <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op1.png" alt="">
@@ -50,7 +50,7 @@ const Configuration = async () => {
                 <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op11.png" alt="">
                 <img class="profileImgOptions" src="./assets/profile-icons/icon-profile-op12.png" alt="">
             </div>
-        </article>
+        </div>
     </section>
     `
 
