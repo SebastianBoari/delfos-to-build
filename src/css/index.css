@@ -357,7 +357,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 0;
-  padding: 1.6rem 0;
+  padding: 1.6rem;
 }
 .header .header_navbar .container-xl .header_navbar-brand .brand_link .brand_image {
   width: 4.8rem;
@@ -368,7 +368,7 @@ body {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  gap: 3.2rem;
+  gap: 1.6rem;
   position: relative;
 }
 .header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons {
@@ -387,6 +387,7 @@ body {
   color: rgb(158, 158, 158);
 }
 .header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons #user-icon {
+  border-radius: 50%;
   width: 3.2rem;
   height: 3.2rem;
   transition: all 0.2s ease-in;
@@ -407,15 +408,34 @@ body {
   top: 4rem;
   right: 1.6rem;
   background: rgb(255, 255, 255);
-  padding: 1.6rem 3.2rem 4.8rem 3.2rem;
+  padding: 0.8rem;
   border-radius: 0.4rem;
   -webkit-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15), 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15), 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15), 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
 }
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #login_button,
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #register_button,
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button {
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.6rem;
+  list-style: none;
+  padding: 0 1.6rem;
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options .user-name {
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: rgb(0, 126, 167);
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #login_button,
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #register_button,
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #logout_button {
+  display: grid;
+  place-items: center;
+  min-width: 6.4rem;
   font-family: "Lato", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
@@ -425,24 +445,42 @@ body {
   cursor: pointer;
   transition: color 0.2s ease-in;
 }
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #login_button:focus,
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #register_button:focus,
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #login_button:focus,
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #register_button:focus,
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #logout_button:focus {
+  outline: none;
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #login_button:hover,
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #register_button:hover,
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #logout_button:hover {
+  color: rgb(158, 158, 158);
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #logout_button:hover {
+  color: rgb(217, 4, 41);
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button {
+  align-self: flex-end;
+  border: none;
+  color: rgb(197, 198, 196);
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: color 0.2s ease-in;
+}
 .header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button:focus {
   outline: none;
 }
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #login_button:hover,
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #register_button:hover,
 .header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button:hover {
   color: rgb(158, 158, 158);
-}
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button {
-  position: absolute;
-  bottom: 0.8rem;
-  right: 1.6rem;
 }
 .header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button #config-icon {
   width: 2rem;
   height: 2rem;
+}
+.header .header_navbar .container-xl .header_navbar-buttons .user-email {
+  font-size: 1.4rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: rgb(158, 158, 158);
 }
 .header #header_banner {
   margin-top: 9rem;
