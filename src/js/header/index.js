@@ -1,4 +1,3 @@
-import Swiper from 'swiper'
 import 'swiper/css'
 import UserIcon from "@icons/UserIcon"
 import userManager from '@managers/UserManager'
@@ -6,9 +5,12 @@ import userManager from '@managers/UserManager'
 const headerScript = async (session) => {
     console.log('header')
 
-    const swiper = new Swiper(".mySwiper", {
-        autoplay: true,
-    })
+    const swiper = new Swiper('.swiper', {
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
 
     const toggleButtons = document.getElementById('toggle_buttons')
     toggleButtons.innerHTML = UserIcon(session)
@@ -37,6 +39,8 @@ const headerScript = async (session) => {
         })
     })
 
+
+    // TEST TEST TEST TEST
     const login = document.getElementById('login')
     login.addEventListener('click', async () => {
         await userManager.login('seba@gmail.com', 'admin123')

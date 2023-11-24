@@ -62,19 +62,42 @@ const Header = async (session) => {
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img class="swiper-brand-center" src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS."> 
+                        <div class="swiper_brand-center">
+                            <img class="swiper_brand-image" src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS."> 
+
+                            <h3 class="swiper_brand-title">Welcome</h3>
+                        </div>
+
                         <img src="https://i.imgur.com/jKHWLIT.png" alt="landscape of greece">
                     </div>
+
                     <div class="swiper-slide">
-                        <img class="swiper-brand" src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS.">
+                        <div class="swiper_brand">
+                            <h3 class="swiper_brand-title">Customizable experience</h3>
+                            
+                            <img class="swiper_brand-image"  src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS.">
+                        </div>
+
                         <img src="https://i.imgur.com/UX4HkUU.png"  alt="landscape of greece">
                     </div>
+
                     <div class="swiper-slide">
-                        <img class="swiper-brand" src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS.">
+                        <div class="swiper_brand">
+                            <h3 class="swiper_brand-title">Let’s build habits</h3>
+
+                            <img class="swiper_brand-image"  src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS.">
+                        </div>
+                        
                         <img src="https://i.imgur.com/ifJwgTE.png" alt="landscape of greece">
                     </div>
+
                     <div class="swiper-slide">
-                        <img class="swiper-brand" src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS.">
+                        <div class="swiper_brand">
+                            <h3 class="swiper_brand-title">Everywhere you go.</h3>
+
+                            <img class="swiper_brand-image" src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS.">
+                        </div>
+
                         <img src="https://i.imgur.com/HyLjahW.png" alt="landscape of greece">
                     </div>
                 </div>

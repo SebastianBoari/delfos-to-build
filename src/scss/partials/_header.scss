@@ -176,18 +176,55 @@
             height: 34rem;
             object-fit: cover;
 
-            .swiper-brand {
+            .swiper_brand {
                 position: absolute;
-                bottom: 1.6rem;
-                right: 1.6rem;
-                max-width: 6.4rem;
+                width: 100%;
+                height: 100%;
 
-                &-center {
+                &-image {
                     position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                    bottom: 1.6rem;
+                    right: 1.6rem;
                     max-width: 6.4rem;
+                }
+
+                &-title {
+                    position: absolute;
+                    left: 1.6rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    max-width: 40rem;
+
+                    font-size: $font-64;
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 200;
+                    line-height: 10rem;
+                    color: white;
+                }
+            }
+
+            .swiper_brand-center {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -100%);
+
+                @include flex(column, nowrap, space-between, center, 4rem);
+
+                .swiper_brand-title {
+                    position: static;
+                    color: white;
+
+                    font-size: $font-48;
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 200;
+                    text-align: center;
+                }
+
+                .swiper_brand-image {
+                    position: static;
+                    max-width: 7.2rem;
                 }
             }
 
