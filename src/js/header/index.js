@@ -37,11 +37,11 @@ const headerScript = async (session) => {
         })
     })
 
-
     const login = document.getElementById('login')
     login.addEventListener('click', async () => {
         await userManager.login('seba@gmail.com', 'admin123')
     })
+
 
 }
 

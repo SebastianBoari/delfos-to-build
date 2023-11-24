@@ -2,7 +2,6 @@
 const homeScript = async () => {
     console.log('home')
 
-
     const accordionItems = document.querySelectorAll('.detail')
 
     accordionItems.forEach(item => {

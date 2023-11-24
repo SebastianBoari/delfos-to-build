@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@300;400;500;600&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -345,7 +345,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 2;
-  background: rgb(255, 255, 255);
+  background: white;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -357,10 +357,10 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 0;
-  padding: 1.6rem;
+  padding: 0.8rem;
 }
 .header .header_navbar .container-xl .header_navbar-brand .brand_link .brand_image {
-  width: 4.8rem;
+  width: 4rem;
 }
 .header .header_navbar .container-xl .header_navbar-buttons {
   display: flex;
@@ -370,6 +370,12 @@ body {
   align-items: center;
   gap: 1.6rem;
   position: relative;
+}
+.header .header_navbar .container-xl .header_navbar-buttons .user-email {
+  font-size: 1.4em;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: rgb(197, 198, 196);
 }
 .header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons {
   display: grid;
@@ -398,83 +404,70 @@ body {
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
 }
 .header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1.6rem;
+  display: grid;
+  place-items: center;
   position: absolute;
   top: 4rem;
-  right: 1.6rem;
-  background: rgb(255, 255, 255);
-  padding: 0.8rem;
-  border-radius: 0.4rem;
+  right: 0;
+  background: white;
+  border-radius: 0.2rem;
   -webkit-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15), 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15), 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15), 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
 }
 .header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options {
+  background: white;
+  border-radius: 0.4rem;
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options .options_greeting {
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem 0.4rem 0 0;
+  text-align: center;
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options .options_greeting .options_greeting-title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: rgb(0, 52, 89);
+}
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options .options_buttons {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 1.6rem;
-  list-style: none;
-  padding: 0 1.6rem;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  border-radius: 0 0 0.4rem 0.4rem;
+  background: rgb(250, 250, 250);
+  -webkit-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.15);
 }
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options .user-name {
-  font-size: 1.6rem;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  color: rgb(0, 126, 167);
-}
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #login_button,
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #register_button,
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #logout_button {
-  display: grid;
-  place-items: center;
-  min-width: 6.4rem;
-  font-family: "Lato", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options .options_buttons .options_buttons-button {
+  cursor: pointer;
+  color: rgb(0, 52, 89);
   border: none;
   background: rgba(0, 0, 0, 0);
-  color: rgb(197, 198, 196);
-  cursor: pointer;
-  transition: color 0.2s ease-in;
+  font-size: 1.4em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  transition: color 0.2s ease;
 }
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #login_button:focus,
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #register_button:focus,
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #logout_button:focus {
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options .options_buttons .options_buttons-button:focus {
   outline: none;
 }
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #login_button:hover,
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #register_button:hover,
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #logout_button:hover {
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options .options_buttons .options_buttons-button:hover {
   color: rgb(158, 158, 158);
 }
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options #logout_button:hover {
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options .options_buttons #logout_button {
   color: rgb(217, 4, 41);
 }
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button {
-  align-self: flex-end;
-  border: none;
-  color: rgb(197, 198, 196);
-  background: rgba(0, 0, 0, 0);
-  cursor: pointer;
-  transition: color 0.2s ease-in;
-}
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button:focus {
-  outline: none;
-}
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button:hover {
-  color: rgb(158, 158, 158);
-}
-.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel #config_button #config-icon {
-  width: 2rem;
-  height: 2rem;
+.header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options .options_buttons #logout_button:hover {
+  color: rgb(160, 0, 27);
 }
 .header .header_navbar .container-xl .header_navbar-buttons .user-email {
   font-size: 1.4rem;
@@ -483,15 +476,29 @@ body {
   color: rgb(158, 158, 158);
 }
 .header #header_banner {
-  margin-top: 9rem;
+  margin-top: 6.4rem;
   width: 100%;
   height: 34rem;
+  position: relative;
 }
 .header #header_banner .swiper {
   position: absolute;
   width: 100%;
   height: 34rem;
   object-fit: cover;
+}
+.header #header_banner .swiper .swiper-brand {
+  position: absolute;
+  bottom: 1.6rem;
+  right: 1.6rem;
+  max-width: 6.4rem;
+}
+.header #header_banner .swiper .swiper-brand-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 6.4rem;
 }
 
 .themeDock {
@@ -549,7 +556,7 @@ body {
   gap: 3.2rem;
 }
 #home #home_welcome .welcome_cta-title {
-  font-size: 3.2em;
+  font-size: 4.2em;
   font-weight: 400;
   font-family: "Lato", sans-serif;
   color: rgb(0, 52, 89);
@@ -559,33 +566,52 @@ body {
   font-weight: 600;
 }
 #home #home_welcome .welcome_cta-description {
-  font-size: 1.8em;
-  font-family: "Lato", sans-serif;
+  font-size: 1.6em;
+  font-family: "Poppins", sans-serif;
   line-height: 3.2rem;
-  color: rgb(158, 158, 158);
+  color: rgb(0, 52, 89);
 }
-#home #home_welcome .welcome_cta #getStarted_button {
+#home #home_welcome .welcome_cta .welcome_cta-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3.2rem;
+  width: 100%;
+}
+#home #home_welcome .welcome_cta .welcome_cta-buttons .getStarted_button {
+  display: grid;
+  place-items: center;
+  height: 5rem;
+  width: 20rem;
   font-size: 1.8em;
-  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: rgb(255, 255, 255);
-  background: rgb(0, 167, 225);
-  padding: 1.6rem 6.4rem;
+  background: #00a7e1;
   border-radius: 0.4rem;
   transition: all 0.2s ease-in;
 }
-#home #home_welcome .welcome_cta #getStarted_button:hover, #home #home_welcome .welcome_cta #getStarted_button:focus {
+#home #home_welcome .welcome_cta .welcome_cta-buttons .getStarted_button:hover, #home #home_welcome .welcome_cta .welcome_cta-buttons .getStarted_button:focus {
   background: rgb(0, 126, 167);
   outline: none;
   -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
 }
-#home #home_details {
-  grid-template-columns: auto;
-  place-items: center;
+#home #home_welcome .welcome_cta .welcome_cta-buttons .getStarted_button-register {
+  font-size: 1.6em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: rgb(0, 52, 89);
+  transition: color 0.2s ease-in;
+}
+#home #home_welcome .welcome_cta .welcome_cta-buttons .getStarted_button-register:hover {
+  color: rgb(0, 126, 167);
 }
 #home #home_details .home_details-container {
+  grid-column: 2/3;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -595,6 +621,9 @@ body {
   border-radius: 0.4rem;
   border: solid 1px rgba(197, 198, 196, 0.8);
   border-bottom: none;
+  -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
 }
 #home #home_details .home_details-container .detail {
   display: flex;
@@ -617,9 +646,14 @@ body {
   cursor: pointer;
   padding: 1.6rem 3.2rem;
   font-size: 1.8em;
-  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
-  color: rgb(158, 158, 158);
+  color: rgb(0, 52, 89);
+}
+#home #home_details .home_details-container .detail .detail_title.expanded {
+  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
 }
 #home #home_details .home_details-container .detail .detail_title.expanded .arrow-icon {
   transform: rotate(180deg);
@@ -637,14 +671,14 @@ body {
 }
 #home #home_details .home_details-container .detail .detail_description .detail_description-text {
   border-top: solid 1px rgba(197, 198, 196, 0.8);
+  border-radius: 0 0 0.4rem 0.4rem;
   padding: 1.6rem 3.2rem;
   font-size: 1.4em;
   font-family: "Lato", sans-serif;
   line-height: 2.4rem;
-  color: rgb(158, 158, 158);
-  background: rgb(250, 250, 250);
+  color: white;
+  background: rgb(0, 52, 89);
 }
-
 #configuration {
   z-index: 1;
   position: fixed;
@@ -1009,7 +1043,7 @@ body {
   transition: all 0.2s;
 }
 #logIn .container-logIn .logIn__options .options__signUp #btn__signUp:hover {
-  color: rgb(0, 167, 225);
+  color: #00a7e1;
 }
 
 @media (max-width: 1400px) {
@@ -1230,7 +1264,7 @@ body {
   transition: all 0.2s;
 }
 #signUp .container-signUp .signUp__options .options__signIn #btn__signIn:hover {
-  color: rgb(0, 167, 225);
+  color: #00a7e1;
 }
 
 @media (max-width: 1400px) {
@@ -1293,7 +1327,7 @@ body {
 #workflow .container-workflow {
   width: 128rem;
   height: auto;
-  border: solid 2px rgb(0, 167, 225);
+  border: solid 2px #00a7e1;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -1308,7 +1342,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   background-color: white;
-  border-bottom: solid 2px rgb(0, 167, 225);
+  border-bottom: solid 2px #00a7e1;
   padding: 0.8rem 1.6rem;
 }
 #workflow .container-workflow .workstation__nav .workstation__nav--left {
@@ -1574,7 +1608,7 @@ body {
   outline: none;
   padding: 0.8rem;
   align-self: flex-end;
-  background-color: rgb(0, 167, 225);
+  background-color: #00a7e1;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.8em;
@@ -1694,7 +1728,7 @@ body {
   outline: none;
   padding: 0.8rem;
   align-self: flex-end;
-  background-color: rgb(0, 167, 225);
+  background-color: #00a7e1;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.8em;

@@ -1,25 +1,35 @@
-import ConfigIcon from "@icons/ConfigIcon"
+const buttonsOnSession = (session) => {
+    const view = `
+    <div class="options">
+        <div class="options_greeting">
+            <h3 class="options_greeting-title">Hi ${JSON.parse(session).name}</h3>
+        </div>
+
+        <div class="options_buttons">
+            <button class="options_buttons-button" id="help_button">Help</button>
+            <button class="options_buttons-button" id="config_button">Options</button>
+            <button class="options_buttons-button" id="logout_button">Log out</button>
+        </div>
+    </div>
+    `
+    return view
+}
 
 const buttonsOutOfSession = () => {
     const view = `
-    <ul class="options">
-        <li class="options-item"><a href="/login" id="login_button">Log In</a></li>
-        <li class="options-item"><a href="/register" id="register_button">Register</a></li>
-    </ul>
+    <div class="options">
+        <div class="options_greeting">
+            <h3 class="options_greeting-title">Welcome</h3>
+        </div>
+
+        <div class="options_buttons">
+            <button class="options_buttons-button" id="login_button">Log In</button>
+            <button class="options_buttons-button" id="register_button">Register</button>
+        </div>
+    </div>
     `
     return view
 }
-
-const buttonsOnSession = (session) => {
-    const view = `
-    <ul class="options">
-        <h3 class="user-name">Hola ${JSON.parse(session).name}!</h3>
-        <li class="options-item"><a href="/" id="logout_button">Log out</a></li>
-    </ul>
-    `
-    return view
-}
-
 
 const Header = async (session) => {
 
@@ -30,7 +40,7 @@ const Header = async (session) => {
             <div class="container-xl">
                 <figure class="header_navbar-brand">
                     <a href="/" class="brand_link">
-                        <img class="brand_image" src="https://i.imgur.com/ldRlR3A.png" alt="Logo de DelfOS.">
+                        <img class="brand_image" src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS.">
                     </a>
                 </figure>
 
@@ -43,10 +53,6 @@ const Header = async (session) => {
 
                     <div id="toggle_buttons-panel" class="display-none">
                         ${session ? buttonsOnSession(session) : buttonsOutOfSession()}
-
-                        <button id="config_button">
-                            ${ConfigIcon()}
-                        </button>
                     </div>
                 </div>
             </div>
@@ -56,16 +62,20 @@ const Header = async (session) => {
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="https://i.imgur.com/AWSiYxy.png">
+                        <img class="swiper-brand-center" src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS."> 
+                        <img src="https://i.imgur.com/jKHWLIT.png" alt="landscape of greece">
                     </div>
                     <div class="swiper-slide">
-                        <img src="https://i.imgur.com/lJbEBaT.png">
+                        <img class="swiper-brand" src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS.">
+                        <img src="https://i.imgur.com/UX4HkUU.png"  alt="landscape of greece">
                     </div>
                     <div class="swiper-slide">
-                        <img src="https://i.imgur.com/lSpBMkO.png">
+                        <img class="swiper-brand" src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS.">
+                        <img src="https://i.imgur.com/ifJwgTE.png" alt="landscape of greece">
                     </div>
                     <div class="swiper-slide">
-                        <img src="https://i.imgur.com/oeH7XsJ.jpg">
+                        <img class="swiper-brand" src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS.">
+                        <img src="https://i.imgur.com/HyLjahW.png" alt="landscape of greece">
                     </div>
                 </div>
             </div>

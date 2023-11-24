@@ -6,7 +6,7 @@ const Home = async () => {
         <div id="home_welcome" class="container-xl">
 
             <figure class="welcome_figure">
-                <img class="welcome_figure-image" src="https://i.imgur.com/EM0cX54.png" alt="Ilustracion de un calendario con tareas a cumplir.">
+                <img class="welcome_figure-image" src="https://i.imgur.com/EM0cX54.png" alt="Ilustracion de un calendario con tareas a cumplir."></img>
             </figure>
             
             <div class="welcome_cta">
@@ -15,7 +15,10 @@ const Home = async () => {
                 <p class="welcome_cta-description">Welcome to To Build, your ultimate task management companion. Keep track of all your tasks, deadlines, and projects in one place.</p>
                 <p class="welcome_cta-description">With To Build, you can easily create new tasks, set reminders, and prioritize your to-do list to stay on top of your work.</p>
                 
-                <a id="getStarted_button" href="/workbench">Get started</a>
+                <div class="welcome_cta-buttons">
+                    <a class="getStarted_button" href="">Get started</a>
+                    <a class="getStarted_button-register" href="/register">Not registered yet?</a>
+                </div>
             </div>
         </div>
 
