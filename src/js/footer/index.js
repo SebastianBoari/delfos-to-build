@@ -1,5 +1,3 @@
-const footerScript = async () => {
-    console.log('footer')
-}
+const footerScript = async () => { }
 
 export default footerScript

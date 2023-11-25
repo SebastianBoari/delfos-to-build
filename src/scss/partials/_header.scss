@@ -30,7 +30,7 @@
                 position: relative;
 
                 .user-email {
-                    font-size: $font-14;
+                    font-size: 1.4em;
                     font-weight: 400;
                     font-family: 'Poppins', sans-serif;
                     color: $gray;
@@ -54,7 +54,7 @@
 
                     &:hover {
                         #user-icon {
-                            color: $strong-grey;
+                            color: $strong-gray;
                         }
                     }
 
@@ -101,10 +101,10 @@
                                 width: 100%;
                                 text-align: center;
 
-                                font-size: $font-14;
+                                font-size: 1.4em;
                                 font-weight: 400;
                                 font-family: 'Poppins', sans-serif;
-                                color: $navyBlue;
+                                color: $strong-blue;
                             }
                         }
 
@@ -121,12 +121,12 @@
 
                             .options_buttons-button {
                                 cursor: pointer;
-                                color: $navyBlue;
+                                color: $strong-blue;
 
                                 border: none;
                                 background: rgba(0, 0, 0, 0);
 
-                                font-size: $font-14;
+                                font-size: 1.4em;
                                 font-family: 'Poppins', sans-serif;
                                 font-weight: 500;
                                 text-align: center;
@@ -138,16 +138,16 @@
                                 }
 
                                 &:hover {
-                                    color: $strong-grey;
+                                    color: $strong-gray;
                                 }
                             }
 
                             #logout_button {
-                                color: $danger;
+                                color: $red;
                             }
 
                             #logout_button:hover {
-                                color: $danger-strong;
+                                color: $strong-red;
                             }
                         }
                     }
@@ -158,7 +158,7 @@
                     font-size: 1.4rem;
                     font-family: 'Lato', sans-serif;
                     font-weight: 400;
-                    color: $strong-grey;
+                    color: $strong-gray;
                 }
             }
         }
@@ -196,31 +196,19 @@
 
                     max-width: 40rem;
 
-                    font-size: $font-64;
+                    font-size: 6.4em;
                     font-family: 'Lato', sans-serif;
                     font-weight: 200;
                     line-height: 10rem;
-                    color: white;
+                    color: $white;
                 }
             }
 
             .swiper_brand-center {
                 position: absolute;
-                top: 100%;
+                top: 60%;
                 left: 50%;
-                transform: translate(-50%, -100%);
-
-                @include flex(column, nowrap, space-between, center, 4rem);
-
-                .swiper_brand-title {
-                    position: static;
-                    color: white;
-
-                    font-size: $font-48;
-                    font-family: 'Lato', sans-serif;
-                    font-weight: 200;
-                    text-align: center;
-                }
+                transform: translate(-50%, -60%);
 
                 .swiper_brand-image {
                     position: static;
@@ -229,5 +217,11 @@
             }
 
         }
+    }
+}
+
+@media (max-width: 768px) {
+    #header_banner {
+        display: none;
     }
 }

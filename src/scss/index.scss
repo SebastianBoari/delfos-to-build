@@ -3,17 +3,14 @@
 @import './misc/variables';
 @import './misc/normalize';
 @import './misc/layout';
-@import'./misc/themes';
 
 // PARTIALS
-@import './partials/sweetAlert';
 @import './partials/footer';
 @import './partials/header';
-@import './partials/dockTheme';
 
 // SCREENS
-@import './screens/home';
-@import './screens/configureuserscreen';
-@import './screens/login';
-@import './screens/signup';
-@import './screens/workflow';
+@import './pages/home';
+// @import './screens/configureuserscreen';
+// @import './screens/login';
+// @import './screens/signup';
+// @import './screens/workflow';

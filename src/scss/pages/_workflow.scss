@@ -10,7 +10,7 @@
 
     .container-workflow {
         @include sizes(128rem, auto);
-        border: solid 2px $skyBlue;
+        border: solid 2px $light-blue;
         border-radius: 5px;
         background-color: $white-op80;
 
@@ -18,7 +18,7 @@
             @include flex(row, nowrap, space-between, center, 0);
             @include grid-container(repeat(2, 1fr), auto);
             background-color: white;
-            border-bottom: solid 2px $skyBlue;
+            border-bottom: solid 2px $light-blue;
             padding: $space-8 $space-16;
 
             .workstation__nav--left {
@@ -37,7 +37,7 @@
                 }
 
                 .workstationNav__btn:hover {
-                    background-color: $gray-op80;
+                    background-color: $light-gray;
                     scale: 1.1;
                 }
             }
@@ -60,7 +60,7 @@
                 }
 
                 #addNewTaskBtn:hover {
-                    background-color: $gray-op80;
+                    background-color: $light-gray;
                     scale: 1.1;
                 }
             }
@@ -140,7 +140,7 @@
                             font-family: 'Lato', sans-serif;
                             font-weight: 600;
                             font-size: $font-22;
-                            color: $navyBlue;
+                            color: $strong-blue;
                             border-bottom: solid 2px $gray;
                             padding-bottom: $space-16;
                         }
@@ -150,7 +150,7 @@
                             font-weight: 400;
                             font-size: $font-16;
                             line-height: 1.4;
-                            color: $navyBlue;
+                            color: $strong-blue;
                         }
                     }
                 }
@@ -237,7 +237,7 @@
                             font-family: 'Lato', sans-serif;
                             font-weight: 400;
                             font-size: $font-24;
-                            color: $navyBlue
+                            color: $strong-blue
                         }
 
                         #newTaskDescrip {
@@ -249,7 +249,7 @@
                             font-family: 'Lato', sans-serif;
                             font-weight: 400;
                             font-size: $font-16;
-                            color: $navyBlue;
+                            color: $strong-blue;
                             resize: vertical;
                             line-height: 1.4;
                         }
@@ -264,7 +264,7 @@
                         outline: none;
                         padding: $space-8;
                         align-self: flex-end;
-                        background-color: $skyBlue;
+                        background-color: $light-blue;
                         font-family: 'Lato', sans-serif;
                         font-weight: 400;
                         font-size: $font-18;
@@ -273,7 +273,7 @@
                     }
 
                     #newTaskSubmit:hover {
-                        background-color: $deepSkyBlue;
+                        background-color: $blue;
                     }
                 }
 
@@ -359,7 +359,7 @@
                             font-family: 'Lato', sans-serif;
                             font-weight: 400;
                             font-size: $font-24;
-                            color: $navyBlue
+                            color: $strong-blue
                         }
 
                         #editTaskDescrip {
@@ -371,7 +371,7 @@
                             font-family: 'Lato', sans-serif;
                             font-weight: 400;
                             font-size: $font-16;
-                            color: $navyBlue;
+                            color: $strong-blue;
                             resize: vertical;
                             line-height: 1.4;
                         }
@@ -386,7 +386,7 @@
                         outline: none;
                         padding: $space-8;
                         align-self: flex-end;
-                        background-color: $skyBlue;
+                        background-color: $light-blue;
                         font-family: 'Lato', sans-serif;
                         font-weight: 400;
                         font-size: $font-18;
@@ -395,7 +395,7 @@
                     }
 
                     #editTaskSubmit:hover {
-                        background-color: $deepSkyBlue;
+                        background-color: $blue;
                     }
                 }
 

@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 167, 225, 0.8);
+  background-color: #00a7e1;
   border-radius: 25px;
 }
 
@@ -70,126 +70,10 @@ body {
   grid-template-rows: auto;
 }
 
-.body__theme--light {
-  background-color: white;
-}
-
-.header__theme--light .header__nav {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.footer__theme--light .container-l .footer__contact .address {
-  color: rgb(0, 52, 89);
-}
-.footer__theme--light .container-l .footer__contact .footer__contact--down .telNumber,
-.footer__theme--light .container-l .footer__contact .footer__contact--down .contactMail {
-  color: rgb(0, 52, 89);
-}
-.footer__theme--light .container-l .footer__social .social__redirect .footer__link,
-.footer__theme--light .container-l .footer__social .social__link .footer__link {
-  color: rgb(0, 52, 89);
-}
-.footer__theme--light .container-l .footer__social .signature {
-  color: rgb(0, 52, 89);
-}
-
-.body__theme--blueMidnight {
-  background: rgb(0, 52, 89);
-  background: radial-gradient(circle, rgb(0, 52, 89) 0%, rgb(0, 23, 31) 100%);
-}
-
-.header__theme--blueMidnight .header__nav {
-  background-color: rgba(0, 52, 89, 0.8);
-}
-
-.footer__theme--blueMidnight .container-l .footer__contact .address {
-  color: rgb(255, 255, 255);
-}
-.footer__theme--blueMidnight .container-l .footer__contact .footer__contact--down .telNumber,
-.footer__theme--blueMidnight .container-l .footer__contact .footer__contact--down .contactMail {
-  color: rgb(255, 255, 255);
-}
-.footer__theme--blueMidnight .container-l .footer__social .social__redirect .footer__link,
-.footer__theme--blueMidnight .container-l .footer__social .social__link .footer__link {
-  color: rgb(255, 255, 255);
-}
-.footer__theme--blueMidnight .container-l .footer__social .signature {
-  color: rgb(255, 255, 255);
-}
-
-.body__theme--dark {
-  background: rgb(0, 23, 31);
-  background: radial-gradient(circle, rgb(0, 23, 31) 50%, rgb(0, 0, 0) 100%);
-}
-
-.header__theme--dark .header__nav {
-  background-color: rgba(0, 23, 31, 0.8);
-}
-
-.footer__theme--dark .container-l .footer__contact .address {
-  color: rgb(255, 255, 255);
-}
-.footer__theme--dark .container-l .footer__contact .footer__contact--down .telNumber,
-.footer__theme--dark .container-l .footer__contact .footer__contact--down .contactMail {
-  color: rgb(255, 255, 255);
-}
-.footer__theme--dark .container-l .footer__social .social__redirect .footer__link,
-.footer__theme--dark .container-l .footer__social .social__link .footer__link {
-  color: rgb(255, 255, 255);
-}
-.footer__theme--dark .container-l .footer__social .signature {
-  color: rgb(255, 255, 255);
-}
-
-.swal-title {
-  color: rgb(0, 52, 89);
-}
-
-.swal-text {
-  color: rgb(0, 52, 89);
-}
-
-.swal-button--confirm {
-  background-color: rgb(0, 126, 167);
-  border-radius: 0px;
-  outline: none;
-  border: none;
-  box-shadow: none;
-  transition: all 0.2s;
-  font-weight: 400;
-  opacity: 1;
-}
-
-.swal-button--confirm:hover {
-  border-radius: 0px;
-  outline: none;
-  border: none;
-  box-shadow: none;
-}
-
-.swal-button--confirm:focus {
-  border-radius: 0px;
-  outline: none;
-  box-shadow: none;
-  border: none;
-}
-
-.swal-button--cancel {
-  color: rgb(0, 52, 89);
-  transition: all 0.2s;
-  font-weight: 600;
-}
-
-.swal-button--cancel:hover {
-  color: rgb(239, 35, 60);
-}
-
-.swal-button--cancel:focus {
-  color: rgb(239, 35, 60);
-}
-
 .footer {
-  box-shadow: 0px -5px 5px 0px rgba(197, 198, 196, 0.8);
+  box-shadow: -1px -2px 4px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: -1px -2px 4px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: -1px -2px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 10rem;
 }
 .footer .footer-container {
@@ -210,7 +94,6 @@ body {
 }
 .footer .footer-container .footer_brand .footer_brand-link .footer_brand-image {
   width: 7rem;
-  height: auto;
 }
 .footer .footer-container .footer_contact {
   grid-column: auto/span 1;
@@ -225,11 +108,11 @@ body {
 }
 .footer .footer-container .footer_contact .address {
   max-width: 28rem;
-  max-height: auto;
   font-size: 1.8em;
   font-weight: 400;
   font-family: "Lato", sans-serif;
   line-height: 3.6rem;
+  color: #003459;
 }
 .footer .footer-container .footer_contact .footer_contact-footer {
   display: grid;
@@ -241,12 +124,12 @@ body {
 .footer .footer-container .footer_contact .footer_contact-footer .telephone,
 .footer .footer-container .footer_contact .footer_contact-footer .mail {
   max-width: 15rem;
-  max-height: auto;
   font-size: 1.4em;
   font-weight: 400;
   font-family: "Lato", sans-serif;
   line-height: 2.2rem;
-  border-bottom: solid 2px;
+  color: #003459;
+  border-bottom: solid 1.5px;
 }
 .footer .footer-container .footer_social {
   grid-column: auto/span 1;
@@ -271,10 +154,11 @@ body {
   font-weight: 400;
   font-family: "Lato", sans-serif;
   line-height: 2.2rem;
+  color: #003459;
   transition: all 0.2s;
 }
 .footer .footer-container .footer_social .footer_social-container .link:hover {
-  color: rgb(0, 126, 167);
+  color: #007ea7;
 }
 .footer .footer-container .footer_social .copyright {
   grid-column: 1/span 3;
@@ -285,6 +169,7 @@ body {
   font-weight: 400;
   font-family: "Lato", sans-serif;
   line-height: 2.2rem;
+  color: #003459;
 }
 
 @media (max-width: 768px) {
@@ -430,7 +315,7 @@ body {
   font-size: 1.4em;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
-  color: rgb(0, 52, 89);
+  color: #003459;
 }
 .header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options .options_buttons {
   display: flex;
@@ -448,7 +333,7 @@ body {
 }
 .header .header_navbar .container-xl .header_navbar-buttons #toggle_buttons-panel .options .options_buttons .options_buttons-button {
   cursor: pointer;
-  color: rgb(0, 52, 89);
+  color: #003459;
   border: none;
   background: rgba(0, 0, 0, 0);
   font-size: 1.4em;
@@ -508,102 +393,69 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 200;
   line-height: 10rem;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .header #header_banner .swiper .swiper_brand-center {
   position: absolute;
-  top: 100%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, -100%);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4rem;
-}
-.header #header_banner .swiper .swiper_brand-center .swiper_brand-title {
-  position: static;
-  color: white;
-  font-size: 4.8em;
-  font-family: "Lato", sans-serif;
-  font-weight: 200;
-  text-align: center;
+  transform: translate(-50%, -60%);
 }
 .header #header_banner .swiper .swiper_brand-center .swiper_brand-image {
   position: static;
   max-width: 7.2rem;
 }
 
-.themeDock {
-  width: 21.3rem;
-  height: 6rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1.6rem;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 1.2rem 3.6rem;
-  border-radius: 6rem;
+@media (max-width: 768px) {
+  #header_banner {
+    display: none;
+  }
 }
-.themeDock .themeDock__label {
-  cursor: pointer;
-}
-.themeDock .themeDock__label input {
-  display: none;
-}
-.themeDock .themeDock__label img {
-  transition: all 0.2s;
-}
-.themeDock .themeDock__label img:hover {
-  scale: 1.1;
-}
-
 #home {
-  padding: 3.2rem 0 6.4rem;
+  padding: 0 0 6.4rem;
 }
 #home .container-xl {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  padding: 8rem 0;
+  padding: 6.4rem 0;
 }
-#home #home_welcome .welcome_figure {
-  perspective: 1500px;
+#home #home_welcome {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6.4rem;
 }
 #home #home_welcome .welcome_figure-image {
-  transform: rotateX(10deg) rotateY(-18deg) rotateZ(3deg);
-  border-radius: 0.25em;
-  transition: transform 0.6s;
-}
-#home #home_welcome .welcome_figure:hover .welcome_figure-image {
-  transform: rotate(0);
+  max-width: 62rem;
 }
 #home #home_welcome .welcome_cta {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: stretch;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 3.2rem;
 }
 #home #home_welcome .welcome_cta-title {
   font-size: 4.2em;
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Lato", sans-serif;
-  color: rgb(0, 52, 89);
+  color: #003459;
 }
 #home #home_welcome .welcome_cta-title bold {
-  color: rgb(0, 126, 167);
+  color: #007ea7;
   font-weight: 600;
 }
 #home #home_welcome .welcome_cta-description {
-  font-size: 1.6em;
-  font-family: "Poppins", sans-serif;
+  max-width: 62rem;
+  font-size: 1.8em;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
   line-height: 3.2rem;
-  color: rgb(0, 52, 89);
+  color: #003459;
 }
 #home #home_welcome .welcome_cta .welcome_cta-buttons {
   display: flex;
@@ -620,15 +472,15 @@ body {
   height: 5rem;
   width: 20rem;
   font-size: 1.8em;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   color: rgb(255, 255, 255);
   background: #00a7e1;
-  border-radius: 0.4rem;
+  border-radius: 0.1rem;
   transition: all 0.2s ease-in;
 }
 #home #home_welcome .welcome_cta .welcome_cta-buttons .getStarted_button:hover, #home #home_welcome .welcome_cta .welcome_cta-buttons .getStarted_button:focus {
-  background: rgb(0, 126, 167);
+  background: #007ea7;
   outline: none;
   -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
@@ -636,1141 +488,13 @@ body {
 }
 #home #home_welcome .welcome_cta .welcome_cta-buttons .getStarted_button-register {
   font-size: 1.6em;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  color: rgb(0, 52, 89);
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #003459;
   transition: color 0.2s ease-in;
 }
 #home #home_welcome .welcome_cta .welcome_cta-buttons .getStarted_button-register:hover {
-  color: rgb(0, 126, 167);
-}
-#home #home_details .home_details-container {
-  grid-column: 2/3;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0px;
-  border-radius: 0.4rem;
-  border: solid 1px rgba(197, 198, 196, 0.8);
-  border-bottom: none;
-  -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
-}
-#home #home_details .home_details-container .detail {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 0;
-  max-width: 48rem;
-  border-bottom: solid 1px rgba(197, 198, 196, 0.8);
-}
-#home #home_details .home_details-container .detail .detail_title {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0px;
-  width: 100%;
-  cursor: pointer;
-  padding: 1.6rem 3.2rem;
-  font-size: 1.8em;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  color: rgb(0, 52, 89);
-}
-#home #home_details .home_details-container .detail .detail_title.expanded {
-  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
-}
-#home #home_details .home_details-container .detail .detail_title.expanded .arrow-icon {
-  transform: rotate(180deg);
-}
-#home #home_details .home_details-container .detail .detail_title .arrow-icon {
-  align-self: flex-end;
-  width: 2rem;
-  height: 2rem;
-  transition: transform 0.3s ease;
-}
-#home #home_details .home_details-container .detail .detail_description {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-#home #home_details .home_details-container .detail .detail_description .detail_description-text {
-  border-top: solid 1px rgba(197, 198, 196, 0.8);
-  border-radius: 0 0 0.4rem 0.4rem;
-  padding: 1.6rem 3.2rem;
-  font-size: 1.4em;
-  font-family: "Lato", sans-serif;
-  line-height: 2.4rem;
-  color: white;
-  background: rgb(0, 52, 89);
-}
-#configuration {
-  z-index: 1;
-  position: fixed;
-  top: 12.8rem;
-  left: 45rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 3.2rem;
-  max-width: 128rem;
-  max-height: auto;
-}
-#configuration .configuration__user {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3.2rem;
-  max-width: 128rem;
-  max-height: 51.2rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 3.2rem;
-}
-#configuration .configuration__user .configUser__figure img {
-  width: 12rem;
-  height: auto;
-}
-#configuration .configuration__user #configUser__form {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-column-gap: 0;
-  grid-row-gap: 2.4rem;
-}
-#configuration .configuration__user #configUser__form .form__line {
-  padding: 1.2rem 1.2rem;
-  width: 32rem;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: all 0.2s;
-}
-#configuration .configuration__user #configUser__form .form__line .form__input {
-  width: 26rem;
-  height: auto;
-  border: none;
-  outline: none;
-  background-color: rgba(25, 25, 25, 0);
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6em;
-  color: rgb(0, 52, 89);
-}
-#configuration .configuration__user #configUser__form .form__line .form__input::placeholder {
-  color: rgb(197, 198, 196);
-}
-#configuration .configuration__user #configUser__form .form__line:focus-within {
-  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
-}
-#configuration .configuration__user #configUser__form .error {
-  box-shadow: 0px 4px 4px 0px rgba(239, 35, 60, 0.6);
-  outline: solid 2px rgba(239, 35, 60, 0.6);
-  border-radius: 5px;
-}
-#configuration .configuration__user #configUser__form .error .form__input {
-  color: rgba(239, 35, 60, 0.6);
-}
-#configuration .configuration__user #configUser__form .error .form__input::placeholder {
-  color: rgba(239, 35, 60, 0.6);
-}
-#configuration .configuration__user #configUser__form .error:focus-within {
-  box-shadow: 0px 6px 6px 0px rgba(239, 35, 60, 0.6);
-}
-#configuration .configuration__user #configUser__form .form__buttons #submit__configUser {
-  width: 14rem;
-  height: 4rem;
-  border: none;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-size: 1.8em;
-  color: rgb(0, 52, 89);
-  transition: all 0.2s;
-}
-#configuration .configuration__user #configUser__form .form__buttons #submit__configUser:hover {
-  cursor: pointer;
-  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
-  color: rgb(0, 126, 167);
-}
-#configuration .configuration__profileImg {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 3.2rem;
-  padding: 3.2rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
-}
-#configuration .configuration__profileImg .profileImge__title {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.8em;
-  color: rgb(0, 126, 167);
-}
-#configuration .configuration__profileImg .profileImg__options {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(3, auto);
-  grid-column-gap: 3.2rem;
-  grid-row-gap: 3.2rem;
-}
-#configuration .configuration__profileImg .profileImg__options img {
-  width: 11rem;
-  height: auto;
-  cursor: pointer;
-}
-
-@media (max-width: 1520px) {
-  #configuration {
-    position: absolute;
-    top: 10rem;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    width: 100vw;
-    height: auto;
-  }
-  #configuration .configuration__user {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3.2rem;
-    width: 100vw;
-    height: 51.2rem;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 2rem;
-  }
-  #configuration .configuration__user .configUser__figure img {
-    width: 12rem;
-    height: auto;
-  }
-  #configuration .configuration__profileImg {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 3.2rem;
-    width: 100vw;
-    height: auto;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-  }
-  #configuration .configuration__profileImg .profileImge__title {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 1.8em;
-    color: rgb(0, 126, 167);
-    text-align: center;
-  }
-  #configuration .configuration__profileImg .profileImg__options {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: auto;
-    grid-column-gap: 1.6rem;
-    grid-row-gap: 3.2rem;
-    align-self: center;
-  }
-  #configuration .configuration__profileImg .profileImg__options img {
-    width: 11rem;
-    height: auto;
-  }
-}
-#logIn {
-  padding-top: 10rem;
-}
-#logIn .container-logIn {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 1fr;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  width: auto;
-  height: 71.8rem;
-}
-#logIn .container-logIn #logIn__img {
-  width: 71.1rem;
-  height: 71.8rem;
-  background-position: center;
-  background-size: cover;
-}
-#logIn .container-logIn .logIn__article {
-  background-color: rgb(255, 255, 255);
-  padding: 6.4rem 12.5rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-}
-#logIn .container-logIn .logIn__article .logIn__title {
-  grid-column: auto/span 1;
-  grid-row: auto/span 1;
-  justify-self: center;
-  align-self: start;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-size: 3.6em;
-  color: rgb(0, 126, 167);
-}
-#logIn .container-logIn .logIn__article .logIn__panel {
-  grid-column: auto/span 1;
-  grid-row: auto/span 1;
-  justify-self: center;
-  align-self: end;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto 1fr;
-  grid-column-gap: 0;
-  grid-row-gap: 3.2rem;
-}
-#logIn .container-logIn .logIn__article .logIn__panel .panel__title {
-  grid-column: auto/span 1;
-  grid-row: auto/span 1;
-  justify-self: center;
-  align-self: center;
-  text-align: center;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-size: 3.2em;
-  color: rgb(0, 52, 89);
-}
-#logIn .container-logIn .logIn__article .logIn__panel #logIn__form {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-column-gap: 0;
-  grid-row-gap: 3.2rem;
-}
-#logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__line {
-  padding: 1.2rem 1.2rem;
-  width: 32rem;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: all 0.2s;
-}
-#logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__line .form__input {
-  width: 26rem;
-  height: auto;
-  border: none;
-  outline: none;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6em;
-  color: rgb(0, 52, 89);
-}
-#logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__line .form__input::placeholder {
-  color: rgb(197, 198, 196);
-}
-#logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__line:focus-within {
-  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
-}
-#logIn .container-logIn .logIn__article .logIn__panel #logIn__form .error {
-  box-shadow: 0px 4px 4px 0px rgba(239, 35, 60, 0.6);
-  outline: solid 2px rgba(239, 35, 60, 0.6);
-  border-radius: 5px;
-}
-#logIn .container-logIn .logIn__article .logIn__panel #logIn__form .error .form__input {
-  color: rgba(239, 35, 60, 0.6);
-}
-#logIn .container-logIn .logIn__article .logIn__panel #logIn__form .error .form__input::placeholder {
-  color: rgba(239, 35, 60, 0.6);
-}
-#logIn .container-logIn .logIn__article .logIn__panel #logIn__form .error:focus-within {
-  box-shadow: 0px 6px 6px 0px rgba(239, 35, 60, 0.6);
-}
-#logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__buttons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-}
-#logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__buttons .buttons__forgotPsw {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6em;
-  color: rgb(197, 198, 196);
-  transition: all 0.2s;
-}
-#logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__buttons .buttons__forgotPsw:hover {
-  color: rgb(0, 126, 167);
-}
-#logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__buttons #submit__logIn {
-  width: 14rem;
-  height: 4rem;
-  border: none;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-size: 1.8em;
-  color: rgb(0, 52, 89);
-  transition: all 0.2s;
-}
-#logIn .container-logIn .logIn__article .logIn__panel #logIn__form .form__buttons #submit__logIn:hover {
-  cursor: pointer;
-  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
-  color: rgb(0, 126, 167);
-}
-#logIn .container-logIn .logIn__options {
-  grid-column: auto/span 1;
-  grid-row: auto/span 1;
-  justify-self: center;
-  align-self: end;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: stretch;
-  align-items: stretch;
-  gap: 3.2rem;
-}
-#logIn .container-logIn .logIn__options .options__signUp {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-size: 1.6em;
-  color: rgb(0, 52, 89);
-}
-#logIn .container-logIn .logIn__options .options__signUp #btn__signUp {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-size: 1.6rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  color: rgb(0, 126, 167);
-  background-color: rgba(0, 0, 0, 0);
-  transition: all 0.2s;
-}
-#logIn .container-logIn .logIn__options .options__signUp #btn__signUp:hover {
-  color: #00a7e1;
-}
-
-@media (max-width: 1400px) {
-  #logIn .container-logIn {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr;
-  }
-  #logIn .container-logIn #logIn__img {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  #logIn {
-    padding-top: 3.2rem;
-  }
-  #logIn .container-logIn {
-    box-shadow: none;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr;
-    width: 100vw;
-    height: 71.8rem;
-  }
-  #logIn .container-logIn .logIn__figure {
-    display: none;
-  }
-  #logIn .container-logIn .logIn__article {
-    padding: 6.4rem 3.2rem;
-  }
-}
-@media (max-width: 768px) {
-  #logIn {
-    padding-top: 3.2rem;
-  }
-  #logIn .container-logIn {
-    box-shadow: none;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr;
-    width: 100vw;
-    height: 71.8rem;
-  }
-  #logIn .container-logIn .logIn__figure {
-    display: none;
-  }
-  #logIn .container-logIn .logIn__article {
-    padding: 4.8rem 1.6rem;
-  }
-}
-#signUp {
-  padding-top: 10rem;
-}
-#signUp .container-signUp {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 1fr;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  width: auto;
-  height: 71.8rem;
-}
-#signUp .container-signUp #signUp__img {
-  width: 71.1rem;
-  height: 71.8rem;
-  background-position: center;
-  background-size: cover;
-}
-#signUp .container-signUp .signUp__article {
-  background-color: rgb(255, 255, 255);
-  padding: 6.4rem 12.5rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-}
-#signUp .container-signUp .signUp__article .signUp__title {
-  grid-column: auto/span 1;
-  grid-row: auto/span 1;
-  justify-self: center;
-  align-self: start;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-size: 3.6em;
-  color: rgb(0, 126, 167);
-}
-#signUp .container-signUp .signUp__article .signUp__panel {
-  grid-column: auto/span 1;
-  grid-row: auto/span 1;
-  justify-self: center;
-  align-self: end;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto 1fr;
-  grid-column-gap: 0;
-  grid-row-gap: 3.2rem;
-}
-#signUp .container-signUp .signUp__article .signUp__panel .panel__title {
-  grid-column: auto/span 1;
-  grid-row: auto/span 1;
-  justify-self: center;
-  align-self: center;
-  text-align: center;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-size: 3.2em;
-  color: rgb(0, 52, 89);
-}
-#signUp .container-signUp .signUp__article .signUp__panel #signUp__form {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-column-gap: 0;
-  grid-row-gap: 2rem;
-}
-#signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__line {
-  padding: 1.2rem 1.2rem;
-  width: 32rem;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: all 0.2s;
-}
-#signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__line .form__input {
-  width: 26rem;
-  height: auto;
-  border: none;
-  outline: none;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6em;
-  color: rgb(0, 52, 89);
-}
-#signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__line .form__input::placeholder {
-  color: rgb(197, 198, 196);
-}
-#signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__line:focus-within {
-  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
-}
-#signUp .container-signUp .signUp__article .signUp__panel #signUp__form .error {
-  box-shadow: 0px 4px 4px 0px rgba(239, 35, 60, 0.6);
-  outline: solid 2px rgba(239, 35, 60, 0.6);
-  border-radius: 5px;
-}
-#signUp .container-signUp .signUp__article .signUp__panel #signUp__form .error .form__input {
-  color: rgba(239, 35, 60, 0.6);
-}
-#signUp .container-signUp .signUp__article .signUp__panel #signUp__form .error .form__input::placeholder {
-  color: rgba(239, 35, 60, 0.6);
-}
-#signUp .container-signUp .signUp__article .signUp__panel #signUp__form .error:focus-within {
-  box-shadow: 0px 6px 6px 0px rgba(239, 35, 60, 0.6);
-}
-#signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__buttons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-}
-#signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__buttons .buttons__forgotPsw {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6em;
-  color: rgb(197, 198, 196);
-  transition: all 0.2s;
-}
-#signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__buttons .buttons__forgotPsw:hover {
-  color: rgb(0, 126, 167);
-}
-#signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__buttons #submit__signUp {
-  width: 14rem;
-  height: 4rem;
-  border: none;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-size: 1.8em;
-  color: rgb(0, 52, 89);
-  transition: all 0.2s;
-}
-#signUp .container-signUp .signUp__article .signUp__panel #signUp__form .form__buttons #submit__signUp:hover {
-  cursor: pointer;
-  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
-  color: rgb(0, 126, 167);
-}
-#signUp .container-signUp .signUp__options {
-  grid-column: auto/span 1;
-  grid-row: auto/span 1;
-  justify-self: center;
-  align-self: end;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: stretch;
-  align-items: stretch;
-  gap: 3.2rem;
-}
-#signUp .container-signUp .signUp__options .options__signIn {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-size: 1.6em;
-  color: rgb(0, 52, 89);
-}
-#signUp .container-signUp .signUp__options .options__signIn #btn__signIn {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-size: 1.6rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  color: rgb(0, 126, 167);
-  background-color: rgba(0, 0, 0, 0);
-  transition: all 0.2s;
-}
-#signUp .container-signUp .signUp__options .options__signIn #btn__signIn:hover {
-  color: #00a7e1;
-}
-
-@media (max-width: 1400px) {
-  #signUp .container-signUp {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr;
-  }
-  #signUp .container-signUp #signUp__img {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  #signUp {
-    padding-top: 3.2rem;
-  }
-  #signUp .container-signUp {
-    box-shadow: none;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr;
-    width: 100vw;
-    height: 71.8rem;
-  }
-  #signUp .container-signUp .signUp__figure {
-    display: none;
-  }
-  #signUp .container-signUp .signUp__article {
-    padding: 6.4rem 3.2rem;
-  }
-}
-@media (max-width: 768px) {
-  #signUp {
-    padding-top: 3.2rem;
-  }
-  #signUp .container-signUp {
-    box-shadow: none;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr;
-    width: 100vw;
-    height: 71.8rem;
-  }
-  #signUp .container-signUp .signUp__figure {
-    display: none;
-  }
-  #signUp .container-signUp .signUp__article {
-    padding: 4.8rem 1.6rem;
-  }
-}
-#workflow {
-  display: none;
-  margin-top: 9.6rem;
-  padding: 6.4rem 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-#workflow .container-workflow {
-  width: 128rem;
-  height: auto;
-  border: solid 2px #00a7e1;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-#workflow .container-workflow .workstation__nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  background-color: white;
-  border-bottom: solid 2px #00a7e1;
-  padding: 0.8rem 1.6rem;
-}
-#workflow .container-workflow .workstation__nav .workstation__nav--left {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.6rem;
-}
-#workflow .container-workflow .workstation__nav .workstation__nav--left .workstationNav__btn {
-  border-radius: 5px;
-  padding: 0.6rem;
-  background-color: rgba(25, 25, 25, 0);
-  transition: all 0.2s;
-  cursor: pointer;
-}
-#workflow .container-workflow .workstation__nav .workstation__nav--left .workstationNav__btn input {
-  display: none;
-}
-#workflow .container-workflow .workstation__nav .workstation__nav--left .workstationNav__btn:hover {
-  background-color: rgba(197, 198, 196, 0.8);
-  scale: 1.1;
-}
-#workflow .container-workflow .workstation__nav .workstation__nav--right {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 3.2rem;
-}
-#workflow .container-workflow .workstation__nav .workstation__nav--right img {
-  padding: 0.6rem;
-}
-#workflow .container-workflow .workstation__nav .workstation__nav--right #addNewTaskBtn {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 0.6rem;
-  background-color: rgba(25, 25, 25, 0);
-  transition: all 0.2s;
-}
-#workflow .container-workflow .workstation__nav .workstation__nav--right #addNewTaskBtn:hover {
-  background-color: rgba(197, 198, 196, 0.8);
-  scale: 1.1;
-}
-#workflow .container-workflow .workstation__body {
-  width: 128rem;
-  height: auto;
-  min-height: 128rem;
-}
-#workflow .container-workflow .workstation__body #weather {
-  width: 127.5rem;
-  height: auto;
-}
-#workflow .container-workflow .workstation__body #calendar {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-  padding: 3.2rem 0;
-  position: absolute;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#workflow .container-workflow .workstation__body #tasks {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  grid-column-gap: 1.6rem;
-  grid-row-gap: 1.6rem;
-  width: 100%;
-  height: 100%;
-  padding: 3.2rem;
-}
-#workflow .container-workflow .workstation__body #tasks .task {
-  grid-column: auto/span 1;
-  grid-row: auto/span 1;
-  justify-self: center;
-  align-self: start;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  gap: 0.8rem;
-  width: 35rem;
-  height: auto;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  min-height: 35rem;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
-}
-#workflow .container-workflow .workstation__body #tasks .task .task__header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-  background-color: rgb(197, 198, 196);
-  padding: 0.6rem;
-  border-radius: 5px 5px 0 0;
-}
-#workflow .container-workflow .workstation__body #tasks .task .task__header .task__header--left img {
-  width: 20px;
-}
-#workflow .container-workflow .workstation__body #tasks .task .task__header .task__header--right {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.6rem;
-}
-#workflow .container-workflow .workstation__body #tasks .task .task__header .task__header--right button {
-  cursor: pointer;
-  background-color: rgba(25, 25, 25, 0);
-  outline: none;
-  border: none;
-  transition: all 0.2s;
-}
-#workflow .container-workflow .workstation__body #tasks .task .task__header .task__header--right button:hover {
-  scale: 1.1;
-}
-#workflow .container-workflow .workstation__body #tasks .task .task__body {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 1.6rem;
-  padding: 1.6rem;
-}
-#workflow .container-workflow .workstation__body #tasks .task .task__body .task__title {
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-  font-size: 2.2em;
-  color: rgb(0, 52, 89);
-  border-bottom: solid 2px rgb(197, 198, 196);
-  padding-bottom: 1.6rem;
-}
-#workflow .container-workflow .workstation__body #tasks .task .task__body .task__descrip {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6em;
-  line-height: 1.4;
-  color: rgb(0, 52, 89);
-}
-#workflow .container-workflow .workstation__body #createNewTask {
-  max-width: 48rem;
-  max-height: none;
-  min-width: 35rem;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__header {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-  background-color: rgb(248, 197, 72);
-  border-radius: 5px 5px 0 0;
-  padding: 0.6rem 1.6rem;
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__header .newTask__label {
-  cursor: pointer;
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__header .newTask__label img {
-  width: 2.5rem;
-  height: auto;
-  transition: all 0.2s;
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__header .newTask__label img:hover {
-  scale: 1.1;
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__header .newTask__label input {
-  display: none;
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__header #cancelNewTask {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background-color: rgba(25, 25, 25, 0);
-  transition: all 0.2s;
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__header #cancelNewTask:hover {
-  scale: 1.1;
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__body {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
-  grid-column-gap: 0;
-  grid-row-gap: 3.2rem;
-  width: 100%;
-  height: 100%;
-  padding: 1.6rem 3.2rem 3.2rem;
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__body .newTask__label {
-  padding: 0;
-  margin: 0;
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__body .newTask__label h4 {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 2.4em;
-  color: rgb(197, 198, 196);
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__body .newTask__label p {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.8em;
-  color: rgb(197, 198, 196);
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__body .newTask__label #newTaskTitle {
-  width: 100%;
-  height: 5rem;
-  border: none;
-  outline: none;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 2.4em;
-  color: rgb(0, 52, 89);
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__body .newTask__label #newTaskDescrip {
-  width: 100%;
-  height: 25rem;
-  padding: 0;
-  margin: 0;
-  border: none;
-  outline: none;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6em;
-  color: rgb(0, 52, 89);
-  resize: vertical;
-  line-height: 1.4;
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__body #newTaskSubmit {
-  grid-column: auto/span 1;
-  grid-row: auto/span 1;
-  justify-self: end;
-  align-self: start;
-  width: 15rem;
-  height: auto;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  padding: 0.8rem;
-  align-self: flex-end;
-  background-color: #00a7e1;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.8em;
-  color: rgb(255, 255, 255);
-  transition: all 0.2s;
-}
-#workflow .container-workflow .workstation__body #createNewTask .newTask__body #newTaskSubmit:hover {
-  background-color: rgb(0, 126, 167);
-}
-#workflow .container-workflow .workstation__body #editTask {
-  max-width: 48rem;
-  max-height: none;
-  min-width: 35rem;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__header {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-  background-color: rgb(248, 197, 72);
-  border-radius: 5px 5px 0 0;
-  padding: 0.6rem 1.6rem;
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__header .editTask__label {
-  cursor: pointer;
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__header .editTask__label img {
-  width: 2.5rem;
-  height: auto;
-  transition: all 0.2s;
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__header .editTask__label img:hover {
-  scale: 1.1;
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__header .editTask__label input {
-  display: none;
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__header #cancelEditTask {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background-color: rgba(25, 25, 25, 0);
-  transition: all 0.2s;
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__header #cancelEditTask:hover {
-  scale: 1.1;
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__body {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
-  grid-column-gap: 0;
-  grid-row-gap: 3.2rem;
-  width: 100%;
-  height: 100%;
-  padding: 1.6rem 3.2rem 3.2rem;
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__body .editTask__label {
-  padding: 0;
-  margin: 0;
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__body .editTask__label h4 {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 2.4em;
-  color: rgb(197, 198, 196);
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__body .editTask__label p {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.8em;
-  color: rgb(197, 198, 196);
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__body .editTask__label #editTaskTitle {
-  width: 100%;
-  height: 5rem;
-  border: none;
-  outline: none;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 2.4em;
-  color: rgb(0, 52, 89);
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__body .editTask__label #editTaskDescrip {
-  width: 100%;
-  height: 25rem;
-  padding: 0;
-  margin: 0;
-  border: none;
-  outline: none;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6em;
-  color: rgb(0, 52, 89);
-  resize: vertical;
-  line-height: 1.4;
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__body #editTaskSubmit {
-  grid-column: auto/span 1;
-  grid-row: auto/span 1;
-  justify-self: end;
-  align-self: start;
-  width: 15rem;
-  height: auto;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  padding: 0.8rem;
-  align-self: flex-end;
-  background-color: #00a7e1;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.8em;
-  color: rgb(255, 255, 255);
-  transition: all 0.2s;
-}
-#workflow .container-workflow .workstation__body #editTask .editTask__body #editTaskSubmit:hover {
-  background-color: rgb(0, 126, 167);
+  color: rgb(158, 158, 158);
 }
 
 /*# sourceMappingURL=index.css.map */

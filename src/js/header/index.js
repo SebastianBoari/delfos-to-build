@@ -3,8 +3,6 @@ import UserIcon from "@icons/UserIcon"
 import userManager from '@managers/UserManager'
 
 const headerScript = async (session) => {
-    console.log('header')
-
     const swiper = new Swiper('.swiper', {
         autoplay: {
             delay: 2500,
@@ -38,7 +36,6 @@ const headerScript = async (session) => {
             }
         })
     })
-
 
     // TEST TEST TEST TEST
     const login = document.getElementById('login')

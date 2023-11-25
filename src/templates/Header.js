@@ -23,8 +23,8 @@ const buttonsOutOfSession = () => {
         </div>
 
         <div class="options_buttons">
-            <button class="options_buttons-button" id="login_button">Log In</button>
-            <button class="options_buttons-button" id="register_button">Register</button>
+            <a href="/login" class="options_buttons-button" id="login_button">Log In</a>
+            <a href="/register" class="options_buttons-button" id="register_button">Register</a>
         </div>
     </div>
     `
@@ -64,8 +64,6 @@ const Header = async (session) => {
                     <div class="swiper-slide">
                         <div class="swiper_brand-center">
                             <img class="swiper_brand-image" src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS."> 
-
-                            <h3 class="swiper_brand-title">Welcome</h3>
                         </div>
 
                         <img src="https://i.imgur.com/jKHWLIT.png" alt="landscape of greece">

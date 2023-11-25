@@ -1,49 +1,58 @@
 // GENERAL STYLES
-#logIn{
+#signUp {
     padding-top: $space-100;
-    .container-logIn{
+
+    .container-signUp {
         @include grid-container(auto auto, 1fr);
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         @include sizes(auto, 71.8rem);
-        #logIn__img{
+
+        #signUp__img {
             @include sizes(71.1rem, 71.8rem);
             background-position: center;
             background-size: cover;
         }
-        .logIn__article{
+
+        .signUp__article {
             background-color: $white;
             padding: $space-64 12.5rem;
             @include grid-container(1fr, auto auto auto);
-            .logIn__title{
+
+            .signUp__title {
                 @include grid-item($justify-self: center, $align-self: start);
                 font-family: 'Lato', sans-serif;
                 font-weight: 300;
                 font-size: $font-36;
-                color: $deepSkyBlue;
+                color: $blue;
             }
-            .logIn__panel{
+
+            .signUp__panel {
                 @include grid-item($justify-self: center, $align-self: end);
                 @include grid-container(auto, auto 1fr);
                 @include grid-gap(0, $space-32);
-                .panel__title{
+
+                .panel__title {
                     @include grid-item($justify-self: center, $align-self: center);
                     text-align: center;
                     font-family: 'Lato', sans-serif;
                     font-weight: 700;
                     font-size: $font-32;
-                    color: $navyBlue;
+                    color: $strong-blue;
                 }
-                #logIn__form{
+
+                #signUp__form {
                     @include grid-container(auto, 1fr 1fr 1fr);
-                    @include grid-gap(0, $space-32);
-                    .form__line{
+                    @include grid-gap(0, $space-20);
+
+                    .form__line {
                         padding: $space-12 $space-12;
                         @include sizes(32rem, auto);
                         @include flex(row, nowrap, space-between, center, 0);
                         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
                         transition: all .2s;
-                        .form__input{
+
+                        .form__input {
                             @include sizes(26rem, auto);
                             border: none;
                             outline: none;
@@ -51,82 +60,97 @@
                             font-family: 'Lato', sans-serif;
                             font-weight: 400;
                             font-size: $font-16;
-                            color: $navyBlue;
+                            color: $strong-blue;
                         }
-                        .form__input::placeholder{
+
+                        .form__input::placeholder {
                             color: $gray;
                         }
                     }
-                    .form__line:focus-within{
+
+                    .form__line:focus-within {
                         box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
                     }
-                    .error{
+
+                    .error {
                         box-shadow: 0px 4px 4px 0px $imperialRed-op60;
                         outline: solid 2px $imperialRed-op60;
                         border-radius: 5px;
-                        .form__input{
-                            color:  $imperialRed-op60;
+
+                        .form__input {
+                            color: $imperialRed-op60;
                         }
-                        .form__input::placeholder{
+
+                        .form__input::placeholder {
                             color: $imperialRed-op60;
                         }
                     }
-                    .error:focus-within{
+
+                    .error:focus-within {
                         box-shadow: 0px 6px 6px 0px $imperialRed-op60;
                     }
-                    .form__buttons{
+
+                    .form__buttons {
                         @include flex(row, nowrap, space-between, center, 0);
-                        .buttons__forgotPsw{
+
+                        .buttons__forgotPsw {
                             font-family: 'Lato', sans-serif;
                             font-weight: 400;
                             font-size: $font-16;
                             color: $gray;
                             transition: all .2s;
                         }
-                        .buttons__forgotPsw:hover{
-                            color: $deepSkyBlue
+
+                        .buttons__forgotPsw:hover {
+                            color: $blue
                         }
-                        #submit__logIn{
+
+                        #submit__signUp {
                             @include sizes(14rem, 4rem);
                             border: none;
                             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
                             font-family: 'Lato', sans-serif;
                             font-weight: 700;
                             font-size: $font-18;
-                            color: $navyBlue;
+                            color: $strong-blue;
                             transition: all .2s;
                         }
-                        #submit__logIn:hover{
+
+                        #submit__signUp:hover {
                             cursor: pointer;
                             box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
-                            color: $deepSkyBlue;
+                            color: $blue;
                         }
 
                     }
                 }
             }
         }
-        .logIn__options{
+
+        .signUp__options {
             @include grid-item($justify-self: center, $align-self: end);
             @include flex(column, nowrap, stretch, stretch, $space-32);
-            .options__signUp{
+
+            .options__signIn {
                 font-family: 'Lato', sans-serif;
                 font-weight: 700;
                 font-size: $font-16;
-                color: $navyBlue;
-                #btn__signUp{
+                color: $strong-blue;
+
+                #btn__signIn {
                     font-family: 'Lato', sans-serif;
                     font-weight: 700;
                     font-size: $space-16;
                     border: none;
                     outline: none;
                     cursor: pointer;
-                    color: $deepSkyBlue;
+                    color: $blue;
                     background-color: rgba(0, 0, 0, 0);
                     transition: all .2s;
                 }
-                #btn__signUp:hover{
-                    color: $skyBlue;
+
+                #btn__signIn:hover {
+                    color: $light-blue;
                 }
             }
         }
@@ -135,45 +159,54 @@
 
 // RESPONSIVE 
 // 1400PX
-@media (max-width: 1400px){
-    #logIn{
-        .container-logIn{
+@media (max-width: 1400px) {
+    #signUp {
+        .container-signUp {
             @include grid-container(auto, 1fr);
-            #logIn__img{
+
+            #signUp__img {
                 display: none;
             }
         }
     }
 }
+
 // 768PX
-@media (max-width: 768px){
-    #logIn{
+@media (max-width: 768px) {
+    #signUp {
         padding-top: $space-32;
-        .container-logIn{
+
+        .container-signUp {
             box-shadow: none;
             @include grid-container(auto, 1fr);
             @include sizes(100vw, 71.8rem);
-            .logIn__figure{
+
+            .signUp__figure {
                 display: none;
             }
-            .logIn__article{
+
+            .signUp__article {
                 padding: $space-64 $space-32;
             }
         }
     }
 }
+
 // 576PX
-@media (max-width: 768px){
-    #logIn{
+@media (max-width: 768px) {
+    #signUp {
         padding-top: $space-32;
-        .container-logIn{
+
+        .container-signUp {
             box-shadow: none;
             @include grid-container(auto, 1fr);
             @include sizes(100vw, 71.8rem);
-            .logIn__figure{
+
+            .signUp__figure {
                 display: none;
             }
-            .logIn__article{
+
+            .signUp__article {
                 padding: $space-48 $space-16;
             }
         }

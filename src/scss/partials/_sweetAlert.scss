@@ -1,11 +1,13 @@
-.swal-title{
-    color: $navyBlue;
+.swal-title {
+    color: $strong-blue;
 }
-.swal-text{
-    color: $navyBlue;
+
+.swal-text {
+    color: $strong-blue;
 }
-.swal-button--confirm{
-    background-color: $deepSkyBlue;
+
+.swal-button--confirm {
+    background-color: $blue;
     border-radius: 0px;
     outline: none;
     border: none;
@@ -14,26 +16,31 @@
     font-weight: 400;
     opacity: 1;
 }
-.swal-button--confirm:hover{
+
+.swal-button--confirm:hover {
     border-radius: 0px;
     outline: none;
     border: none;
     box-shadow: none;
 }
-.swal-button--confirm:focus{
+
+.swal-button--confirm:focus {
     border-radius: 0px;
     outline: none;
     box-shadow: none;
     border: none;
 }
-.swal-button--cancel{
-    color: $navyBlue;
+
+.swal-button--cancel {
+    color: $strong-blue;
     transition: all .2s;
     font-weight: 600;
 }
-.swal-button--cancel:hover{
+
+.swal-button--cancel:hover {
     color: $imperialRed;
 }
-.swal-button--cancel:focus{
+
+.swal-button--cancel:focus {
     color: $imperialRed;
 }

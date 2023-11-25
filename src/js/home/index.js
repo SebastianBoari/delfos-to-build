@@ -1,17 +1,24 @@
 
-const homeScript = async () => {
-    console.log('home')
+const homeScript = async (session) => {
+    const getStartedButton = document.getElementById('get-started')
+    getStartedButton.addEventListener('click', () => {
 
-    const accordionItems = document.querySelectorAll('.detail')
+        if (!session) {
+            getStartedButton.href = '/login'
+            return
+        }
 
-    accordionItems.forEach(item => {
-        const header = item.querySelector('.detail_title')
-        const content = item.querySelector('.detail_description')
+        getStartedButton.href = '/workbench'
+    })
 
-        header.addEventListener('click', () => {
-            header.classList.toggle('expanded')
-            content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px'
-        })
+    const getStartedRegisterButton = document.getElementById('get-started-register')
+    getStartedRegisterButton.addEventListener('click', () => {
+        if (!session) {
+            getStartedRegisterButton.href = '/register'
+            return
+        }
+
+        getStartedRegisterButton.href = '/workbench'
     })
 }
 

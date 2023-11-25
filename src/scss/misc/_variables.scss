@@ -1,27 +1,3 @@
-// SPACEING
-$space-224: 22.4rem;
-$space-128: 12.8rem;
-$space-100: 10rem;
-$space-80: 8rem;
-$space-64: 6.4rem;
-$space-48: 4.8rem;
-$space-46: 4.6rem;
-$space-42: 4.2rem;
-$space-40: 4.0rem;
-$space-38: 3.8rem;
-$space-36: 3.6rem;
-$space-32: 3.2rem;
-$space-28: 2.8rem;
-$space-24: 2.4rem;
-$space-22: 2.2rem;
-$space-20: 2.0rem;
-$space-18: 1.8rem;
-$space-16: 1.6rem;
-$space-12: 1.2rem;
-$space-10: 1rem;
-$space-8: 0.8rem;
-$space-6: 0.6rem;
-
 // FONT-SIZE
 $font-64: 6.4em;
 $font-48: 4.8em;
@@ -39,42 +15,16 @@ $font-16: 1.6em;
 $font-14: 1.4em;
 
 // COLORS
-$white: rgba(255, 255, 255, 1);
-$white-op80: rgba(255, 255, 255, 0.80);
-
+$light-gray: #c5c6c4cc;
 $gray: rgba(197, 198, 196, 1);
-$gray-op80: rgba(197, 198, 196, 0.80);
+$strong-gray: rgb(158, 158, 158);
 
+$red: rgba(217, 4, 41, 1);
+$strong-red: rgb(160, 0, 27);
 
-$grey-op80: rgba(197, 198, 196, 0.80);
+$white: rgba(255, 255, 255, 1);
+$white-opacity-80: rgba(255, 255, 255, 0.80);
 
-
-$skyBlue: #00a7e1;
-$skyBlue-op80: rgba(0, 167, 225, 0.80);
-
-$deepSkyBlue: rgba(0, 126, 167, 1);
-$deepSkyBlue-op80: rgba(0, 126, 167, 0.80);
-
-$navyBlue: rgba(0, 52, 89, 1);
-$navyBlue-op80: rgba(0, 52, 89, 0.80);
-
-$blackBlue: rgba(0, 23, 31, 1);
-$blackBlue-op80: rgba(0, 23, 31, 0.80);
-
-$imperialRed: rgba(239, 35, 60, 1);
-$imperialRed-op60: rgba(239, 35, 60, 0.60);
-
-$amaranthRed: rgba(217, 4, 41, 1);
-
-
-
-$yellow: rgba(248, 197, 72, 1);
-
-
-// LOS QUE SE QUEDAN
-$grey: rgba(197, 198, 196, 1);
-
-$strong-grey: rgb(158, 158, 158);
-
-$danger: rgba(217, 4, 41, 1);
-$danger-strong: rgb(160, 0, 27);
+$light-blue: #00a7e1;
+$blue: #007ea7;
+$strong-blue: #003459;

@@ -1,0 +1,88 @@
+#home {
+    padding: 0 0 6.4rem;
+
+    .container-xl {
+        @include grid-container(1fr 1fr, auto);
+        padding: 6.4rem 0;
+    }
+
+    #home_welcome {
+        @include flex(row, nowrap, space-between, center, 6.4rem);
+
+        .welcome_figure {
+            &-image {
+                max-width: 62rem;
+            }
+        }
+
+        .welcome_cta {
+            @include flex(column, nowrap, space-between, flex-start, 3.2rem);
+
+            &-title {
+                font-size: 4.2em;
+                font-weight: 300;
+                font-family: 'Lato', sans-serif;
+                color: $strong-blue;
+
+                bold {
+                    color: $blue;
+                    font-weight: 600;
+                }
+            }
+
+            &-description {
+                max-width: 62rem;
+                font-size: 1.8em;
+                font-family: 'Lato', sans-serif;
+                font-weight: 300;
+                line-height: 3.2rem;
+                color: $strong-blue;
+            }
+
+            .welcome_cta-buttons {
+                @include flex(row, nowrap, flex-start, center, 3.2rem);
+                width: 100%;
+
+                .getStarted_button {
+                    display: grid;
+                    place-items: center;
+
+                    height: 5rem;
+                    width: 20rem;
+
+                    font-size: 1.8em;
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 400;
+
+                    color: $white;
+                    background: $light-blue;
+                    border-radius: .1rem;
+
+                    transition: all .2s ease-in;
+
+                    &:hover,
+                    &:focus {
+                        background: $blue;
+                        outline: none;
+                        -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+                        -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+                        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+                    }
+
+                    &-register {
+                        font-size: 1.6em;
+                        font-family: 'Lato', sans-serif;
+                        font-weight: 400;
+
+                        color: $strong-blue;
+                        transition: color .2s ease-in;
+
+                        &:hover {
+                            color: $strong-gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

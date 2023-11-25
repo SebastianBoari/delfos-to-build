@@ -17,14 +17,14 @@
     .container-l {
         .footer__contact {
             .address {
-                color: $navyBlue;
+                color: $strong-blue;
             }
 
             .footer__contact--down {
 
                 .telNumber,
                 .contactMail {
-                    color: $navyBlue;
+                    color: $strong-blue;
                 }
             }
         }
@@ -34,12 +34,12 @@
             .social__redirect,
             .social__link {
                 .footer__link {
-                    color: $navyBlue;
+                    color: $strong-blue;
                 }
             }
 
             .signature {
-                color: $navyBlue;
+                color: $strong-blue;
             }
         }
     }
@@ -81,7 +81,7 @@
 // HEADER
 .header__theme--blueMidnight {
     .header__nav {
-        background-color: $navyBlue-op80;
+        background-color: $strong-blue-op80;
     }
 }
 
