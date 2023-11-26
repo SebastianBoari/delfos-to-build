@@ -4,21 +4,21 @@ const homeScript = async (session) => {
     getStartedButton.addEventListener('click', () => {
 
         if (!session) {
-            getStartedButton.href = '/login'
+            getStartedButton.href = '/#login'
             return
         }
 
-        getStartedButton.href = '/workbench'
+        getStartedButton.href = '/#workbench'
     })
 
     const getStartedRegisterButton = document.getElementById('get-started-register')
     getStartedRegisterButton.addEventListener('click', () => {
         if (!session) {
-            getStartedRegisterButton.href = '/register'
+            getStartedRegisterButton.href = '/#register'
             return
         }
 
-        getStartedRegisterButton.href = '/workbench'
+        getStartedRegisterButton.href = '/#workbench'
     })
 }
 

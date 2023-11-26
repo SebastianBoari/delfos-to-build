@@ -12,8 +12,11 @@ class Router {
         this.#routes = []
     }
 
-    #getPath() {
-        const currentPath = location.pathname.toLowerCase()
+    #getHash() {
+        let currentPath = `/${location.hash.slice(1).toLocaleLowerCase().split('/')[0]}`
+
+        if (!currentPath) currentPath = '/'
+
         return currentPath
     }
 
@@ -70,7 +73,8 @@ class Router {
         try {
             if (!route) throw Error('route is a mandatory parameter')
 
-            const path = this.#getPath()
+            const path = this.#getHash()
+
             if (!path) throw Error('path is undefined')
 
             const search = this.#match(path, this.#routes, route)
