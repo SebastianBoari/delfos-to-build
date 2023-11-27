@@ -1,0 +1,181 @@
+.register-blue {
+    background: radial-gradient(136.28% 128.12% at 50% 50.12%, #003459 0%, #000 100%);
+}
+
+.register-dark {
+    background: radial-gradient(176.39% 130.65% at 50% 50%, #00171F 0%, #000 100%);
+}
+
+#register {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    .register_container {
+        background: white;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include flex(row, nowrap, space-between, center, 3.2rem);
+
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+        #register_landscape {
+            height: 72.2rem;
+            width: 71.2rem;
+            object-fit: cover;
+        }
+
+        .register_content {
+            @include flex(column, nowrap, space-between, center, 1.6rem);
+            height: 71.8rem;
+            width: 57rem;
+            padding: 1.6rem 3.2rem;
+
+            &-title {
+                font-size: 3.6em;
+                font-weight: 200;
+                font-family: 'Lato', sans-serif;
+                color: $blue;
+                text-align: center;
+            }
+
+            &-form {
+                @include flex(column, nowrap, space-between, center, 3.2rem);
+
+                &-title {
+                    font-size: 2.4em;
+                    font-weight: 600;
+                    font-family: 'Lato', sans-serif;
+                    color: $strong-blue;
+                    text-align: center;
+                }
+
+                #register_form {
+                    @include flex(column, nowrap, space-between, center, 2.4rem);
+
+                    .register_form-label {
+                        @include flex(row, nowrap, flex-start, center, .8rem);
+                        width: 32rem;
+                        height: 4rem;
+
+                        padding: 0 1.6rem;
+                        border-radius: .2rem;
+
+                        -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+                        -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+                        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+                        transition: box-shadow .2s ease-in;
+
+                        .register_form-input {
+                            padding: .8rem;
+                            border: none;
+                            outline: none;
+                            background: rgba(0, 0, 0, 0);
+
+                            font-family: 'Lato', sans-serif;
+                            font-size: 1.4em;
+                            font-weight: 400;
+                            color: $strong-blue;
+
+                            width: 27rem;
+
+                            &:focus {
+                                outline: none;
+                            }
+
+                            &::placeholder {
+                                color: $gray;
+                            }
+                        }
+
+                        #user-form-icon,
+                        #password-form-icon,
+                        #user-phone-icon,
+                        #user-mail-icon {
+                            color: $gray;
+                        }
+                    }
+
+                    .box-shadow-focus {
+                        -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    }
+
+                    .register_form-actions {
+                        @include flex(row, nowrap, flex-end, center, 0);
+                        padding: 1.6rem;
+                        width: 100%;
+
+                        .register_form-submit {
+                            cursor: pointer;
+
+                            font-family: 'Lato', sans-serif;
+                            font-size: 1.6em;
+                            font-weight: 600;
+
+                            color: $strong-blue;
+
+                            padding: .8rem 1.6rem;
+                            border: none;
+                            border-radius: .2rem;
+                            background: rgba(0, 0, 0, 0);
+
+                            -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+                            -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+                            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+                            transition: box-shadow .2s ease-in;
+
+                            &:hover {
+                                -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                                -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                            }
+
+                            &:focus {
+                                outline: none;
+                                -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                                -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .register_login {
+            @include flex(column, nowrap, space-between, center, 1.6rem);
+
+            .register_login-text {
+                font-family: 'Lato', sans-serif;
+                font-size: 1.4em;
+                font-weight: 600;
+                color: $strong-blue;
+
+                .register_login-link {
+                    color: $blue;
+                    transition: color .2s ease-in;
+
+                    &:hover {
+                        color: $strong-blue;
+                    }
+
+                    &:focus {
+                        color: $strong-blue;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}

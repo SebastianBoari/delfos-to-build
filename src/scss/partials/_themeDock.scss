@@ -26,13 +26,13 @@
 
         #sun-icon {
             &:hover {
-                color: orange;
+                color: yellow;
             }
         }
 
         .themeDock_sunIcon-active {
-            scale: 1.05;
-            color: orange;
+            scale: 1.08;
+            color: yellow;
         }
 
         #sunset-icon {
@@ -45,7 +45,7 @@
         }
 
         .themeDock_sunsetIcon-active {
-            scale: 1.05;
+            scale: 1.08;
             color: orangered;
         }
 
@@ -56,7 +56,7 @@
         }
 
         .themeDock_moonIcon-active {
-            scale: 1.05;
+            scale: 1.08;
             color: $blue;
         }
 

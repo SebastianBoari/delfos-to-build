@@ -4,7 +4,7 @@ import HeaderRender from '@templates/Header'
 import FooterRender from '@templates/Footer'
 import HomeRender from '@pages/Home'
 import LoginRender from '@pages/Login'
-import RegisterRender from '@pages/Signin'
+import RegisterRender from '@pages/Register'
 import WorkbenchRender from '@pages/Workbench'
 
 import HeaderScript from '@script/header'

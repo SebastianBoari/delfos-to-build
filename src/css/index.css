@@ -439,11 +439,11 @@ body {
   transition: all 0.2s ease-in;
 }
 #theme-dock label #sun-icon:hover {
-  color: orange;
+  color: yellow;
 }
 #theme-dock label .themeDock_sunIcon-active {
-  scale: 1.05;
-  color: orange;
+  scale: 1.08;
+  color: yellow;
 }
 #theme-dock label #sunset-icon {
   width: 2.8rem;
@@ -453,14 +453,14 @@ body {
   color: orangered;
 }
 #theme-dock label .themeDock_sunsetIcon-active {
-  scale: 1.05;
+  scale: 1.08;
   color: orangered;
 }
 #theme-dock label #moon-icon:hover {
   color: #007ea7;
 }
 #theme-dock label .themeDock_moonIcon-active {
-  scale: 1.05;
+  scale: 1.08;
   color: #007ea7;
 }
 #theme-dock label svg:hover {
@@ -743,6 +743,188 @@ body {
   color: #003459;
 }
 #login .login_container .login_register .login_register-text .login_register-link:focus {
+  color: #003459;
+  outline: none;
+}
+
+.register-blue {
+  background: radial-gradient(136.28% 128.12% at 50% 50.12%, #003459 0%, #000 100%);
+}
+
+.register-dark {
+  background: radial-gradient(176.39% 130.65% at 50% 50%, #00171F 0%, #000 100%);
+}
+
+#register {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+#register .register_container {
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.2rem;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+#register .register_container #register_landscape {
+  height: 72.2rem;
+  width: 71.2rem;
+  object-fit: cover;
+}
+#register .register_container .register_content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.6rem;
+  height: 71.8rem;
+  width: 57rem;
+  padding: 1.6rem 3.2rem;
+}
+#register .register_container .register_content-title {
+  font-size: 3.6em;
+  font-weight: 200;
+  font-family: "Lato", sans-serif;
+  color: #007ea7;
+  text-align: center;
+}
+#register .register_container .register_content-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.2rem;
+}
+#register .register_container .register_content-form-title {
+  font-size: 2.4em;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  color: #003459;
+  text-align: center;
+}
+#register .register_container .register_content-form #register_form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.4rem;
+}
+#register .register_container .register_content-form #register_form .register_form-label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  width: 32rem;
+  height: 4rem;
+  padding: 0 1.6rem;
+  border-radius: 0.2rem;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s ease-in;
+}
+#register .register_container .register_content-form #register_form .register_form-label .register_form-input {
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0);
+  font-family: "Lato", sans-serif;
+  font-size: 1.4em;
+  font-weight: 400;
+  color: #003459;
+  width: 27rem;
+}
+#register .register_container .register_content-form #register_form .register_form-label .register_form-input:focus {
+  outline: none;
+}
+#register .register_container .register_content-form #register_form .register_form-label .register_form-input::placeholder {
+  color: rgb(197, 198, 196);
+}
+#register .register_container .register_content-form #register_form .register_form-label #user-form-icon,
+#register .register_container .register_content-form #register_form .register_form-label #password-form-icon,
+#register .register_container .register_content-form #register_form .register_form-label #user-phone-icon,
+#register .register_container .register_content-form #register_form .register_form-label #user-mail-icon {
+  color: rgb(197, 198, 196);
+}
+#register .register_container .register_content-form #register_form .box-shadow-focus {
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+#register .register_container .register_content-form #register_form .register_form-actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0;
+  padding: 1.6rem;
+  width: 100%;
+}
+#register .register_container .register_content-form #register_form .register_form-actions .register_form-submit {
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  color: #003459;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 0.2rem;
+  background: rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s ease-in;
+}
+#register .register_container .register_content-form #register_form .register_form-actions .register_form-submit:hover {
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+#register .register_container .register_content-form #register_form .register_form-actions .register_form-submit:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+#register .register_container .register_login {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.6rem;
+}
+#register .register_container .register_login .register_login-text {
+  font-family: "Lato", sans-serif;
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #003459;
+}
+#register .register_container .register_login .register_login-text .register_login-link {
+  color: #007ea7;
+  transition: color 0.2s ease-in;
+}
+#register .register_container .register_login .register_login-text .register_login-link:hover {
+  color: #003459;
+}
+#register .register_container .register_login .register_login-text .register_login-link:focus {
   color: #003459;
   outline: none;
 }

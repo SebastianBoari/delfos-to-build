@@ -39,6 +39,7 @@ class Router {
             if (!renderFunctions) throw Error('render functions is a mandatory parameter')
 
             const root = document.getElementById('root')
+
             if (!root) throw Error('root container is undefined')
 
             root.innerHTML = ''

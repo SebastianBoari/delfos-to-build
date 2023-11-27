@@ -2,13 +2,13 @@ import themeManager from '@managers/ThemeManager'
 import userManager from '@managers/UserManager'
 import themeDock from '../theme-dock'
 
-const landscapes = {
-    light: 'https://i.imgur.com/hW3kkQS.png',
-    blue: 'https://i.imgur.com/SLuE6Bv.png',
-    dark: 'https://i.imgur.com/2GqBE0L.png'
-}
-
 const loginScript = async (session) => {
+
+    const landscapes = {
+        light: 'https://i.imgur.com/hW3kkQS.png',
+        blue: 'https://i.imgur.com/SLuE6Bv.png',
+        dark: 'https://i.imgur.com/2GqBE0L.png'
+    }
 
     // TODO: check on deploy
     if (session) {
@@ -23,23 +23,22 @@ const loginScript = async (session) => {
     const loginContainer = document.getElementById('login')
     loginContainer.classList.add(`login-${currentTheme}`)
 
-    const loginForm_userNameLabel = document.getElementById('login-username-label')
-    const loginForm_userNameInput = document.getElementById('login-username-input')
-    loginForm_userNameInput.addEventListener('focus', () => {
-        loginForm_userNameLabel.classList.add('box-shadow-focus');
-    });
-    loginForm_userNameInput.addEventListener('blur', () => {
-        loginForm_userNameLabel.classList.remove('box-shadow-focus');
-    });
 
-    const loginForm_passwordLabel = document.getElementById('login-password-label')
-    const loginForm_passwordInput = document.getElementById('login-password-input')
-    loginForm_passwordInput.addEventListener('focus', () => {
-        loginForm_passwordLabel.classList.add('box-shadow-focus')
-    })
-    loginForm_passwordInput.addEventListener('blur', () => {
-        loginForm_passwordLabel.classList.remove('box-shadow-focus')
-    })
+    const setListeners = (labelId, inputId) => {
+        const label = document.getElementById(labelId)
+        const input = document.getElementById(inputId)
+
+        input.addEventListener('focus', () => {
+            label.classList.add('box-shadow-focus')
+        })
+
+        input.addEventListener('blur', () => {
+            label.classList.remove('box-shadow-focus')
+        })
+    }
+
+    setListeners('login-username-label', 'login-username-input')
+    setListeners('login-password-label', 'login-password-input')
 
     themeDock()
 

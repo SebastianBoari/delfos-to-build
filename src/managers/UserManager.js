@@ -1,31 +1,33 @@
 import { SessionEvent } from '../utils'
 
 class UserManager {
-    #users
+    #user
     #sessionStorageOnChangeEvent
 
     constructor() {
-        this.#users = JSON.parse(localStorage.getItem('delfos-to-build-users')) || []
+        this.#user = JSON.parse(localStorage.getItem('delfos-to-build-user')) || []
         this.#sessionStorageOnChangeEvent = SessionEvent
     }
 
-    #getUsers() {
-        this.#users = JSON.parse(localStorage.getItem('delfos-to-build-users')) || []
+    #getUser() {
+        this.#user = JSON.parse(localStorage.getItem('delfos-to-build-user')) || []
 
-        return this.#users
+        return this.#user
     }
 
     async #findUserByEmail(email) {
         if (!email) throw Error('email is a mandatory parameter')
 
         try {
-            const currentUser = this.#users.find((user) => {
-                return user.email === email
-            })
+            const user = localStorage.getItem('delfos-to-build-user')
 
-            if (!currentUser) return false
+            if (!user) return false
 
-            return currentUser
+            const parsedUser = JSON.parse(user)
+
+            if (parsedUser.email !== email) return false
+
+            return parsedUser
         } catch (error) {
             console.error(error.message)
         }
@@ -35,12 +37,12 @@ class UserManager {
         if (!user) throw Error('user is a mandatory parameter')
 
         try {
+            console.log(`USER MANAGER ${user}`)
             const userAlreadyExists = await this.#findUserByEmail(user.email)
+
             if (userAlreadyExists) throw Error('user already exists')
 
-            this.#users.push(user)
-
-            await localStorage.setItem('delfos-to-build-users', JSON.stringify(this.#users))
+            await localStorage.setItem('delfos-to-build-user', JSON.stringify(user))
 
             return user
         } catch (error) {
@@ -92,7 +94,11 @@ class UserManager {
 
             return
         } catch (error) {
-            console.error(error.message)
+            if (error.message == 'session not exists') {
+                console.warn(error.message)
+            } else {
+                console.error(error.message)
+            }
         }
     }
 
@@ -104,7 +110,11 @@ class UserManager {
 
             return session
         } catch (error) {
-            console.error(error.message)
+            if (error.message == 'session not exists') {
+                console.warn(error.message)
+            } else {
+                console.error(error.message)
+            }
         }
     }
 }
