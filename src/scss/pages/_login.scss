@@ -1,213 +1,180 @@
-// GENERAL STYLES
-#logIn {
-    padding-top: $space-100;
+#login {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
 
-    .container-logIn {
-        @include grid-container(auto auto, 1fr);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        @include sizes(auto, 71.8rem);
+    .login_container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-        #logIn__img {
-            @include sizes(71.1rem, 71.8rem);
-            background-position: center;
-            background-size: cover;
+        @include flex(row, nowrap, space-between, center, 3.2rem);
+
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+        #login_landscape {
+            height: 100%;
+            object-fit: cover;
         }
 
-        .logIn__article {
-            background-color: $white;
-            padding: $space-64 12.5rem;
-            @include grid-container(1fr, auto auto auto);
+        .login_content {
+            @include flex(column, nowrap, space-between, center, 3.2rem);
+            height: 71.8rem;
+            width: 57rem;
+            padding: 6.4rem;
 
-            .logIn__title {
-                @include grid-item($justify-self: center, $align-self: start);
+            &-title {
+                font-size: 3.6em;
+                font-weight: 200;
                 font-family: 'Lato', sans-serif;
-                font-weight: 300;
-                font-size: $font-36;
                 color: $blue;
+                text-align: center;
             }
 
-            .logIn__panel {
-                @include grid-item($justify-self: center, $align-self: end);
-                @include grid-container(auto, auto 1fr);
-                @include grid-gap(0, $space-32);
+            &-form {
+                @include flex(column, nowrap, space-between, center, 3.2rem);
 
-                .panel__title {
-                    @include grid-item($justify-self: center, $align-self: center);
-                    text-align: center;
+                &-title {
+                    font-size: 2.4em;
+                    font-weight: 600;
                     font-family: 'Lato', sans-serif;
-                    font-weight: 700;
-                    font-size: $font-32;
                     color: $strong-blue;
+                    text-align: center;
                 }
 
-                #logIn__form {
-                    @include grid-container(auto, 1fr 1fr 1fr);
-                    @include grid-gap(0, $space-32);
+                #login_form {
+                    @include flex(column, nowrap, space-between, center, 3.2rem);
 
-                    .form__line {
-                        padding: $space-12 $space-12;
-                        @include sizes(32rem, auto);
-                        @include flex(row, nowrap, space-between, center, 0);
-                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    .login_form-label {
+                        @include flex(row, nowrap, flex-start, center, .8rem);
+                        width: 32rem;
+                        height: 4rem;
 
-                        transition: all .2s;
+                        padding: 0 1.6rem;
+                        border-radius: .2rem;
 
-                        .form__input {
-                            @include sizes(26rem, auto);
+                        -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+                        -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+                        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+                        transition: box-shadow .2s ease-in;
+
+                        .login_form-input {
+                            padding: .8rem;
                             border: none;
                             outline: none;
+                            background: rgba(0, 0, 0, 0);
 
                             font-family: 'Lato', sans-serif;
+                            font-size: 1.4em;
                             font-weight: 400;
-                            font-size: $font-16;
                             color: $strong-blue;
+
+                            width: 27rem;
+
+                            &:focus {
+                                outline: none;
+                            }
+
+                            &::placeholder {
+                                color: $gray;
+                            }
                         }
 
-                        .form__input::placeholder {
+                        #user-form-icon,
+                        #password-form-icon {
                             color: $gray;
                         }
                     }
 
-                    .form__line:focus-within {
-                        box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
+                    .box-shadow-focus {
+                        -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
                     }
 
-                    .error {
-                        box-shadow: 0px 4px 4px 0px $imperialRed-op60;
-                        outline: solid 2px $imperialRed-op60;
-                        border-radius: 5px;
+                    .login_form-actions {
+                        @include flex(row, nowrap, space-between, center, 1.6rem);
+                        padding: 1.6rem;
+                        width: 100%;
 
-                        .form__input {
-                            color: $imperialRed-op60;
-                        }
-
-                        .form__input::placeholder {
-                            color: $imperialRed-op60;
-                        }
-                    }
-
-                    .error:focus-within {
-                        box-shadow: 0px 6px 6px 0px $imperialRed-op60;
-                    }
-
-                    .form__buttons {
-                        @include flex(row, nowrap, space-between, center, 0);
-
-                        .buttons__forgotPsw {
+                        .login_form-forgotpassword {
                             font-family: 'Lato', sans-serif;
+                            font-size: 1.4em;
                             font-weight: 400;
-                            font-size: $font-16;
                             color: $gray;
-                            transition: all .2s;
+                            transition: color .2s ease-in;
+
+                            &:focus {
+                                outline: none;
+                                color: $strong-gray;
+                            }
                         }
 
-                        .buttons__forgotPsw:hover {
-                            color: $blue
-                        }
-
-                        #submit__logIn {
-                            @include sizes(14rem, 4rem);
-                            border: none;
-                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-                            font-family: 'Lato', sans-serif;
-                            font-weight: 700;
-                            font-size: $font-18;
-                            color: $strong-blue;
-                            transition: all .2s;
-                        }
-
-                        #submit__logIn:hover {
+                        .login_form-submit {
                             cursor: pointer;
-                            box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
-                            color: $blue;
-                        }
 
+                            font-family: 'Lato', sans-serif;
+                            font-size: 1.6em;
+                            font-weight: 600;
+
+                            color: $strong-blue;
+
+                            padding: .8rem 1.6rem;
+                            border: none;
+                            border-radius: .2rem;
+                            background: rgba(0, 0, 0, 0);
+
+                            -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+                            -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+                            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+                            transition: box-shadow .2s ease-in;
+
+                            &:hover {
+                                -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                                -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                            }
+
+                            &:focus {
+                                outline: none;
+                                -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                                -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                            }
+                        }
                     }
                 }
             }
         }
 
-        .logIn__options {
-            @include grid-item($justify-self: center, $align-self: end);
-            @include flex(column, nowrap, stretch, stretch, $space-32);
+        .login_register {
+            @include flex(column, nowrap, space-between, center, 1.6rem);
 
-            .options__signUp {
+            .login_register-text {
                 font-family: 'Lato', sans-serif;
-                font-weight: 700;
-                font-size: $font-16;
+                font-size: 1.4em;
+                font-weight: 600;
                 color: $strong-blue;
 
-                #btn__signUp {
-                    font-family: 'Lato', sans-serif;
-                    font-weight: 700;
-                    font-size: $space-16;
-                    border: none;
-                    outline: none;
-                    cursor: pointer;
+                .login_register-link {
                     color: $blue;
-                    background-color: rgba(0, 0, 0, 0);
-                    transition: all .2s;
+                    transition: color .2s ease-in;
+
+                    &:hover {
+                        color: $strong-blue;
+                    }
+
+                    &:focus {
+                        color: $strong-blue;
+                        outline: none;
+                    }
                 }
-
-                #btn__signUp:hover {
-                    color: $light-blue;
-                }
-            }
-        }
-    }
-}
-
-// RESPONSIVE 
-// 1400PX
-@media (max-width: 1400px) {
-    #logIn {
-        .container-logIn {
-            @include grid-container(auto, 1fr);
-
-            #logIn__img {
-                display: none;
-            }
-        }
-    }
-}
-
-// 768PX
-@media (max-width: 768px) {
-    #logIn {
-        padding-top: $space-32;
-
-        .container-logIn {
-            box-shadow: none;
-            @include grid-container(auto, 1fr);
-            @include sizes(100vw, 71.8rem);
-
-            .logIn__figure {
-                display: none;
-            }
-
-            .logIn__article {
-                padding: $space-64 $space-32;
-            }
-        }
-    }
-}
-
-// 576PX
-@media (max-width: 768px) {
-    #logIn {
-        padding-top: $space-32;
-
-        .container-logIn {
-            box-shadow: none;
-            @include grid-container(auto, 1fr);
-            @include sizes(100vw, 71.8rem);
-
-            .logIn__figure {
-                display: none;
-            }
-
-            .logIn__article {
-                padding: $space-48 $space-16;
             }
         }
     }

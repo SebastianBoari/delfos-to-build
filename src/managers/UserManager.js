@@ -1,10 +1,12 @@
+import { SessionEvent } from '../utils'
+
 class UserManager {
     #users
     #sessionStorageOnChangeEvent
 
     constructor() {
         this.#users = JSON.parse(localStorage.getItem('delfos-to-build-users')) || []
-        this.#sessionStorageOnChangeEvent = new Event('sessionStorageOnChange')
+        this.#sessionStorageOnChangeEvent = SessionEvent
     }
 
     #getUsers() {

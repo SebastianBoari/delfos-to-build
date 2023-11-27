@@ -7,10 +7,11 @@
 // PARTIALS
 @import './partials/footer';
 @import './partials/header';
+@import './partials/themeDock';
 
 // SCREENS
 @import './pages/home';
-// @import './screens/configureuserscreen';
-// @import './screens/login';
-// @import './screens/signup';
-// @import './screens/workflow';
+// @import './pages/options';
+@import './pages/login';
+// @import './pages/signup';
+// @import './pages/workbench';

@@ -44,7 +44,7 @@ const Header = async (session) => {
                     </a>
                 </figure>
 
-                <button id="login">Log In</button>
+                <button id="loginTest">Log In</button>
 
                 <div class="header_navbar-buttons">
                     <p class="user-email">${session ? JSON.parse(session).email : ''}</p>

@@ -1,0 +1,67 @@
+#theme-dock {
+    @include sizes(21.3rem, 6rem);
+    @include flex(row, nowrap, space-around, center, 1.6rem);
+
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+    padding: 1.2rem 3.6rem;
+    border-radius: 6rem;
+
+
+    label {
+        input {
+            display: none;
+        }
+
+        cursor: pointer;
+
+        svg {
+            color: $strong-blue;
+            width: 2.4rem;
+            height: 2.4rem;
+            transition: all .2s ease-in;
+        }
+
+        #sun-icon {
+            &:hover {
+                color: orange;
+            }
+        }
+
+        .themeDock_sunIcon-active {
+            scale: 1.05;
+            color: orange;
+        }
+
+        #sunset-icon {
+            width: 2.8rem;
+            height: 2.8rem;
+
+            &:hover {
+                color: orangered;
+            }
+        }
+
+        .themeDock_sunsetIcon-active {
+            scale: 1.05;
+            color: orangered;
+        }
+
+        #moon-icon {
+            &:hover {
+                color: $blue;
+            }
+        }
+
+        .themeDock_moonIcon-active {
+            scale: 1.05;
+            color: $blue;
+        }
+
+        svg:hover {
+            scale: 1.05;
+        }
+    }
+}

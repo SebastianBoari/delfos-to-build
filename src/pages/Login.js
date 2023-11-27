@@ -1,57 +1,44 @@
+import UserFormIcon from '@icons/UserFormIcon'
+import PasswordFormIcon from '@icons/PasswordFormIcon'
+import ThemeDock from '@templates/ThemeDock'
+
 const Login = async () => {
     const view = `
-    <section id="logIn" class="logIn__theme--light animate__animated animate__fadeIn animate__slow">
-        <div class="container-logIn">
-            <figure id="logIn__img" class="logInImg__theme--light">
+        <article id="login">
+            <section class="login_container">    
+                <img id="login_landscape" src="" alt="Greek landscape"/>
+            
+                <div class="login_content">
+                    <h2 class="login_content-title">PANORAMA</h2>
 
-            </figure>
+                    <div class="login_content-form">
+                        <h4 class="login_content-form-title">Log In</h4>
 
-            <article class="logIn__article">
-                <h2 class="logIn__title">PANORAMA</h2>
-
-                <div class="logIn__panel">
-                    <h4 class="panel__title">Log In</h4>
-                    <form id="logIn__form">
-                        <label class="form__line" id="form__line--logInUser">
-                            <img id="logIn__userIcon" src="./assets/icons/user-icon-default.png" alt="User form icon">
-                            <input class="form__input" type="text" name="userName" id="logIn__user" placeholder="username phone or email">
-                        </label>
-                        
-                        <label class="form__line" id="form__line--logInPassword">
-                            <img id="logIn__passwordIcon" src="./assets/icons/password-icon-default.png" alt="Password form icon">
-                            <input class="form__input" type="password" name="userPassword" id="logIn__psw" placeholder="password">
-                        </label>
-                        
-                        <div class="form__buttons">
-                            <a class="buttons__forgotPsw" href="#">Forgot password?</a>
-                            <input type="submit" value="Continuar" id="submit__logIn">
-                        </div>
-                    </form>
-                </div>
-
-                <div class="logIn__options">
-                    <div class="themeDock">
-                        <label class="themeDock__label">
-                            <img class="label__light--midnightblue" src="./assets/icons/light-dock.svg" alt="Light Theme">
-                            <input type="radio" name="theme" class="dock__input--light">
-                        </label>
-                        
-                        <label class="themeDock__label">
-                            <img class="label__light--midnightblue" src="./assets/icons/midnight-dock.svg" alt="Midnightblue Theme">
-                            <input type="radio" name="theme" class="dock__input--midnightblue">
-                        </label>
-
-                        <label class="themeDock__label">
-                            <img class="label__light--dark" src="./assets/icons/dark-dock.svg" alt="Dark Theme">
-                            <input type="radio" name="theme" class="dock__input--dark">
-                        </label>
+                        <form id="login_form">
+                            <label class="login_form-label" id="login-username-label">
+                                ${UserFormIcon()}
+                                <input class="login_form-input" id="login-username-input" type="text" name="userName" placeholder="email">
+                            </label>
+                            
+                            <label class="login_form-label" id="login-password-label">
+                                ${PasswordFormIcon()}
+                                <input class="login_form-input" id="login-password-input" type="password" name="userPassword" placeholder="password">
+                            </label>
+                            
+                            <div class="login_form-actions">
+                                <a class="login_form-forgotpassword" href="#">Forgot password?</a>
+                                <input class="login_form-submit" type="submit" value="Continue" />
+                            </div>
+                        </form>
                     </div>
 
-                    <p class="options__signUp">Don't have an account? <button id="btn__signUp">Sign Up</button></p>
+                    <div class="login_register">
+                        ${ThemeDock()}
+                        <p class="login_register-text">Don't have an account? <a class="login_register-link" href="/#register">register</a></p>
+                    </div>
                 </div>
-            </article>
-        </div>
-    </section>
+        </section>
+    </article>
     `
     return view
 }
