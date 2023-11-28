@@ -4,17 +4,16 @@ import themeDock from '../theme-dock'
 
 const loginScript = async (session) => {
 
-    const landscapes = {
-        light: 'https://i.imgur.com/hW3kkQS.png',
-        blue: 'https://i.imgur.com/SLuE6Bv.png',
-        dark: 'https://i.imgur.com/2GqBE0L.png'
-    }
-
     // TODO: check on deploy
     if (session) {
         location.href = '/#workbench'
     }
 
+    const landscapes = {
+        light: 'https://i.imgur.com/hW3kkQS.png',
+        blue: 'https://i.imgur.com/SLuE6Bv.png',
+        dark: 'https://i.imgur.com/2GqBE0L.png'
+    }
 
     const currentTheme = await themeManager.getTheme()
     const loginImage = document.getElementById('login_landscape')
@@ -49,7 +48,19 @@ const loginScript = async (session) => {
         const loginUsernameInput = document.getElementById('login-username-input').value
         const loginPasswordInput = document.getElementById('login-password-input').value
 
-        await userManager.login(loginUsernameInput, loginPasswordInput)
+        const loginAction = await userManager.login(loginUsernameInput, loginPasswordInput)
+
+        if (loginAction === 'user not exists') {
+            const label = document.getElementById('login-username-label')
+            label.classList.add('wrong')
+            label.innerHTML += '<p class="login-action">User not exists</p>'
+        }
+
+        if (loginAction === 'wrong password') {
+            const label = document.getElementById('login-password-label')
+            label.classList.add('wrong')
+            label.innerHTML += '<p class="login-action">Wrong password</p>'
+        }
     })
 
 }

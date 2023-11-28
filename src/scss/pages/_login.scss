@@ -75,6 +75,19 @@
 
                         transition: box-shadow .2s ease-in;
 
+                        position: relative;
+
+                        .login-action {
+                            position: absolute;
+                            top: -2rem;
+                            left: .4rem;
+
+                            font-size: 1.2em;
+                            font-weight: 400;
+                            font-family: 'Lato', sans-serif;
+                            color: $red;
+                        }
+
                         .login_form-input {
                             padding: .8rem;
                             border: none;
@@ -100,6 +113,19 @@
                         #user-form-icon,
                         #password-form-icon {
                             color: $gray;
+                        }
+                    }
+
+                    .wrong {
+                        border: solid 1px $red;
+
+                        .login_form-input {
+                            color: $red;
+                        }
+
+                        #user-form-icon,
+                        #password-form-icon {
+                            color: $red;
                         }
                     }
 

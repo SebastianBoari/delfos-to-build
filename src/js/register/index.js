@@ -3,10 +3,10 @@ import themeManager from '@managers/ThemeManager'
 import themeDock from '../theme-dock'
 
 const registerScript = async () => {
-    // TODO: check on deploy
-    // if (session) {
-    //     location.href = '/#workbench'
-    // }
+    //TODO: check on deploy
+    if (session) {
+        location.href = '/#workbench'
+    }
 
     const landscapes = {
         light: 'https://i.imgur.com/hW3kkQS.png',
@@ -46,7 +46,6 @@ const registerScript = async () => {
     const registerForm = document.getElementById('register_form')
     registerForm.addEventListener('submit', async (event) => {
         event.preventDefault()
-        // TODO: crear usuario
 
         const fisrt_name = document.getElementById('register-firstname-input').value
         const last_name = document.getElementById('register-lastname-input').value

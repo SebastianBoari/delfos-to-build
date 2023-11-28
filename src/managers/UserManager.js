@@ -79,7 +79,7 @@ class UserManager {
 
             return currentUser
         } catch (error) {
-            console.error(error.message)
+            return error.message
         }
     }
 
