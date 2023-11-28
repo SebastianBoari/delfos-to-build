@@ -36,14 +36,6 @@ const headerScript = async (session) => {
             }
         })
     })
-
-    // TEST TEST TEST TEST
-    const login = document.getElementById('loginTest')
-    login.addEventListener('click', async () => {
-        await userManager.login('seba@gmail.com', 'admin123')
-    })
-
-
 }
 
 export default headerScript

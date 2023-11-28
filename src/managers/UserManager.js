@@ -9,12 +9,6 @@ class UserManager {
         this.#sessionStorageOnChangeEvent = SessionEvent
     }
 
-    #getUser() {
-        this.#user = JSON.parse(localStorage.getItem('delfos-to-build-user')) || []
-
-        return this.#user
-    }
-
     async #findUserByEmail(email) {
         if (!email) throw Error('email is a mandatory parameter')
 

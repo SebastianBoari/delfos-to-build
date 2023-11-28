@@ -2,7 +2,7 @@ const buttonsOnSession = (session) => {
     const view = `
     <div class="options">
         <div class="options_greeting">
-            <h3 class="options_greeting-title">Hi ${JSON.parse(session).name}</h3>
+            <h3 class="options_greeting-title">Hi ${JSON.parse(session).firstName}</h3>
         </div>
 
         <div class="options_buttons">
@@ -43,8 +43,6 @@ const Header = async (session) => {
                         <img class="brand_image" src="https://i.imgur.com/mJNJKZx.png" alt="Logo de DelfOS.">
                     </a>
                 </figure>
-
-                <button id="loginTest">Log In</button>
 
                 <div class="header_navbar-buttons">
                     <p class="user-email">${session ? JSON.parse(session).email : ''}</p>

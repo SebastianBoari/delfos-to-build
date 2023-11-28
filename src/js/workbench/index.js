@@ -1,5 +1,6 @@
-const workbenchScript = async () => {
-    console.log('workbench')
+const workbenchScript = async (session) => {
+
+
 }
 
 export default workbenchScript

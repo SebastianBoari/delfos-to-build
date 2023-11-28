@@ -29,7 +29,7 @@ const routing = async () => {
 
     await router.addRoute('/login', session, [LoginRender], [LoginScript])
     await router.addRoute('/register', session, [RegisterRender], [RegisterScript])
-    await router.addRoute('/workbench', session, [HeaderRender, WorkbenchRender, FooterRender], [HeaderScript, WorkbenchScript, FooterScript])
+    await router.addRoute('/workbench', session, [WorkbenchRender], [WorkbenchScript])
 }
 
 export default routing

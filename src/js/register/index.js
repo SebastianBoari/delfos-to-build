@@ -2,7 +2,8 @@ import userManager from '@managers/UserManager'
 import themeManager from '@managers/ThemeManager'
 import themeDock from '../theme-dock'
 
-const registerScript = async () => {
+const registerScript = async (session) => {
+
     //TODO: check on deploy
     if (session) {
         location.href = '/#workbench'
@@ -15,6 +16,7 @@ const registerScript = async () => {
     }
 
     const currentTheme = await themeManager.getTheme()
+
     const registerImage = document.getElementById('register_landscape')
     registerImage.src = landscapes[currentTheme]
 
