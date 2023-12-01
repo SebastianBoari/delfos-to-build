@@ -949,4 +949,303 @@ body {
   outline: none;
 }
 
+#workbench {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+#workbench .workbench_aside {
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start;
+  align-items: start;
+  gap: 1rem;
+  max-width: 29.8rem;
+  position: relative;
+  background: #f3f3f3;
+}
+#workbench .workbench_aside .workbench_aside-branding {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 1.6rem;
+  position: absolute;
+  top: 0.4rem;
+  left: 0.8rem;
+}
+#workbench .workbench_aside .workbench_aside-branding .branding-icon {
+  max-width: 2rem;
+}
+#workbench .workbench_aside .workbench_aside-branding .branding-name {
+  align-self: flex-end;
+  font-family: "Lato", sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #003459;
+}
+#workbench .workbench_aside .workbench_aside-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 4.8rem;
+  padding: 0.6rem 1.6rem;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s ease;
+}
+#workbench .workbench_aside .workbench_aside-header .header_figure {
+  border-radius: 50%;
+}
+#workbench .workbench_aside .workbench_aside-header .header_figure .header_figure-image {
+  width: 4.8rem;
+  border-radius: 50%;
+}
+#workbench .workbench_aside .workbench_aside-header .header_welcome {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+#workbench .workbench_aside .workbench_aside-header .header_welcome .header_welcome-name {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  color: #003459;
+}
+#workbench .workbench_aside .workbench_aside-header .header_welcome .header_welcome-email {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #616161;
+}
+#workbench .workbench_aside .workbench_aside-header #profile-panel-container {
+  position: absolute;
+  top: 7.2rem;
+  left: 1.6rem;
+  z-index: 2;
+  border-radius: 0.4rem;
+}
+#workbench .workbench_aside .workbench_aside-header #profile-panel-container .profile_panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s;
+  background: rgb(255, 255, 255);
+}
+#workbench .workbench_aside .workbench_aside-header #profile-panel-container .profile_panel .prfile_panel-label .profile_panel-label-link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1.6rem;
+  margin: 0.2rem;
+  width: 26.6rem;
+  font-size: 1.4em;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #003459;
+}
+#workbench .workbench_aside .workbench_aside-header #profile-panel-container .profile_panel .prfile_panel-label .profile_panel-label-link svg {
+  width: 2rem;
+  height: 2rem;
+  color: #003459;
+}
+#workbench .workbench_aside .workbench_aside-header #profile-panel-container .profile_panel .prfile_panel-label .profile_panel-label-link:hover {
+  background: #f6f6f6;
+}
+#workbench .workbench_aside .workbench_aside-header #profile-panel-container .profile_panel #profile-panel-line {
+  display: block;
+  width: 100%;
+  height: 0.1rem;
+  background: #dfdfdf;
+}
+#workbench .workbench_aside .workbench_aside-header #profile-panel-container .profile-panel-active {
+  max-height: 17.1rem;
+}
+#workbench .workbench_aside .workbench_aside-header:hover {
+  background: #dfdfdf;
+}
+#workbench .workbench_aside .workbench_aside-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.4rem;
+  padding: 0 1.6rem;
+  width: 100%;
+  align-self: center;
+}
+#workbench .workbench_aside .workbench_aside-form .form_label {
+  border-radius: 0.4rem;
+  position: relative;
+  width: 100%;
+  height: 3rem;
+}
+#workbench .workbench_aside .workbench_aside-form .form_label .form_label-input {
+  width: 100%;
+  padding: 0.6rem 1.6rem;
+  font-size: 1.4em;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  background: #f6f6f6;
+  color: #003459;
+  outline: none;
+  border: none;
+  border-radius: 0.4rem;
+  border-bottom: solid 1px rgb(158, 158, 158);
+}
+#workbench .workbench_aside .workbench_aside-form .form_label .form_label-input::placeholder {
+  color: rgb(158, 158, 158);
+}
+#workbench .workbench_aside .workbench_aside-form .form_label .form_label-input:focus {
+  background: rgb(255, 255, 255);
+  border-bottom: solid 2px #003459;
+}
+#workbench .workbench_aside .workbench_aside-form .form_label #search-icon {
+  position: absolute;
+  right: 1.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(158, 158, 158);
+  width: 1.6rem;
+}
+#workbench .workbench_aside .workbench_aside-form .form_label:focus {
+  border: none;
+}
+#workbench .workbench_aside .workbench_aside-form .form_options {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: start;
+  gap: 1.6rem;
+  width: 100%;
+}
+#workbench .workbench_aside .workbench_aside-form .form_options-label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 1.4rem;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.4em;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #003459;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+#workbench .workbench_aside .workbench_aside-form .form_options-label svg {
+  max-height: 2rem;
+  max-width: 2rem;
+}
+#workbench .workbench_aside .workbench_aside-form .form_options-label-input {
+  display: none;
+}
+#workbench .workbench_aside .workbench_aside-form .form_options-label-span {
+  position: absolute;
+  right: 2.4rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  background: #dfdfdf;
+}
+#workbench .workbench_aside .workbench_aside-form .form_options-label:hover {
+  background: #ececec;
+}
+#workbench .workbench_aside .workbench_aside-form .form_options-label .checked {
+  width: 0.3rem;
+  height: 1.6rem;
+  position: absolute;
+}
+#workbench .workbench_aside .workbench_aside-form .form_options-label #star-icon {
+  color: rgb(217, 4, 41);
+}
+#workbench .workbench_aside .workbench_aside-form .form_options-label #calendar-icon {
+  color: rgb(0, 65, 0);
+}
+#workbench .workbench_aside .workbench_aside-form .form_options-label #user-alt-icon {
+  color: darkgreen;
+}
+#workbench .workbench_aside .workbench_aside-form .form_options-label #home-icon {
+  color: rgb(29, 29, 253);
+}
+#workbench .workbench_aside .workbench_aside-form .form_options .input-checked {
+  background: #ececec;
+}
+#workbench .workbench_aside .workbench_aside-form .form_options .input-checked .checked {
+  background: #003459;
+  left: 1.6rem;
+  border-radius: 0.8rem;
+}
+#workbench .workbench_aside .workbench_tasks-lists {
+  border-top: solid 1px #dfdfdf;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start;
+  align-items: start;
+  gap: 1rem;
+}
+#workbench .workbench_aside .workbench_tasks-lists .tasks_lists-actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+}
+#workbench .workbench_aside .workbench_tasks-lists .tasks_lists-actions .task_lists-actions-button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 0;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.6rem 1.6rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #003459;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+#workbench .workbench_aside .workbench_tasks-lists .tasks_lists-actions .task_lists-actions-button:focus {
+  outline: none;
+}
+#workbench .workbench_aside .workbench_tasks-lists .tasks_lists-actions .task_lists-actions-button:hover {
+  background: #ececec;
+}
+#workbench .workbench_aside .workbench_tasks-lists .tasks_lists-actions .task_lists-actions-button svg {
+  color: #003459;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+#workbench .workbench_aside .workbench_tasks-lists .tasks_lists-actions #newlist-button {
+  width: 100%;
+  gap: 1rem;
+}
+
 /*# sourceMappingURL=index.css.map */
