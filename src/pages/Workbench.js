@@ -9,6 +9,9 @@ import GroupIcon from '@icons/GroupIcon'
 import UserAltIcon from '@icons/UserAltIcon'
 import ConfigAltIcon from '@icons/ConfigAltIcon'
 import SyncIcon from '@icons/SyncIcon'
+import ArrowIcon from '@icons/ArrowIcon'
+import ListIcon from '@icons/ListIcon'
+
 
 const Workbench = async (session) => {
 
@@ -111,19 +114,104 @@ const Workbench = async (session) => {
             </form>
             
 
-            <div class="workbench_tasks-lists">
-                <div class="tasks_lists-container" id="tasks-lists">
+            <div class="workbench_tasks-groups">
+                <div class="workbench_tasks-groups-container" id="workbench-tasks-groups-container">
+
+                    <div class="group">
+                        <div class="group_title">
+                            <div class="group_title-left">
+                                ${GroupIcon()}
+                                <h4 class="group_title-left-text">Test group</h4>
+                            </div>
+
+                            ${ArrowIcon()}
+                        </div>
+
+                        <ul class="group_lists">
+                            <li class="group_lists-item">
+                                <p class="group_lists-item-link">
+                                    <span id="list-line"></span>
+                                    ${ListIcon()}
+                                    Supermercado
+                                </p>
+                            </li>
+
+                            <li class="group_lists-item">
+                                <p class="group_lists-item-link">
+                                    <span id="list-line"></span>
+                                    ${ListIcon()}
+                                    Estudios
+                                </p>
+                            </li>
+
+                            <li class="group_lists-item">
+                                <p class="group_lists-item-link">
+                                    <span id="list-line"></span>
+                                    ${ListIcon()}
+                                    Otros
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="group">
+                        <div class="group_title">
+                            <div class="group_title-left">
+                                ${GroupIcon()}
+                                <h4 class="group_title-left-text">Test group</h4>
+                            </div>
+
+                            ${ArrowIcon()}
+                        </div>
+
+                        <ul class="group_lists">
+                            <li class="group_lists-item">
+                                <p class="group_lists-item-link">
+                                    <span id="list-line"></span>
+                                    ${ListIcon()}
+                                    Supermercado
+                                </p>
+                            </li>
+
+                            <li class="group_lists-item">
+                                <p class="group_lists-item-link">
+                                    <span id="list-line"></span>
+                                    ${ListIcon()}
+                                    Estudios
+                                </p>
+                            </li>
+
+                            <li class="group_lists-item">
+                                <p class="group_lists-item-link">
+                                    <span id="list-line"></span>
+                                    ${ListIcon()}
+                                    Otros
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="list">
+                        <div class="list_item">
+                            <p class="group_lists-item-link list_item-link">
+                                <span id="list-line"></span>
+                                ${ListIcon()}
+                                Otros
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="tasks_lists-actions">
-                    <button class="task_lists-actions-button" id="newlist-button">${PlusIcon()} New list</button>
-                    <button class="task_lists-actions-button" id="newgroup-button">${GroupIcon()}</button>
+                <div class="workbench_tasks-groups-actions">
+                    <button class="workbench_tasks-groups-actions-button" id="newlist-button">${PlusIcon()} New list</button>
+                    <button class="workbench_tasks-groups-actions-button" id="newgroup-button">${GroupIcon()}</button>
                 </div>
             </div>
         </aside>
         
         <section id="workbench_tasks">
-        
+            <div class="workbench_tasks-container"></div>
         </section>
     </article>
     `

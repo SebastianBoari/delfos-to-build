@@ -1,5 +1,3 @@
-
-
 const workbenchScript = async (session) => {
 
     const workbenchAsideHeader = document.getElementById('workbench-aside-header')
@@ -31,6 +29,69 @@ const workbenchScript = async (session) => {
     setListeners('option-tasks-label', 'option-tasks-input', ['option-myday-label', 'option-important-label', 'option-planned-label', 'option-myuser-label'])
 
 
+    const groups = document.querySelectorAll('.group')
+    groups.forEach(group => {
+        group.addEventListener('click', event => {
+            const groupLists = group.querySelector('.group_lists')
+            groupLists.classList.toggle('group_lists-active')
+
+            const groupTitle = group.querySelector('.group_title')
+            groupTitle.classList.toggle('group_title-active')
+
+            const groupArrow = group.querySelector('#arrow-icon')
+            groupArrow.classList.toggle('rotate')
+
+            groupLists.addEventListener('click', (event) => {
+                event.stopPropagation()
+            })
+        })
+    })
+
+    const lists = document.querySelectorAll('.list_item-link');
+    document.addEventListener('click', (event) => {
+        const isClickInsideList = Array.from(lists).some((list) => list.contains(event.target))
+
+        if (!isClickInsideList) {
+            lists.forEach((list) => {
+                list.classList.remove('list_item-link-active')
+            })
+        }
+    })
+    lists.forEach((list) => {
+        list.addEventListener('click', (event) => {
+            event.stopPropagation()
+
+            lists.forEach((item) => {
+                if (item !== list) item.classList.remove('list_item-link-active')
+            })
+
+            list.classList.toggle('list_item-link-active')
+        })
+    })
+
+    const listsAlt = document.querySelectorAll('.group_lists-item-link');
+    document.addEventListener('click', (event) => {
+        const isClickInsideListAlt = Array.from(listsAlt).some((list) => list.contains(event.target))
+
+        if (!isClickInsideListAlt) {
+            listsAlt.forEach((list) => {
+                list.classList.remove('group_lists-item-link-active')
+            })
+        }
+    })
+    listsAlt.forEach((list) => {
+        list.addEventListener('click', (event) => {
+            event.stopPropagation()
+
+            listsAlt.forEach((item) => {
+                if (item !== list) {
+                    item.classList.remove('group_lists-item-link-active')
+                }
+            })
+
+            list.classList.toggle('group_lists-item-link-active')
+        })
+    })
 }
 
 export default workbenchScript
