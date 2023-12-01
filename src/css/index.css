@@ -951,7 +951,7 @@ body {
 
 #workbench {
   display: grid;
-  grid-template-columns: 29.8rem auto auto;
+  grid-template-columns: 1fr 4fr 1fr;
 }
 #workbench .workbench_aside {
   grid-column: 1/2;
@@ -960,7 +960,6 @@ body {
   justify-items: start;
   align-items: start;
   gap: 1rem;
-  max-width: 29.8rem;
   position: relative;
   background: #f3f3f3;
 }
@@ -1372,20 +1371,36 @@ body {
 #workbench .workbench_aside .workbench_tasks-groups-actions #newlist-button #plus-icon {
   width: 2.2rem;
 }
-#workbench #workbench_tasks {
+#workbench .workbench_tasks {
   height: 100vh;
   grid-column: 2/3;
   background: #f3f3f3;
   padding-top: 3.5rem;
 }
-#workbench #workbench_tasks .workbench_tasks-container {
+#workbench .workbench_tasks .workbench_tasks-container {
   background-image: url("https://images.unsplash.com/photo-1586810724476-c294fb7ac01b?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;
-  border-radius: 10px 0 0 0;
+  border-radius: 10px 10px 0 0;
+}
+#workbench .ads {
+  grid-column: 3/4;
+  background: #f3f3f3;
+  display: grid;
+  place-items: center;
+}
+#workbench .ads div {
+  height: 54rem;
+  width: 20rem;
+  background: rgb(255, 255, 255);
+  display: grid;
+  place-items: center;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
 }
 
 /*# sourceMappingURL=index.css.map */

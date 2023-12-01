@@ -210,9 +210,13 @@ const Workbench = async (session) => {
             </div>
         </aside>
         
-        <section id="workbench_tasks">
+        <section class="workbench_tasks">
             <div class="workbench_tasks-container"></div>
         </section>
+
+        <aside class="ads">
+            <div>Advertising space available.</div>
+        </aside>
     </article>
     `
 
