@@ -118,12 +118,41 @@ const Workbench = async (session) => {
                 <div class="workbench_tasks-groups-container" id="workbench-tasks-groups-container">
 
                     <div class="group">
+                        <div class="group_panel-container">
+                            <ul class="group_panel group-panel-inactive">
+                                <label class="group_panel-label">
+                                    <a class="group_panel-label-link" href="#">
+                                        ${UserAltThickIcon()}
+                                        Manage account
+                                    </a>
+                                </label> 
+                                
+                                <span class="group_panel-line"></span>
+
+                                <label class="group_panel-label">
+                                    <a class="group_panel-label-link" href="#">
+                                        ${ConfigAltIcon()}
+                                        Configuration
+                                    </a>
+                                </label> 
+
+                                <span class="group_panel-line"></span>
+
+                                <label class="group_panel-label">
+                                    <a class="group_panel-label-link" href="#">
+                                        ${SyncIcon()}
+                                        Synchronizing
+                                    </a>
+                                </label> 
+                            </ul>
+                        </div>
+
                         <div class="group_title">
                             <div class="group_title-left">
                                 ${GroupIcon()}
                                 <h4 class="group_title-left-text">Test group</h4>
                             </div>
-
+                            
                             ${ArrowIcon()}
                         </div>
 
@@ -155,6 +184,36 @@ const Workbench = async (session) => {
                     </div>
 
                     <div class="group">
+
+                        <div class="group_panel-container">
+                            <ul class="group_panel group-panel-inactive">
+                                <label class="group_panel-label">
+                                    <a class="group_panel-label-link" href="#">
+                                        ${UserAltThickIcon()}
+                                        Manage account
+                                    </a>
+                                </label> 
+                        
+                                <span class="group_panel-line"></span>
+
+                                <label class="group_panel-label">
+                                    <a class="group_panel-label-link" href="#">
+                                        ${ConfigAltIcon()}
+                                        Configuration
+                                    </a>
+                                </label> 
+
+                                <span class="group_panel-line"></span>
+
+                                <label class="group_panel-label">
+                                    <a class="group_panel-label-link" href="#">
+                                        ${SyncIcon()}
+                                        Synchronizing
+                                    </a>
+                                </label> 
+                            </ul>
+                        </div>
+
                         <div class="group_title">
                             <div class="group_title-left">
                                 ${GroupIcon()}
@@ -211,7 +270,7 @@ const Workbench = async (session) => {
         </aside>
         
         <section class="workbench_tasks">
-            <div class="workbench_tasks-container"></div>
+            <div class="workbench_tasks-container" id="workbench-tasks-container"></div>
         </section>
 
         <aside class="ads">

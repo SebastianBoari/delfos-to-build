@@ -1,3 +1,5 @@
+import MyDay from '@templates/MyDay'
+
 const workbenchScript = async (session) => {
 
     const workbenchAsideHeader = document.getElementById('workbench-aside-header')
@@ -18,6 +20,12 @@ const workbenchScript = async (session) => {
                     const otherLabel = document.getElementById(item)
                     otherLabel.classList.remove('input-checked')
                 })
+
+                if (!event.target.id.includes('myday')) return
+
+                const tasksContainer = document.getElementById('workbench-tasks-container')
+                tasksContainer.innerHTML = ''
+                tasksContainer.innerHTML = MyDay()
             }
         })
     }
@@ -31,7 +39,7 @@ const workbenchScript = async (session) => {
 
     const groups = document.querySelectorAll('.group')
     groups.forEach(group => {
-        group.addEventListener('click', event => {
+        group.addEventListener('click', (event) => {
             const groupLists = group.querySelector('.group_lists')
             groupLists.classList.toggle('group_lists-active')
 
@@ -45,7 +53,28 @@ const workbenchScript = async (session) => {
                 event.stopPropagation()
             })
         })
+
+        group.addEventListener('contextmenu', (event) => {
+            event.preventDefault()
+            const groupPanel = group.querySelector('.group_panel')
+            groupPanel.classList.toggle('group-panel-active')
+
+            document.addEventListener('click', (event) => {
+                const isClickInsideListAlt = group.contains(event.target)
+                if (!isClickInsideListAlt) {
+                    groupPanel.classList.remove('group-panel-active')
+                }
+            })
+
+            document.addEventListener('contextmenu', (event) => {
+                const isClickInsideListAlt = group.contains(event.target)
+                if (!isClickInsideListAlt) {
+                    groupPanel.classList.remove('group-panel-active')
+                }
+            })
+        })
     })
+
 
     const lists = document.querySelectorAll('.list_item-link');
     document.addEventListener('click', (event) => {
@@ -57,6 +86,7 @@ const workbenchScript = async (session) => {
             })
         }
     })
+
     lists.forEach((list) => {
         list.addEventListener('click', (event) => {
             event.stopPropagation()
@@ -92,6 +122,9 @@ const workbenchScript = async (session) => {
             list.classList.toggle('group_lists-item-link-active')
         })
     })
+
+
+
 }
 
 export default workbenchScript
